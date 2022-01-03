@@ -1,4 +1,4 @@
-package com.encore.second.room;
+package com.encore.second.seat;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,12 @@
-package com.encore.second.room;
+package com.encore.second.seat;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,8 +20,11 @@ public class Room {
 	
 	@Id
 	private int seat_id;    //좌석
-
-	private String room_id; //상영관
+	
+	@ManyToOne
+	@JoinColumn(name="detail_id", nullable=false)
+	@OnDelete(action= OnDeleteAction.CASCADE)
+	private String detail_id; //상영관
 	
 	private int row;        //좌석행
 	
