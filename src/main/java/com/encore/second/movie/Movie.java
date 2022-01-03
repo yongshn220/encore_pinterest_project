@@ -38,5 +38,31 @@ public class Movie {
 	
 	@Transient
 	private MultipartFile img_file;
+	
+	//hi
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * 
+ * 1. schedule : 시간대, 날짜, movie_id ....
+ * 
+ * 2. room : schedule_id, id
+ * 
+ * 3. seat : room_id, position
+ * 
+ *z
+ * */
