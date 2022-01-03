@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoomDao extends JpaRepository<Room, Integer> {
 
-
+	ArrayList<Room> findByDetail(String detail_id);
 }
