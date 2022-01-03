@@ -1,4 +1,4 @@
-package com.encore.second.room;
+package com.encore.second.seat;
 
 import java.util.ArrayList;
 
@@ -15,8 +15,8 @@ public class RoomService {
 		dao.save(r);
 	}
 	
-	public ArrayList<Room> getRoom(String room_id){
-		return dao.findByRoom(room_id);
+	public ArrayList<Room> getRoom(String detail_id){
+		return dao.findByDetail(detail_id);
 	}
 	
 	

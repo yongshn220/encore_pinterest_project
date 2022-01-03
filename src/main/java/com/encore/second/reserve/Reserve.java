@@ -11,7 +11,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie_detail.Movie_detail;
-import com.encore.second.room.Room;
+import com.encore.second.seat.Room;
 import com.encore.second.user.User;
 
 import lombok.Getter;

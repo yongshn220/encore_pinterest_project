@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie.Movie;
-import com.encore.second.room.Room;
+import com.encore.second.seat.Room;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -34,7 +34,5 @@ public class Movie_detail {
 	
 	private String time;
 	
-	@ManyToMany
-	@JoinColumn(name="room_id", nullable=false)
-	private Room room;
+	private String room;
 }
