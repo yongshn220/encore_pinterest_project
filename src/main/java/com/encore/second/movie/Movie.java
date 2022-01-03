@@ -32,7 +32,7 @@ public class Movie {
 	
 	private boolean screen_flag;  //개봉유무
 	
-	private Date open_date;
+	private Date open_date;  //상영 시작일
 	
 	private String img_path;
 	
