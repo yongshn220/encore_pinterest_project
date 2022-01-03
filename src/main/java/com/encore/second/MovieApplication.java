@@ -1,13 +1,13 @@
-package com.encore.project2;
+package com.encore.second;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EnocreProject2Application {
+public class MovieApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EnocreProject2Application.class, args);
+		SpringApplication.run(MovieApplication.class, args);
 	}
-//09
+
 }

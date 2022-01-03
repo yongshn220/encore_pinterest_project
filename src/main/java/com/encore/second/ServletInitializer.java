@@ -1,4 +1,4 @@
-package com.encore.project2;
+package com.encore.second;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
@@ -7,7 +7,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(EnocreProject2Application.class);
+		return application.sources(MovieApplication.class);
 	}
 
 }
