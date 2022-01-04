@@ -22,7 +22,7 @@ import lombok.ToString;
 public class Movie {
 	@Id  //primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int movie_id;
+	private int id;
 	
 	private String title;
 	

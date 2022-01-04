@@ -1,6 +1,8 @@
 package com.encore.second.movie_detail;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
@@ -23,11 +25,10 @@ import lombok.ToString;
 public class Movie_detail {
 
 	@Id
-	private int detail_id;
+	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name="move_id", nullable=false)
-	@OnDelete(action=OnDeleteAction.CASCADE)
+	@JoinColumn(name="movie_id", nullable=false)
 	private Movie movie;
 	
 	private String date;
