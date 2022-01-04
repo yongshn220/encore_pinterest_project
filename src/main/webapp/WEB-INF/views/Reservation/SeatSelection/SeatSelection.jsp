@@ -12,7 +12,7 @@
 		<div id="testBox">
 		</div>
 	</div>
-	<script type="text/javascript" src="./SeatSelection/js/test.js"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./SeatSelection/js/test.js"></script>
 </body>
 </html>
