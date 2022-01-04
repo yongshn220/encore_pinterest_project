@@ -37,7 +37,5 @@ public class Reserve {
 	@OnDelete(action= OnDeleteAction.CASCADE)
 	private Movie_detail detail;
 	
-	@ManyToOne
-	@JoinColumn(name="seat_id", nullable=false)
-	private Seat seat;
+
 }
