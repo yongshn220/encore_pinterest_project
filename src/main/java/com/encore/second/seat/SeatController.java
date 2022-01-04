@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/Seat")
 public class SeatController {
 
 	@Autowired
@@ -16,7 +15,7 @@ public class SeatController {
 	@RequestMapping("/")
 	public String test()
 	{
-		return "index.jsp";
+		return "index";
 	}
 	//test
 }
