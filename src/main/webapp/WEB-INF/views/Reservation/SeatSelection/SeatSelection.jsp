@@ -13,5 +13,6 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="./SeatSelection/js/test.js"></script>
+	<script type="text/javascript" src="./js/jquery.js"></script>
 </body>
 </html>
