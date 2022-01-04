@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.encore.second.movie.Movie;
 
 @Controller
-@RequestMapping("/Detail")
+@RequestMapping("/Reservation")
 public class Movie_detailController {
 	
 	@Autowired
