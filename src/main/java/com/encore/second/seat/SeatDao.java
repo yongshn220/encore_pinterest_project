@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface RoomDao extends JpaRepository<Room, Integer> {
+public interface SeatDao extends JpaRepository<Seat, Integer> {
 
-	ArrayList<Room> findByDetail(String detail_id);
+	ArrayList<Seat> findByDetail(String detail_id);
 }

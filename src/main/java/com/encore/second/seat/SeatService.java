@@ -6,16 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RoomService {
+public class SeatService {
 	
 	@Autowired
-	private RoomDao dao;
+	private SeatDao dao;
 	
-	public void save(Room r) {
+	public void save(Seat r) {
 		dao.save(r);
 	}
 	
-	public ArrayList<Room> getRoom(String detail_id){
+	public ArrayList<Seat> getRoom(String detail_id){
 		return dao.findByDetail(detail_id);
 	}
 	

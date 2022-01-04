@@ -16,7 +16,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Room {
+public class Seat {
 	
 	@Id
 	private int seat_id;    //좌석
