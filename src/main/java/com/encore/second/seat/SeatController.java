@@ -11,11 +11,10 @@ public class SeatController {
 	SeatService service;
 	
 	
-	
 	@RequestMapping("/")
 	public String test()
 	{
-		return "index";
+		return "/Reservation/SeatSelection/SeatSelection";
 	}
 	//test
 }
