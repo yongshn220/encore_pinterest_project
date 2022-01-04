@@ -16,7 +16,7 @@ public class SeatController {
 	@RequestMapping("/")
 	public String test()
 	{
-		return "Reservation/SeatSelection/NewFile.jsp";
+		return "index.jsp";
 	}
 	//test
 }
