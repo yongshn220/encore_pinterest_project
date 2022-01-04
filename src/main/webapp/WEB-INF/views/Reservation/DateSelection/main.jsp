@@ -9,7 +9,8 @@
 <script type="text/javascript">
 
 const a = (moive, date) => {
-	xhttp.open("GET", "/Reservation/timelist?")
+	xhttp.open("GET", "/Reservation/DateSelection/timelist?moive")
+	xhttp.send();
 }
 
 
