@@ -19,8 +19,10 @@ public class Movie_detailController {
 	private Movie_detailService service;
 	
 	@GetMapping("/main/{movie}")
-	public void main(Map map) {
-		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(@PathVariable("movie") Movie movie);
-				
+	public void main(@PathVariable("movie") Movie movie, Map map) {
+		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
+		map.put("list", list);
 	}
+	
+	
 }
