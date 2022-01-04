@@ -10,5 +10,5 @@ public class SeatController {
 	SeatService service;
 	
 	
-	
+	//test
 }
