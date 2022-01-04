@@ -1,8 +1,6 @@
 package com.encore.second.movie;
 
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,7 +30,7 @@ public class Movie {
 	
 	private boolean screen_flag;  //개봉유무
 	
-	private Date open_date;  //상영 시작일
+	private String open_date;  //상영 시작일
 	
 	private String img_path;
 	
