@@ -48,3 +48,36 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+/*
+---------------------------------------------------------------------
+Start from here
+*/
+
+
+
+#screen
+{
+	width: 100%;
+	height:100%;
+	background-color:black;
+	position: absolute;	
+}
+
+#screen #testBox
+{
+	width: 100px;
+	height:100px;
+	background-color:white;
+	position: absolute;	
+}
+
+
+
+
+
+
+
+
