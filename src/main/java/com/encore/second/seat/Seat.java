@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
+import com.encore.second.movie_detail.Movie_detail;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -24,7 +26,7 @@ public class Seat {
 	@ManyToOne
 	@JoinColumn(name="detail_id", nullable=false)
 	@OnDelete(action= OnDeleteAction.CASCADE)
-	private String detail_id; //상영관
+	private Movie_detail movieDetail; //상영관
 	
 	private int row;        //좌석행
 	
