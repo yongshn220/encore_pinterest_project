@@ -9,7 +9,7 @@
 <script type="text/javascript">
 
 const a = (moive, date) => {
-	
+	xhttp.open("GET", "/Reservation/timelist?")
 }
 
 
@@ -30,7 +30,7 @@ const a = (moive, date) => {
 	<h4>날짜</h4>
 	<c:forEach var="d" items="${list }">
 	<table border="1">
-	<tr><th><input type="button" value="${d.date }" onclick="a('${d.movie }'${d.date }')"></th></tr>
+	<tr><th><input type="button" value="${d.date }" onclick="a('${d.movie }', '${d.date }')"></th></tr>
 	</table>
 	</c:forEach>
 	<h5>시간</h5>
