@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie.Movie;
-import com.encore.second.seat.Room;
+import com.encore.second.seat.Seat;
 
 import lombok.Getter;
 import lombok.Setter;

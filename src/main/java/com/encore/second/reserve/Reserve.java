@@ -11,7 +11,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie_detail.Movie_detail;
-import com.encore.second.seat.Room;
+import com.encore.second.seat.Seat;
 import com.encore.second.user.User;
 
 import lombok.Getter;
@@ -39,5 +39,5 @@ public class Reserve {
 	
 	@ManyToOne
 	@JoinColumn(name="seat_id", nullable=false)
-	private Room seat;
+	private Seat seat;
 }
