@@ -16,8 +16,8 @@ public class SeatService {
 	}
 	
 	
-	public void delete(int seat_id) {
-		dao.deleteById(seat_id);
+	public void delete(int id) {
+		dao.deleteById(id);
 	}
 	
 	

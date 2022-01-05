@@ -27,7 +27,7 @@ public class Seat {
 	private int id;    //좌석
 	
 	@ManyToOne
-	@JoinColumn(name="detail_id", nullable=false)
+	@JoinColumn(nullable=false)
 	private Movie_detail movieDetail; //상영관
 	
 	@Column(nullable = false)

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.encore.second.movie.Movie;
 
 @Controller
-@RequestMapping("/Reservation")
+@RequestMapping("/Reservation/DateSelection")
 public class Movie_detailController {
 	
 	@Autowired
@@ -23,6 +23,7 @@ public class Movie_detailController {
 		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
 		map.put("list", list);
 	}
+	
 	
 	
 }
