@@ -15,7 +15,7 @@
 				<div class="header">
 					<h1>
 						<a href="#">
-							<em><img alt="logo" src="./images/logo"></em>
+							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
 					<nav class="nav"></nav>

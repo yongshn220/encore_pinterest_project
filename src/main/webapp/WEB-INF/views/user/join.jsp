@@ -35,12 +35,12 @@ const idCheck=()=>{
 				<div class="header">
 					<h1>
 						<a href="#">
-							<em><img alt="logo" src="./images/logo"></em>
+							<em><img src="/images/logo.png" alt="logo"></em>
 						</a>
 					</h1>
 					<nav class="nav"></nav>
 						<ul>
-							<li><a href="#">로그인</a></li>
+							<li><a href="/user/login">로그인</a></li>
 						</ul>
 				</div>
 			</div>

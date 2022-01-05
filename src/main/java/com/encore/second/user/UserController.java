@@ -1,5 +1,6 @@
 package com.encore.second.user;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,12 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.encore.second.reserve.Reserve;
+import com.encore.second.reserve.ReserveService;
+import com.encore.second.seat.SeatService;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
 
 	@Autowired
 	private UserService service;
+	@Autowired
+	private ReserveService serviceR;
+	@Autowired
+	private SeatService serviceS;
 	
 	@GetMapping("/join") //로그인 페이지에서 회원가입 버튼 클릭시 join 페이지로 넘어감
 	public void joinForm() {}
@@ -50,7 +59,7 @@ public class UserController {
 		String path = "user/login";
 		if(u != null && u.getPwd().equals(pwd)) {
 			session.setAttribute("loginid",	id);
-			path = "/home";
+			path = "redirect:/home";
 		}
 		return path;
 	}
@@ -59,10 +68,31 @@ public class UserController {
 	public void editForm(HttpSession session, Map map) {
 		String id = (String) session.getAttribute("loginid");
 		User u = service.getUser(id);
+		ArrayList<Reserve> r = serviceR.getByUser_id(u);
+		//ArrayList<Seat> s = serviceS.getByReserve_id(r);		
 		map.put("u", u);
+		map.put("r", r);
+		//map.put("s", s);
 	}
 	
+	@PostMapping("/edit")
+	public String edit(User u) {
+		service.saveUser(u);
+		return "redirect:/use/myinfo";
+	}
 	
+	@GetMapping("/out")
+	public String out(HttpSession session) {
+		String id = (String) session.getAttribute("loginid");
+		service.delUser(id);
+		return "redirect:/user/logout";
+	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/home";
+	}
 }
 
 
