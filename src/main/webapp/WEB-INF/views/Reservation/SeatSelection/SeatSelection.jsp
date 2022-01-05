@@ -18,5 +18,11 @@
 	</div>
 	<script type="text/javascript" src="./js/jquery.js"></script>
 	<script type="text/javascript" src="./SeatSelection/js/test.js"></script>
+	
+	<input id="calendar" value="1234">
+	
+	<div id="list">
+	</div>
+	
 </body>
 </html>
