@@ -48,7 +48,7 @@ const idCheck=()=>{
 	</header>
 	<!-- //header -->
 	
-	<section id="join"></section>
+	<section id="join">
 	<div class="title"><h3>회원가입</h3></div>
 	<div class="join">
 		<div class="contatiner">
@@ -72,6 +72,7 @@ const idCheck=()=>{
 			</div>
 		</div>
 	</div>
+	</section>
 
 </body>
 </html>
