@@ -17,15 +17,15 @@ public class ReserveService {
 		dao.save(r);
 	}
 	
-	public Reserve getByReserve_id(int reserve_id) {
-		return dao.findById(reserve_id).orElse(null);
+	public Reserve getByReserve_id(int id) {
+		return dao.findById(id).orElse(null);
 	}
 	
 	public ArrayList<Reserve> getByUser_id(User user) {
 		return dao.findByUser(user);
 	}
 	
-	public void delReserve(int reservie_id) {
-		dao.deleteById(reservie_id);
+	public void delReserve(int id) {
+		dao.deleteById(id);
 	}
 }
