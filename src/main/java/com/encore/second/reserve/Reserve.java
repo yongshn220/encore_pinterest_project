@@ -29,11 +29,11 @@ public class Reserve {
 	private int reserve_id;
 	
 	@ManyToOne
-	@JoinColumn(name="user", nullable=false)
+	@JoinColumn(nullable=false)
 	private User user;
 	
 	@ManyToOne
-	@JoinColumn(name="detail", nullable=false)
+	@JoinColumn(nullable=false)
 	@OnDelete(action= OnDeleteAction.CASCADE)
 	private Movie_detail detail;
 	

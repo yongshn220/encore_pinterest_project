@@ -28,7 +28,7 @@ public class Movie_detail {
 	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name="movie", nullable=false)
+	@JoinColumn(nullable=false)
 	private Movie movie;
 	
 	private String date; //상영하는 날짜 
