@@ -13,7 +13,9 @@
 		<div id="header">
 		</div>
 		<div id="body">
-			<div id="contents">
+			<div id="container">
+				<div id="contents">
+				</div>
 			</div>
 		</div>
 	</div>
