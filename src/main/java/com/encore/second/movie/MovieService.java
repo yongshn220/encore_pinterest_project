@@ -23,8 +23,8 @@ public class MovieService {
 	
 	
 	//영화삭제
-	public void delMovie(int movie_id) {
-		dao.deleteById(movie_id);
+	public void delMovie(int id) {
+		dao.deleteById(id);
 	}
 	
 	//영화제목으로 검색
