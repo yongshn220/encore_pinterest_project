@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="./SeatSelection/css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="/user/login.css">
 	<title>Insert title here</title>
 </head>
 <body>
@@ -15,12 +15,12 @@
 				<div class="header">
 					<h1>
 						<a href="#">
-							<em><img alt="logo" src="./images/logo"></em>
+							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
 					<nav class="nav"></nav>
 						<ul>
-							<li><a href="#">로그인중...</a></li>
+							<li><a href="/user/logout">로그아웃</a></li>
 						</ul>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 	</section>
 	<!-- //login -->
 
-	<script type="text/javascript" src="./js/jquery.js"></script>
-	<script type="text/javascript" src="./SeatSelection/page/login.js"></script>
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script type="text/javascript" src="/SeatSelection/page/login.js"></script>
 </body>
 </html>
