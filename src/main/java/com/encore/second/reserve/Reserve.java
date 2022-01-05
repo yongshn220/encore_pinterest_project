@@ -26,7 +26,7 @@ public class Reserve {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int reserve_id;
+	private int id;
 	
 	@ManyToOne
 	@JoinColumn(nullable=false)
