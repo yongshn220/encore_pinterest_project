@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h3>영화등록</h3>
-<form >
-	
-</form>
+
 </body>
 </html>
