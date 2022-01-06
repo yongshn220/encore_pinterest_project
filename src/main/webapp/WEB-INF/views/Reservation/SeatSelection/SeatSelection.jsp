@@ -21,17 +21,26 @@
 							<div id="type_adult_area">
 								<a>일반</a>
 								<ul>
-									<li class="type_adult_block" data-count="0"></li>
-									<li class="type_adult_block" data-count="1"></li>
-									<li class="type_adult_block" data-count="2"></li>
-									<li class="type_adult_block" data-count="3"></li>
-									<li class="type_adult_block" data-count="4"></li>
-									<li class="type_adult_block" data-count="5"></li>
-									<li class="type_adult_block" data-count="6"></li>
+									<li class="type_adult_block" data-count="0">0</li>
+									<li class="type_adult_block" data-count="1">1</li>
+									<li class="type_adult_block" data-count="2">2</li>
+									<li class="type_adult_block" data-count="3">3</li>
+									<li class="type_adult_block" data-count="4">4</li>
+									<li class="type_adult_block" data-count="5">5</li>
+									<li class="type_adult_block" data-count="6">6</li>
 								</ul>
 							</div>
 							<div id="type_child_area">
 								<a>청소년</a>
+								<ul>
+									<li class="type_child_block" data-count="0">0</li>
+									<li class="type_child_block" data-count="1">1</li>
+									<li class="type_child_block" data-count="2">2</li>
+									<li class="type_child_block" data-count="3">3</li>
+									<li class="type_child_block" data-count="4">4</li>
+									<li class="type_child_block" data-count="5">5</li>
+									<li class="type_child_block" data-count="6">6</li>
+								</ul>
 							</div>					
 						</div>
 					</div>

@@ -130,6 +130,98 @@ Start from here
 	background-color: blue;
 }
 
+#screen #body #container #contents #select_area #amount_area
+{
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+	width:90%;
+	height:100px;
+    text-align: center;
+    z-index: 1;
+	background-color: red;
+}
+
+#screen #body #container #contents #type_adult_area
+{
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    top: 25%;
+    transform: translateY(-50%);
+	width:95%;
+	height:40px;
+    z-index: 2;
+	background-color: green;
+}
+
+#type_adult_area a
+{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    margin: 10px 10px 10px 10px;
+    background-color:white; 
+}
+#type_adult_area ul
+{
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    display:flex;
+}
+
+#type_adult_area ul li
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px 0px 15px;
+    background-color: white;
+
+}
+
+#screen #body #container #contents #type_child_area
+{
+    position: relative;
+    margin: 0 auto;
+    top: 25%;
+    transform: translateY(-50%);
+	width:95%;
+	height:40px;
+    z-index: 2;
+	background-color: green;
+}
+
+#type_child_area a
+{
+    position: absolute;
+    left: 0;
+    top: 10%;
+    margin: 10px 10px 10px 10px;
+}
+
+#type_child_area ul
+{
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translateX(-50%);
+    display:flex;
+}
+
+#type_child_area ul li
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px 0px 15px;
+    background-color: white;
+
+}
+
 #screen #body #container #contents #info_area
 {
 	position: absolute;
@@ -146,10 +238,12 @@ Start from here
     left: 0%;
     top:150px;
 	width:100%;
-	height:400px;
+	height:500px;
     text-align: center;
 	background-color: yellow;
 }
+
+
 
 
 
