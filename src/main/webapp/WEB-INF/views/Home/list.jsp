@@ -14,7 +14,7 @@
     <div class="contents">
        <h1>
        <a href="/Home/list">
-         <img src="https://img.cgv.co.kr/R2014/images/common/logo/logoRed.png" alt="CGV">
+         <img src="/images/logo.png" alt="ElVOM">
        </a>
        <span>ENCOREPLEX</span>
        </h1>
@@ -22,20 +22,20 @@
    <ul class="info">
      <li>
       <a href="로그인url">
-        <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginPassword.png" alt="로그인">
+        <img src="/images/login.png" alt="로그인">
         <span>로그인</span>
       </a>
       </li>
       <li>
       <a href="회원가입url">
-        <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginJoin.png" alt="회원가입">
+        <img src="/images/join.png" alt="회원가입">
         <span>회원가입</span>
       </a>
       </li>
       <li>
       <a href="내정보url">
-        <img src="https://img.cgv.co.kr/R2014/images/common/ico/loginMember.png" alt="MY CGV">
-        <span>MY CGV</span>
+        <img src="/images/info.png" alt="MY ElVOM">
+        <span>MY ElVOM</span>
       </a>
       </li>
    </ul> 
@@ -78,17 +78,17 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/1.jpg" alt="스파이더맨-노 웨이 홈" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-12.png" alt="12세 이상세">
+                                            <img src="../images/posters/grade-12.png" alt="12세 이상세">
                                             
                                         
                                         </div>
                                         <div class="screenType_wrap">
                                             
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax"></i>
+                                          <!--   <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax"></i>
                                             
                                             <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/forDX_white.png" alt="forDX"></i>
                                             
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/screenx_white.png" alt="screenx"></i>
+                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/screenx_white.png" alt="screenx"></i> -->
                                             
                                         </div>
                                         <div class="movieChart_btn">
@@ -111,7 +111,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/2.jpg" alt="경관의 피" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-15.png" alt="15세 이상세">
+                                            <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                             
                                         
                                         </div>
@@ -138,7 +138,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/3.jpg" alt="씽2게더" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-all.png" alt="전체세">
+                                            <img src="../images/posters/grade-all.png" alt="전체세">
                                             
                                         
                                         </div>
@@ -164,7 +164,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/4.jpg" alt="해피 뉴 이어" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-12.png" alt="12세 이상세">
+                                            <img src="../images/posters/grade-12.png" alt="12세 이상세">
                                             
                                         
                                         </div>
@@ -191,7 +191,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/5.jpg" alt="킹스맨-퍼스트 에이전트" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-19.png" alt="청소년 관람불가세">
+                                            <img src="../images/posters/grade-19.png" alt="청소년 관람불가세">
                                             
                                         
                                         </div>
@@ -218,7 +218,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/6.jpg" alt="드라이브 마이 카" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-15.png" alt="15세 이상세">
+                                            <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                             
                                         
                                         </div>
@@ -245,7 +245,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/7.jpg" alt="피드백" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-19.png" alt="청소년 관람불가세">
+                                            <img src="../images/posters/grade-19.png" alt="청소년 관람불가세">
                                             
                                         
                                         </div>
@@ -271,7 +271,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/8.jpg" alt="매트릭스-리저렉션" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-15.png" alt="15세 이상세">
+                                            <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                         
                                         </div>
                                         <div class="screenType_wrap">
@@ -297,7 +297,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/9.jpg" alt="하우스 오브 구찌" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-15.png" alt="15세 이상세">
+                                            <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                         
                                         </div>
                                         <div class="screenType_wrap">
@@ -323,7 +323,7 @@
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/10.jpg" alt="프랑스" onerror="errorImage(this)" style= width:600px;height:859px>
                                         <div class="movieAge">
-                                            <img src="https://img.cgv.co.kr/R2014/images/common/flag/age/grade-12.png" alt="12세 이상세">
+                                            <img src="../images/posters/grade-12.png" alt="12세 이상세">
                                             <!-- <div class="dDay_wrap"><span>8</span></div> -->
                                         
                                         </div>
@@ -357,10 +357,6 @@
     </div>
                     
      
-                   
-                    
-                    
-  
 <!-- 하단 -->
 
 
