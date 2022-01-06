@@ -54,10 +54,16 @@ table {
 /*
 ---------------------------------------------------------------------
 Start from here
+---------------------------------------------------------------------
 */
 
 
 
+/*
+---------------------------------------------------------------------
+[body] - Layout area
+---------------------------------------------------------------------
+*/
 #screen
 {
 	width: 100%;
@@ -103,23 +109,25 @@ Start from here
 	height: 820px;
 }
 
-#screen #body #container #contents #title
-{
-	position: relative;
-	width:100%;
-	height:50px;
-	background-color: red;
-}
+/*
+---------------------------------------------------------------------
+[contents] - title area
+---------------------------------------------------------------------
+*/
 
 #screen #body #container #contents #title
 {
 	position: relative;
 	width:100%;
-	height:50px;
-    text-align: center;
+	height:30px;
 	background-color: red;
 }
 
+/*
+---------------------------------------------------------------------
+[contents] - Number Selection area
+---------------------------------------------------------------------
+*/
 #screen #body #container #contents #select_area
 {
 	position: absolute;
@@ -156,13 +164,13 @@ Start from here
 	background-color: green;
 }
 
-#type_adult_area a
+#type_adult_area #text
 {
     position: absolute;
     left: 0;
     top: 10%;
     margin: 10px 10px 10px 10px;
-    background-color:white; 
+
 }
 #type_adult_area ul
 {
@@ -180,7 +188,9 @@ Start from here
     height: 30px;
     margin: 0px 0px 0px 15px;
     background-color: white;
-
+    border: 1px solid #5c5c5c;
+    line-height: 16px;
+    
 }
 
 #screen #body #container #contents #type_child_area
@@ -195,7 +205,7 @@ Start from here
 	background-color: green;
 }
 
-#type_child_area a
+#type_child_area #text
 {
     position: absolute;
     left: 0;
@@ -219,8 +229,16 @@ Start from here
     height: 30px;
     margin: 0px 0px 0px 15px;
     background-color: white;
+    border: 1px solid #5c5c5c;
+    line-height: 16px;
 
 }
+
+/*
+---------------------------------------------------------------------
+[contents] - info area
+---------------------------------------------------------------------
+*/
 
 #screen #body #container #contents #info_area
 {
@@ -231,6 +249,43 @@ Start from here
     text-align: center;
 	background-color: green;
 }
+
+#screen #info_area #date 
+{
+	position: relative;
+	height:50px;
+	margin: 15px;
+    text-align: center;
+	background-color: blue;
+}
+
+#screen #info_area #date div
+{
+	position:relative;
+	top:50%;
+	transform: translateY(-50%);
+	font-size:20px;
+	font-weight:400;
+	background-color: white;
+}
+
+#screen #info_area #seat_available 
+{
+	position: relative;
+	height:50px;
+    text-align: center;
+    margin: 15px;
+	background-color: white;
+}
+
+
+
+
+/*
+---------------------------------------------------------------------
+[contents] - Seat Selection area
+---------------------------------------------------------------------
+*/
 
 #screen #body #container #contents #seat_area
 {
@@ -243,6 +298,54 @@ Start from here
 	background-color: yellow;
 }
 
+
+#contents #seat_area #instruction_area
+{
+    position: absolute;
+    left: 82%;
+    top: 40%;
+    transform: translateX(-50%);
+    width: 12%;
+    height: 30%;
+    background-color:aliceblue;
+}
+
+#contents #seat_area #seat_screen_box
+{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 5%;
+    background-color:aliceblue;
+}
+
+#contents #seat_area #seat_selection_box
+{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    background-color:aliceblue;
+}
+
+#contents #seat_area #seat_selection_box .seatList
+{
+	position:absolute;
+	width:40px;
+	height:40px;
+	margin: 10px;
+	background-color:green;
+	text-align:center;
+}
+
+#contents #seat_area #seat_selection_box .seatList div
+{
+
+}
 
 
 
