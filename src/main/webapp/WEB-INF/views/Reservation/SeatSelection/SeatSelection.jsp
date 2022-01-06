@@ -21,25 +21,11 @@
 							<div id="type_adult_area">
 								<div id="text">일반</div>
 								<ul>
-									<li class="type_adult_block" data-count="0">0</li>
-									<li class="type_adult_block" data-count="1">1</li>
-									<li class="type_adult_block" data-count="2">2</li>
-									<li class="type_adult_block" data-count="3">3</li>
-									<li class="type_adult_block" data-count="4">4</li>
-									<li class="type_adult_block" data-count="5">5</li>
-									<li class="type_adult_block" data-count="6">6</li>
 								</ul>
 							</div>
 							<div id="type_child_area">
 								<div id="text">청소년</div>
 								<ul>
-									<li class="type_child_block" data-count="0">0</li>
-									<li class="type_child_block" data-count="1">1</li>
-									<li class="type_child_block" data-count="2">2</li>
-									<li class="type_child_block" data-count="3">3</li>
-									<li class="type_child_block" data-count="4">4</li>
-									<li class="type_child_block" data-count="5">5</li>
-									<li class="type_child_block" data-count="6">6</li>
 								</ul>
 							</div>					
 						</div>
@@ -83,7 +69,8 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="/js/jquery.js"></script>
-	<script type="text/javascript" src="/SeatSelection/js/room.js"></script>
+	<script type="text/javascript" src="/SeatSelection/js/pageEventHandler.js"></script>
+	<script type="text/javascript" src="/SeatSelection/js/function.js"></script>
 	<script type="text/javascript" src="/SeatSelection/js/main.js"></script>
 </body>
 </html>
