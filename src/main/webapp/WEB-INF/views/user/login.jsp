@@ -18,17 +18,23 @@
 							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
-					<nav class="nav"></nav>
-						<ul>
-							<li><a href="/user/logout">로그아웃</a></li>
+					<nav class="nav">
+						<ul class="clearfix">
+							<li><a href="">영화 </a></li>
+							<li><a href="">극장 </a></li>
+							<li><a href="">예매 </a></li>
+							<li><a href="">스토어 </a></li>
+							<li><a href="">이벤트 </a></li>
+							<li><a href="/user/logout">로그인</a></li>
 						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!-- //header -->
 
-	<section id="login">
+<!-- 	<section id="login">
 		<div class="title"><h3>로그인</h3></div>
 		<div class="login_inf">
 			<div class="container">
@@ -46,7 +52,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 	<!-- //login -->
 
 	<script type="text/javascript" src="/js/jquery.js"></script>
