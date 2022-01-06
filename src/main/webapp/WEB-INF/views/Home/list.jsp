@@ -4,21 +4,59 @@
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="stylesheet" type="text/css" href="/home/list.css">
 <title>Insert title here</title>
 </head>
 <body>
-<!--상단--> 
+	<header id="header">
+		<div class="contatiner">
+			<div class="row">
+				<div class="header">
+					<h1>
+                     <a href="/Home/list">
+                      <img src="/images/logo.png" alt="ElVOM">
+                       </a>
+                      <span>ENCOREPLEX</span>
+                      </h1>
+					<nav class="nav">
+						<ul class="clearfix">
+							<li>
+                            <a href="/user/logout">
+                            <img src="/images/login.png" alt="로그인" class="img-1">
+                            <span>로그인</span>
+                             </a>
+                             </li>
+                             <li>
+                             <a href="회원가입url">
+                             <img src="/images/join.png" alt="회원가입">
+                             <span>회원가입</span>
+                             </a>
+                             </li>
+                             <li>
+                             <a href="내정보url">
+                            <img src="/images/info.png" alt="MY ElVOM">
+                           <span>MY ElVOM</span>
+                            </a>
+                             </li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
 <div id="wrap" >
-  <div class="header">
+  <div class="head">
     <div class="header_content">
     <div class="contents">
+    <!-- 
        <h1>
        <a href="/Home/list">
          <img src="/images/logo.png" alt="ElVOM">
        </a>
        <span>ENCOREPLEX</span>
        </h1>
-   <!--  -->
+  
    <ul class="info">
      <li>
       <a href="로그인url">
@@ -39,9 +77,10 @@
       </a>
       </li>
    </ul> 
+   -->
   </div>
   </div>
-   <!-- 검색창 -->
+   
    <div class="search">
      <label for="search">
        <input type="text" id="keyword" value>
@@ -59,13 +98,14 @@
   
    </div>
    </div>
-   
+    -->
+    
    <!-- 무비차트 -->
    
-  <div id="contaniner" class>
+  <div id="cont" class>
   <!-- <input type="hidden" id="isOpenUserEmailYNPopup" name="isOpenUserEmailYNPopup" value="False"> -->
    <div class="movieChart">
-     <div class="contents">
+     <div class="movie_contents">
        <div class="movieChartBeScreen_btn_wrap">
           <div class="tabBtn_wrap">
           <h3><a href="#none" class="active" id="btnMovie">무비차트</a></h3>
