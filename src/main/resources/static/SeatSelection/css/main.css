@@ -101,15 +101,58 @@ Start from here
 	margin: 0 auto;
 	width: 100%;
 	height: 820px;
-	background-color: #cef412;
 }
 
 #screen #body #container #contents #title
 {
 	position: relative;
 	width:100%;
-	height:10px;
+	height:50px;
 	background-color: red;
 }
+
+#screen #body #container #contents #title
+{
+	position: relative;
+	width:100%;
+	height:50px;
+    text-align: center;
+	background-color: red;
+}
+
+#screen #body #container #contents #select_area
+{
+	position: absolute;
+    left:0px;
+	width:50%;
+	height:150px;
+    text-align: center;
+	background-color: blue;
+}
+
+#screen #body #container #contents #info_area
+{
+	position: absolute;
+    left: 50%;
+	width:50%;
+	height:150px;
+    text-align: center;
+	background-color: green;
+}
+
+#screen #body #container #contents #seat_area
+{
+	position: relative;
+    left: 0%;
+    top:150px;
+	width:100%;
+	height:400px;
+    text-align: center;
+	background-color: yellow;
+}
+
+
+
+
 
 
