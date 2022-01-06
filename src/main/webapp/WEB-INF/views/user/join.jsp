@@ -35,12 +35,12 @@ const idCheck=()=>{
 				<div class="header">
 					<h1>
 						<a href="#">
-							<em><img src="/images/logo.png" alt="logo"></em>
+							<em><img alt="logo" src="./images/logo"></em>
 						</a>
 					</h1>
 					<nav class="nav"></nav>
 						<ul>
-							<li><a href="/user/login">로그인</a></li>
+							<li><a href="#">로그인</a></li>
 						</ul>
 				</div>
 			</div>
@@ -48,7 +48,7 @@ const idCheck=()=>{
 	</header>
 	<!-- //header -->
 	
-	<section id="join">
+	<section id="join"></section>
 	<div class="title"><h3>회원가입</h3></div>
 	<div class="join">
 		<div class="contatiner">
@@ -72,7 +72,6 @@ const idCheck=()=>{
 			</div>
 		</div>
 	</div>
-	</section>
 
 </body>
 </html>
