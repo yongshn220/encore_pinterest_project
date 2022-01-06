@@ -19,7 +19,7 @@
 					</h1>
 					<nav class="nav"></nav>
 						<ul>
-							<li><a href="/user/logout">·Î±×¾Æ¿ô</a></li>
+							<li><a href="/User/logout">·Î±×¾Æ¿ô</a></li>
 						</ul>
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 		<div class="contatiner">
 			<div class="row">
 				<div class="join_insert">
-					<form action="/user/edit" method="post">
+					<form action="/User/edit" method="post">
 						<ul>
 							<li>id:<input type="text" name="id" value="${u.id }" readonly></li>
 							<li>pwd:<input type="password" name="pwd" value="${u.pwd }" ></li>

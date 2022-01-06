@@ -18,7 +18,7 @@ import com.encore.second.reserve.ReserveService;
 import com.encore.second.seat.SeatService;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/User")
 public class UserController {
 
 	@Autowired
@@ -47,7 +47,7 @@ public class UserController {
 	@PostMapping("/join") 
 	public String join(User u) {
 		service.saveUser(u);
-		return "redirect:/user/home";
+		return "redirect:/User/home";
 	}
 	
 	@GetMapping("/login") //홈페이지에서 로그인 버튼 클릭시 login 페이지로 넘어감
@@ -56,7 +56,7 @@ public class UserController {
 	@PostMapping("/login") 
 	public String login(String id, String pwd, HttpSession session) {
 		User u = service.getUser(id);
-		String path = "user/login";
+		String path = "User/login";
 		if(u != null && u.getPwd().equals(pwd)) {
 			session.setAttribute("loginid",	id);
 			path = "redirect:/home";
@@ -78,14 +78,14 @@ public class UserController {
 	@PostMapping("/edit")
 	public String edit(User u) {
 		service.saveUser(u);
-		return "redirect:/use/myinfo";
+		return "redirect:/Use/myinfo";
 	}
 	
 	@GetMapping("/out")
 	public String out(HttpSession session) {
 		String id = (String) session.getAttribute("loginid");
 		service.delUser(id);
-		return "redirect:/user/logout";
+		return "redirect:/User/logout";
 	}
 	
 	@GetMapping("/logout")
