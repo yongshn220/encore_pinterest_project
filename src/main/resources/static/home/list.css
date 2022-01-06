@@ -56,140 +56,478 @@ table {
 Start from here
 */
 
-/* //nav */
+/* 레이아웃 */
+#header {width: 100%; height: 107px; border-bottom: 1px solid #c6c6c6; background-color: lightblue;}
+
+/* 가운데 영역 */
+.contatiner {position: relative; width:1700px; margin: 0 auto; background: rgba(0,0,0,0);}
+
+/* 로우 영역 */
+.row {padding: 0 100px;}
+
+/* 헤더 영역 */
+.header {
+	overflow: hidden; 
+	position: Fixed;
+}
+.header h1 {float: left;}
+.header h1 em {padding: 13px 10px 10px 0; display:inline-block}
+.header h1 img {width: 200px;}
+
+.header .nav {float: right;}
+.header .nav ul {border-left: 0px solid #777;}
+.header .nav ul li {float:left; width: 100xp; text-align: center; border-right: 0px solid #777;}
+.header .nav ul li a {
+	
+	display: block; 
+	padding: 40px 20px;
+	font-size: 28px; 
+	font-weight: 700; 
+	line-height: 1.2;
+    color: #666;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    margin: 0;
+    border: 0;
+  
+	}
+	
+.img-1{
+	top:0;
+	}
 
 
-/* content */
 
-.content-header-container {
-    margin-top: 20px;
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-    align-items: center;
+/*.header{
+	 line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: relative;
+    z-index: 101;
+	
 }
 
-.content-header-wrapper {
-    font-size: 15px;
-    width: 70%;
+--상단로고쪽 
+.header_content {
+	
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin-bottom: 50px;
+    background-color: lightblue;
+    border-bottom: 1px solid #eee;
+}
+
+.contents h1{
+	
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    width: 1500px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 6px;
-    border-bottom: 4px solid black;
+    padding: 30px 6px 25px 5px;
+    background-color: lightblue;
 }
 
-.content-header-title {
-    font-size: 30px;
-    font-weight: bolder;
-}
+.contents h1 img{width: 200px;}
+*/
 
-.content-header-menu {
+
+--영화아래소제목    
+.info{
+
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    list-style: none;
     display: flex;
+    align-items: center;
 }
 
-.selectedMenu {
-    color: red;
-    font-size: 15px;
+.search{
+	
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    padding: 0 36px 0 10px;
 }
 
-.movie-notice,
-.movie-house {
-    margin-left: 20px;
+.contaniner{
+
+	line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 7;
 }
 
-.movie-infomation-wrapper {
+.movieChart{
+
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    clear: none;
+    float: none;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+}
+
+.contents{
+	  
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    overflow: hidden;
+    padding: 50px 30px 60px;
+    width: 980px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+--영화목록 위에 무비차트 글자 칸
+.movieChartBeScreen_btn_wrap{ 
+	  
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+--무비차트 글자
+.tabBtn_wrap{
+	
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    display: inline-flex;
+}
+
+
+.movieChart_list{
+
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    overflow: visible;
+    position: relative;
+}
+
+.swiper-wrapper{
+	
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+    counter-reset: movie-chart-counter;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+
+.slide_movie{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    flex-shrink: 0;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    width: 170.4px;
+    margin-right: 32px;
+}
+
+.img_wrap{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 234px;
+    border-radius: 10px;
+}
+
+.movieAge{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: absolute;
+    right: 6px;
+    top: 7px;
+    z-index: 4;
+}
+
+.screenType_wrap{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 5;
+}
+
+.movieChart_btn{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    display: none;
+}
+
+
+.movie_info{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 120px;
-    width: 1000px;
-    
 }
 
-.movie-informaion {
-    margin-left: 52px;
-    margin-bottom: 40px;
-    width: 185px;
-    /* border: 1px solid black; */
-    border-radius: 5px;
-    overflow: hidden;
-}
 
-.movie-rank {
-    text-align: center;
-    margin-bottom: 0.4px;
-    background-image: linear-gradient(45deg, #f83600 0%, #fcb69f 100%);
-    color: white;
-    padding: 3px;
-    height: 30px;
-    line-height: 24px;
-}
-
-.movie-title {
-    margin-top: 5px;
-    font-size: 15px;
-    font-weight: bold;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.movie-rate {
-    margin-top: 4px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.movie-date {
-    margin-top: 3px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.like-reserve-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 6px;
-    font-size: 14px;
-}
-
-.movie-like {
-    font-size: 13px;
-    font-weight: bold;
+.swiper-button-next{
+	    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    line-height: 1.2;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+    left: auto;
+    overflow: hidden;
+    right: -20px;
+    top: calc(50% - 26px);
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.likeButton {
-    width: 23px;
-    height: 23px;
-    margin-right: 5px;
+.swiper-button-prevswiper-button-disabled{
+	
+    line-height: 1.2;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: absolute;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color));
+    right: auto;
+    overflow: hidden;
+    left: -20px;
+    top: calc(50% - 26px);
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    font-size: 0;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    opacity: .35;
+    cursor: auto;
+    pointer-events: none;
 }
 
-.likeButton:hover {
-    background-image: url("../images/ ");
-    background-position: center;
-    background-size: contain;
+.swiper-notification{
+
+    line-height: 1.2;
+    color: #666;
+    font-weight: 400;
+    list-style: none;
+    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    word-break: break-all;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1000;
 }
 
 
-/* .poster-wrapper {
-    border: 3px solid black;
-} */
-
-.poster-wrapper img {
-    width: 185px;
-    height: 254px;
-}
-
-.poster-wrapper img:hover {
-    opacity: 0.5;
-}
-
-.reserveButton>img {
-    width: 59px;
-    border-radius: 5px;
-}
+    
 
 
-/*// content */
+
