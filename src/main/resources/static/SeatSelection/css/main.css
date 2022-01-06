@@ -181,7 +181,7 @@ Start from here
     display:flex;
 }
 
-#type_adult_area ul li
+#type_adult_area ul .type_adult_block
 {
     position: relative;
     width: 30px;
@@ -191,6 +191,22 @@ Start from here
     border: 1px solid #5c5c5c;
     line-height: 16px;
     
+}
+
+#type_adult_area ul .type_adult_block.selected
+{
+	color: white;
+	background-color: black;
+}
+
+#type_adult_area ul .type_adult_block div
+{
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 10px;
+	text-align:center;
+	pointer-events: none;
 }
 
 #screen #body #container #contents #type_child_area
@@ -222,7 +238,7 @@ Start from here
     display:flex;
 }
 
-#type_child_area ul li
+#type_child_area ul .type_child_block
 {
     position: relative;
     width: 30px;
@@ -234,6 +250,21 @@ Start from here
 
 }
 
+#type_child_area ul .type_child_block.selected
+{
+	color: white;
+	background-color: black;
+}
+
+#type_child_area ul .type_child_block div
+{
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 10px;
+	text-align:center;
+	pointer-events: none;
+}
 /*
 ---------------------------------------------------------------------
 [contents] - info area
