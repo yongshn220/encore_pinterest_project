@@ -34,11 +34,10 @@
 								<a>청소년</a>
 							</div>					
 						</div>
-						<div id="info_area">
-						</div>
-						<div id="seat_area">
-						
-						</div>
+					</div>
+					<div id="info_area">
+					</div>
+					<div id="seat_area">
 					</div>
 				</div>
 			</div>
