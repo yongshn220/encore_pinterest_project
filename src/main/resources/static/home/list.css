@@ -61,15 +61,12 @@ Start from here
 /* 레이아웃 */
 #header {
 	width: 100%;
-	height: 210px; 
-	background-color: #000000;
+	height: 170px; /*헤더고정*/
+	background-color: #fff;
 	border-bottom: 1px solid #c6c6c6; 
-	background-color: lightblue;
-	position: sticky; /*헤더고정*/
-	top:0;             /*헤더고정*/ 
-
+	
 	}
-
+	
 
 	
 /* 가운데 영역 */
@@ -77,33 +74,89 @@ Start from here
 
 
 /* 로우 영역 */
-.row {padding: 0 150px;}	
+.row {padding: 0 120px;}	
 
 /* 헤더 영역 */
 .header {
 	overflow: hidden; 
 	position: Fixed;
 	width: 85%;
-	height: 210px; 
+	height: 170px; 
+	
 	
 }
 
 .header h1 {float: left;}
 
 /*로고위치*/
-.header h1 em {padding: 13px 10px 10px 0; display:block;}
-.header h1 img {width: 50%; vertical-align: sub; margin-top:35px;} 
+.header h1 em {padding: 13px 10px 10px 0; display:block; }
+.header h1 img {width: 50%; vertical-align: sub; margin-top:20px;} 
 
 /*오른쪽 서비스 위치*/
-.nav  {float:right; margin-top:65px; }
+.nav  {float:right; margin-top:25px;}
 .header .nav ul {border-left: 0px solid #777;  }
-.clearfix li {display: inline-flex; font-size:17px; font-weight: 700;}
-.clearfix img {display: flex; margin-bottom:10px; margin-right:20px; padding-right: 60px;}
-.clearfix span {display: flex; margin-bottom:10px; margin-right:20px; padding-left: 6px;}
+.clearfix li {display: inline-flex; font-size:13px; font-weight: 500; }
+.clearfix img {display: flex; margin-bottom:10px;  padding-left:5px; width:40px; height:40px;}
+.clearfix span {display: flex; margin-bottom:10px; margin-right:20px; padding-left: -5px;}
 
 
 
 /*검색창*/
+
+
+.search-box{
+		position: absolute;
+		top: 75%; left: 90%;
+		transform: translate(-50%, -50%);
+		background: #c0c0c0;
+		height: 30px;
+		border-radius: 30px;
+		padding: 10px;
+	}
+ㅎ
+/*검색폭 */
+.search-box:hover > .search-txt {
+		width: 200px;
+		padding:0 6px;
+		
+	}
+
+/*돋보기*/
+.search-box:hover > .search-btn {
+	    position: absolute;
+	    right: 5px;
+		background: white;
+		color: #1e1e1e;
+	}
+
+.search-btn{
+		color:#d9d9d9;
+		float: right; 
+		width: 30px; height: 30px;
+		border-radius: 50%;
+		background:#ffffff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 0.4s;
+		
+		
+		
+	}
+
+.search-txt {
+		border : none;
+		background : none;
+		outline: none;
+		float: left;
+		padding: 0;
+		color: white;
+		font-size: 16px;
+		transition: 0.4s;
+		line-height: 30px;
+		width: 0px;
+	}
+	
 
 
 
@@ -112,13 +165,16 @@ Start from here
 #cont{
 
     width: auto;
-	height: 100%; 
+	height: 80%; 
 	background-color: #fff;
 	background-image: url('/images/main.jpg');
 	background-size: cover;
+	background-attachment: fixed; /*배경고정*/
 	opacity: 1;
+	position: sticky; /*헤더고정*/
+	top:0;             /*헤더고정*/ 
 	
-	
+		
 	
 }
 
@@ -151,7 +207,7 @@ Start from here
     line-height: 2;
     color: #fff;
     font-weight: 700;
-    font-family: '맑은 고딕', '돋움', sans-serif;
+    font-family: 'Times New Roman', '돋움', sans-serif;
     font-size: 100%;
     
     border: solid #fff; /*나중에 0으로 변경*/
@@ -159,7 +215,7 @@ Start from here
     word-break: break-all;
     overflow: hidden;
     padding: 50px 30px 60px;
-    width: 1500px;
+    width: 1200px;
     height: 100%;
     margin: 0 auto;
     
