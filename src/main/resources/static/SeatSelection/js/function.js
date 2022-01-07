@@ -132,7 +132,7 @@ class Room
 	drawRoom()
 	{
 		elmt_seat_list = ducument.querySelectAll('#seat_selection_box .seatList');
-		//test;
+		//test develop;
 	}
 }
 
