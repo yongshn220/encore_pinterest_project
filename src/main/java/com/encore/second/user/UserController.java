@@ -59,7 +59,7 @@ public class UserController {
 		String path = "User/login";
 		if(u != null && u.getPwd().equals(pwd)) {
 			session.setAttribute("loginid",	id);
-			path = "redirect:/home";
+			path = "redirect:/Home/list";
 		}
 		return path;
 	}
