@@ -14,19 +14,38 @@ class MainController
 		this.generator.init();
 	}
 	
+	//amount select events
 	addEventAdultAmountSelectClicked(element)
 	{
-		element.click(this.pageEventHandler.adultAmountSelectClicked);
+		element.click((event) => this.pageEventHandler.adultAmountSelectClicked(event, element));
 	}
 	
 	addEventChildAmountSelectClicked(element)
 	{
-		element.click(this.pageEventHandler.childAmountSelectClicked);
+		element.click((event) => this.pageEventHandler.childAmountSelectClicked(event, element));
 	}
 	
+	//seat select events
 	addEventSeatPositionSelectClicked(element)
 	{
-		element.click(this.pageEventHandler.seatPositionSelectClicked);
+		element.click((event) => this.pageEventHandler.seatPositionSelectClicked(event, element));
+	}
+	
+	addEventSeatPositionSelectHovered(element)
+	{
+		element.hover((event) => this.pageEventHandler.seatPositionSelectHovered(event, element));
+	}
+	addEventSeatPositionSelectMouseleave(element)
+	{
+		element.mouseleave((event) => this.pageEventHandler.seatPositionSelectMouseleave(event, element));
+	}
+	
+	//multiple events connector;
+	addAllEventsSeatPositionSelect(element)
+	{
+		this.addEventSeatPositionSelectClicked(element);
+		this.addEventSeatPositionSelectHovered(element);
+		this.addEventSeatPositionSelectMouseleave(element);
 	}
 }
 
@@ -36,6 +55,9 @@ class Data
 	{
 		this.controller = controller;
 		this.room = new Room();
+		this.maxAmount = 4;
+		this.curAmount = 0;
+		this.selectedSeatList = [];
 		this.amountAdult = 0;
 		this.amountChild = 0;
 		this.adultPrice = 10000;
@@ -46,6 +68,18 @@ class Data
 	{
 		this.room.createNewRoom();
 	}
+	
+	isAmountFull()
+	{
+		let a = (this.maxAmount < this.amountAdult + this.amountChild)
+		return a;
+	}
+	
+	getAmount()
+	{
+		return this.amountAdult + this.amountChild;
+	}
+	
 }
 
 class Room
@@ -126,8 +160,9 @@ class Generator
 			}
 			
 		}
-		
 		this.controller.addEventAdultAmountSelectClicked($("#type_adult_area ul .type_adult_block"));
+		this.controller.addEventChildAmountSelectClicked($("#type_child_area ul .type_child_block"));
+
 	}
 
 	generateRoomTable()
@@ -145,8 +180,8 @@ class Generator
         		let top = row * 60;
         		elmt_selectionBox.innerHTML += 
         		`
-        		<div id="seat_id_${seat_id}"class="seatList" data-rol="${seat_id}>
-        		    <div id="text">
+        		<div id="seat_id_${seat_id}" class="seatList" data-count="${seat_id}">
+        		    <div id="text" style="pointer-events: none;">
         		        ${col + 1}
 					</div>
 				</div>
@@ -156,6 +191,9 @@ class Generator
 				
         	}	
         }
+        
+        let elmt_seatList = $('#seat_selection_box .seatList');
+        this.controller.addAllEventsSeatPositionSelect(elmt_seatList);
 	}
 }
 
