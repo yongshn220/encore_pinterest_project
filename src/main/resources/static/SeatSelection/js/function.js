@@ -268,8 +268,8 @@ class Generator
         	for(let col = 0; col < seatList[0].length; col++)
         	{
         		let seat_id = seatList[row][col].id;
-        		let left = col * 60;
-        		let top = row * 60;
+        		let left = col * 55;
+        		let top = row * 55;
         		elmt_selectionBox.innerHTML += 
         		`
         		<div id="seat_id_${seat_id}" class="seatList" data-count="${seat_id}">

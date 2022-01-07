@@ -15,7 +15,7 @@
 		<div id="body">
 			<div id="container">
 				<div id="contents">
-					<div id="title">인원/좌석</div>
+					<div id="title"><div>인원 / 좌석</div></div>
 					<div id="select_area">
 						<div id="amount_area">
 							<div id="type_adult_area">
@@ -46,20 +46,26 @@
 						<div id="instruction_area">
 							<ul>
 								<li>
-									<div></div>
-									<div>선택</div>
+									<div id="icon1" class="icon"></div>
+									<div id="text1" class="text">선택</div>
 								</li>
 								<li>
-									<div></div>
-									<div>선택가능</div>
+									<div id="icon2" class="icon"></div>
+									<div id="text2" class="text">선택가능</div>
 								</li>
 								<li>
-									<div></div>
-									<div>예매완료</div>
+									<div id="icon3" class="icon"></div>
+									<div id="text3" class="text">예매완료</div>
 								</li>
+								<li>
+									<div id="icon4" class="icon"></div>
+									<div id="text4" class="text">선택불가</div>
+								</li>
+								
 							</ul>
 						</div>
 						<div id="seat_screen_box">
+							<div>SCREEN</div>
 						</div>
 						<div id="seat_selection_box">
 						</div>

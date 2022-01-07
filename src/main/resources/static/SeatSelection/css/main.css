@@ -79,16 +79,27 @@ Start from here
 	top: 0px;
 	width: 100%;
 	height:150px;
-	
-	background-color: lightblue;
+	background-color: white;
 }
+#screen #header::after
+{
+    content: "";
+    display: block;
+    top: 149px;
+    width: 100%;
+    height: 1px;
+    background: #b10303;
+    position: absolute;
+}
+
 
 #screen #body
 {
 	position: relative;	
 	width: 100%;
 	height:100%;
-	background-color: rgb(233, 224, 159);
+	background-color: white;
+
 }
 
 #screen #body #container
@@ -106,7 +117,8 @@ Start from here
 	top: 80px;
 	margin: 0 auto;
 	width: 100%;
-	height: 820px;
+	height: 673px;
+	box-shadow: 0px 2px 10px #0000009c;
 }
 
 /*
@@ -119,8 +131,20 @@ Start from here
 {
 	position: relative;
 	width:100%;
-	height:30px;
-	background-color: red;
+	height:20px;
+	background-color: #504e4e;
+	text-align:center;
+	border: 2px solid #313131;
+
+}
+
+#screen #body #container #contents #title div
+{
+	position: relative;
+	font-size: 12px;
+	top: 6px;
+	color: #efefef;
+	
 }
 
 /*
@@ -135,20 +159,21 @@ Start from here
 	width:50%;
 	height:150px;
     text-align: center;
-	background-color: blue;
+	border: 1px solid #a2a2a2;
+	background-color: #fffdfbd6;
+	box-shadow: 0px 2px 5px #0000009c;
 }
 
 #screen #body #container #contents #select_area #amount_area
 {
     position: relative;
-    margin: 0 auto;
+    
     top: 50%;
     transform: translateY(-50%);
 	width:90%;
 	height:100px;
     text-align: center;
     z-index: 1;
-	background-color: red;
 }
 
 #screen #body #container #contents #type_adult_area
@@ -161,7 +186,6 @@ Start from here
 	width:95%;
 	height:40px;
     z-index: 2;
-	background-color: green;
 }
 
 #type_adult_area #text
@@ -170,6 +194,7 @@ Start from here
     left: 0;
     top: 10%;
     margin: 10px 10px 10px 10px;
+    color:#939292;
 
 }
 #type_adult_area ul
@@ -188,7 +213,7 @@ Start from here
     height: 30px;
     margin: 0px 0px 0px 15px;
     background-color: white;
-    border: 1px solid #5c5c5c;
+    border: 1px solid #a2a2a2;
     line-height: 16px;
     
 }
@@ -218,7 +243,6 @@ Start from here
 	width:95%;
 	height:40px;
     z-index: 2;
-	background-color: green;
 }
 
 #type_child_area #text
@@ -227,6 +251,7 @@ Start from here
     left: 0;
     top: 10%;
     margin: 10px 10px 10px 10px;
+    color:#939292;
 }
 
 #type_child_area ul
@@ -245,7 +270,7 @@ Start from here
     height: 30px;
     margin: 0px 0px 0px 15px;
     background-color: white;
-    border: 1px solid #5c5c5c;
+    border: 1px solid #a2a2a2;
     line-height: 16px;
 
 }
@@ -278,16 +303,17 @@ Start from here
 	width:50%;
 	height:150px;
     text-align: center;
-	background-color: green;
+	border: 1px solid #a2a2a2;
+	background-color: #fffdfbd6;
+	box-shadow: 0px 0px 5px #0000009c;
 }
 
 #screen #info_area #date 
 {
 	position: relative;
-	height:50px;
-	margin: 15px;
+	height:90px;
+	margin: 0px;
     text-align: center;
-	background-color: blue;
 }
 
 #screen #info_area #date div
@@ -295,20 +321,25 @@ Start from here
 	position:relative;
 	top:50%;
 	transform: translateY(-50%);
-	font-size:20px;
-	font-weight:400;
-	background-color: white;
+	font-size:25px;
+	font-weight:900;
 }
 
 #screen #info_area #seat_available 
 {
 	position: relative;
-	height:50px;
+	height:0px;
     text-align: center;
-    margin: 15px;
-	background-color: white;
+    margin: 0px;
 }
-
+#screen #info_area #seat_available  div
+{
+	position:relative;
+	top:50%;
+	transform: translateY(-50%);
+	font-size:15px;
+	font-weight:500;
+}
 
 
 
@@ -326,19 +357,66 @@ Start from here
 	width:100%;
 	height:500px;
     text-align: center;
-	background-color: yellow;
+	border: 1px solid #a2a2a2;
+	background-color: #f9f3edd6;
 }
 
 
 #contents #seat_area #instruction_area
 {
     position: absolute;
-    left: 82%;
+    left: 85%;
     top: 40%;
     transform: translateX(-50%);
     width: 12%;
     height: 30%;
-    background-color:aliceblue;
+}
+#contents #seat_area #instruction_area ul
+{
+	display:block;
+}
+
+
+#contents #seat_area #instruction_area ul li
+{
+    position:relative;
+    margin: 10px 0px 0px 20px;
+    display: flex;
+}
+
+#contents #seat_area #instruction_area ul li .icon
+{
+	position:relative;
+	width: 20px;
+	height: 20px;
+	box-shadow: 0px 2px 10px #0000009c;
+}
+
+#instruction_area ul li #icon1
+{
+	background-color: #448FF2 !important;
+}
+#instruction_area ul li #icon2
+{
+	background-color: #4e4d4d !important;
+}
+#instruction_area ul li #icon3
+{
+	background-color: #aeaeae !important;
+}
+#instruction_area ul li #icon4
+{
+	background-color: #f86363 !important;
+}
+
+#contents #seat_area #instruction_area ul li .text
+{
+	position:relative;
+	left: 10px;
+	top: 5px;
+	width: 60px;
+	height: 100%;
+	font-size: 13px;
 }
 
 #contents #seat_area #seat_screen_box
@@ -349,7 +427,16 @@ Start from here
     transform: translateX(-50%);
     width: 40%;
     height: 5%;
-    background-color:aliceblue;
+    background-color:#8c8c8c;
+}
+
+#contents #seat_area #seat_screen_box div
+{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	top: 20%;
+	letter-spacing: 10px;
 }
 
 #contents #seat_area #seat_selection_box
@@ -358,9 +445,8 @@ Start from here
     left: 50%;
     top: 30%;
     transform: translateX(-50%);
-    width: 300px;
-    height: 300px;
-    background-color:aliceblue;
+    width: 290px;
+    height: 290px;
 }
 
 #contents #seat_area #seat_selection_box .seatList
@@ -369,25 +455,34 @@ Start from here
 	width:40px;
 	height:40px;
 	margin: 10px;
-	background-color:green;
+	background-color:#4e4d4d;
+	border: 1px solid black;
 	text-align:center;
 }
 
 #contents #seat_area #seat_selection_box .seatList.hover
 {
-	background-color: blue;
+	background-color: #fefefe;
 }
 
 #contents #seat_area #seat_selection_box .seatList.clicked
 {
-	background-color: red;
+	background-color: #448FF2;
 }
 
 #contents #seat_area #seat_selection_box .seatList div
 {
-    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 32%;
+    text-align: center;
+    color:#ededed;
 }
-
+#contents #seat_area #seat_selection_box .seatList.hover div
+{
+    color:black;
+}
 
 
 
