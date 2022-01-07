@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -43,13 +44,13 @@ public class MovieController {
 	
 	//제목으로 검색
 	@PostMapping("/getbytitle/{title}")
-	public String getByTitle(String title, Map map) {
-		ArrayList<Movie> list = service.getByTitle(title);
+	public String getByTitle(String word, Map map) {
+		ArrayList<Movie> list = service.getByTitle(word);
 		map.put("list", list);
 		return "movie/list";
 	}
 	
-	
+
 	
 //	//수정
 //	//요청url: post:"/movie/edit", view: "redirect:/movie/list"

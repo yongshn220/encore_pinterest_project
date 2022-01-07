@@ -46,14 +46,17 @@
 					</div>
 					<div class="login_right">
 						<div class="login_insert">
-							<form action="/user/login" method="post">
-							<ul>
-								<li class="box">I D : <input type=text name="id"></li>
-								<li class="blank"></li>
-								<li class="box2">PWD : <input type=password name="pwd"></li>
-								<li class="blank"></li>
-								<li class="button"><input type="submit" value="L O G I N"></li>
-							</ul>
+							<form action="/User/login" method="post">
+							<label for="id">아이디</label>
+								<span class="box int_id">
+									<input type="text" name="id" id="id" class="int" size=20 required>
+								</span>
+							<label for="pwd">비밀번호</label>
+								<span class="box int_pwd">
+								<input type="password" name="pwd" id="pwd" class="int" required>
+								</span>
+								<span class="box int_button"><input type="submit" class="login" value="L O G I N">
+								</span>
 							</form>	
 						</div>
 						<div class="login_button">
@@ -63,7 +66,7 @@
 								<li class="red2"><a href="#">Pwd찾기</a></li>
 							</ul>
 						</div>
-						<a href="#">
+						<a class="login_naver" href="#">
 						<img alt="login" src="/images/loginNaver.png">
 						</a>
 					</div>
@@ -72,6 +75,10 @@
 		</div>
 	</section>
 	<!-- //login -->
+	
+	<section>
+		<img alt="down_banner" class="down_banner" src="/images/banner_down.png">
+	</section>
 
 	<script type="text/javascript" src="/js/jquery.js"></script>
 	<script type="text/javascript" src="/SeatSelection/page/login.js"></script>
