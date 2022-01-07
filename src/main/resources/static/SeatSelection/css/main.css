@@ -373,7 +373,7 @@ Start from here
 	text-align:center;
 }
 
-#contents #seat_area #seat_selection_box .seatList:hover
+#contents #seat_area #seat_selection_box .seatList.hover
 {
 	background-color: blue;
 }
