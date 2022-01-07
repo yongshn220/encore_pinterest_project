@@ -56,194 +56,132 @@ table {
 Start from here
 */
 
-/* 레이아웃 */
-#header {width: 100%; height: 107px; border-bottom: 1px solid #c6c6c6; background-color: lightblue;}
+	
 
+/* 레이아웃 */
+#header {
+	width: 100%;
+	height: 210px; 
+	background-color: #000000;
+	border-bottom: 1px solid #c6c6c6; 
+	background-color: lightblue;
+	position: sticky; /*헤더고정*/
+	top:0;             /*헤더고정*/ 
+
+	}
+
+
+	
 /* 가운데 영역 */
-.contatiner {position: relative; width:1700px; margin: 0 auto; background: rgba(0,0,0,0);}
+.contatiner {position: relative; width:1700px; margin: 0 50 50 50px; background: rgba(0,0,0,0);}
+
 
 /* 로우 영역 */
-.row {padding: 0 100px;}
+.row {padding: 0 150px;}	
 
 /* 헤더 영역 */
 .header {
 	overflow: hidden; 
 	position: Fixed;
+	width: 85%;
+	height: 210px; 
+	
 }
+
 .header h1 {float: left;}
-.header h1 em {padding: 13px 10px 10px 0; display:inline-block}
-.header h1 img {width: 200px;}
 
-.header .nav {float: right;}
-.header .nav ul {border-left: 0px solid #777;}
-.header .nav ul li {float:left; width: 100xp; text-align: center; border-right: 0px solid #777;}
-.header .nav ul li a {
+/*로고위치*/
+.header h1 em {padding: 13px 10px 10px 0; display:block;}
+.header h1 img {width: 50%; vertical-align: sub; margin-top:35px;} 
+
+/*오른쪽 서비스 위치*/
+.nav  {float:right; margin-top:65px; }
+.header .nav ul {border-left: 0px solid #777;  }
+.clearfix li {display: inline-flex; font-size:17px; font-weight: 700;}
+.clearfix img {display: flex; margin-bottom:10px; margin-right:20px; padding-right: 60px;}
+.clearfix span {display: flex; margin-bottom:10px; margin-right:20px; padding-left: 6px;}
+
+
+
+/*검색창*/
+
+
+
+
+/*메인*/
+#cont{
+
+    width: auto;
+	height: 100%; 
+	background-color: #fff;
+	background-image: url('/images/main.jpg');
+	background-size: cover;
+	opacity: 1;
 	
-	display: block; 
-	padding: 40px 20px;
-	font-size: 28px; 
-	font-weight: 700; 
-	line-height: 1.2;
-    color: #666;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    margin: 0;
-    border: 0;
-  
-	}
 	
-.img-1{
-	top:0;
-	}
-
-
-
-/*.header{
-	 line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    position: relative;
-    z-index: 101;
 	
 }
 
---상단로고쪽 
-.header_content {
-	
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    margin-bottom: 50px;
-    background-color: lightblue;
-    border-bottom: 1px solid #eee;
-}
-
-.contents h1{
-	
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 6px 25px 5px;
-    background-color: lightblue;
-}
-
-.contents h1 img{width: 200px;}
-*/
-
-
---영화아래소제목    
-.info{
-
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    list-style: none;
-    display: flex;
-    align-items: center;
-}
-
-.search{
-	
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    display: inline-flex;
-    position: absolute;
-    right: 0;
-    top: 7px;
-    padding: 0 36px 0 10px;
-}
-
-.contaniner{
-
-	line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    z-index: 7;
-}
-
+/*메인칸 전체 적용*/
 .movieChart{
 
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    line-height: 2;
+    color: #ff8080;
+    font-weight: 700;
+    font-family: '맑은 고딕', '돋움', sans-serif;
     font-size: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 50px;
     border: 0;
     vertical-align: baseline;
     word-break: break-all;
     clear: none;
     float: none;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));
+    overflow: hidden;
+    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));*/
+   
 }
 
-.contents{
-	  
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+.movieChart h3 a{ font-size: 50px; }
+
+
+/*외곽 흰선*/
+.contents {
+   
+    line-height: 2;
+    color: #fff;
+    font-weight: 700;
+    font-family: '맑은 고딕', '돋움', sans-serif;
     font-size: 100%;
-    border: 0;
+    
+    border: solid #fff; /*나중에 0으로 변경*/
     vertical-align: baseline;
     word-break: break-all;
     overflow: hidden;
     padding: 50px 30px 60px;
-    width: 980px;
+    width: 1500px;
     height: 100%;
     margin: 0 auto;
+    
 }
 
---영화목록 위에 무비차트 글자 칸
+/*중간 분홍선*/
 .movieChartBeScreen_btn_wrap{ 
+    line-height: 2;
+    color: #ff8080;
+    font-weight: 700;
+    font-family: '맑은 고딕', '돋움', sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding-top: 50px;
+    border: solid; /*나중에 0으로 변경*/
+    vertical-align: baseline;
+    word-break: break-all;
+    clear: none;
+    float: none;
+    overflow: hidden;
 	  
+	/*
     line-height: 1.2;
     color: #666;
     font-weight: 400;
@@ -257,14 +195,16 @@ Start from here
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
 }
 
---무비차트 글자
+
+/*
 .tabBtn_wrap{
 	
+	
     line-height: 1.2;
-    color: #666;
+    color: #00ff80;
     font-weight: 400;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
     font-size: 100%;
@@ -275,35 +215,44 @@ Start from here
     word-break: break-all;
     display: inline-flex;
 }
+*/
 
 
 .movieChart_list{
 
-    line-height: 1.2;
+	
+	
+   /* line-height: 2;
     color: #666;
     font-weight: 400;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
+    font-size: 100%;*/
     margin: 0;
     border: 0;
     vertical-align: baseline;
-    word-break: break-all;
+    word-break: break-all; /*줄바꿈*/
+    
     margin-left: auto;
     margin-right: auto;
+    
     list-style: none;
     padding: 0;
-    z-index: 1;
+    z-index: 1; /*겹치는 경우 우선순위*/
     overflow: visible;
     position: relative;
+    display: inline-flex;
+    
 }
 
-.swiper-wrapper{
+
+.swiper{
+	
 	
     line-height: 1.2;
     color: #666;
     font-weight: 400;
     list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-family: '맑은 고딕', '돋움', sans-serif;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -322,14 +271,17 @@ Start from here
 }
 
 
+
 .slide_movie{
+	
+	
 	    --swiper-theme-color: #007aff;
     --swiper-navigation-size: 44px;
     line-height: 1.2;
     color: #666;
     font-weight: 400;
     list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-family: '맑은 고딕', '돋움', sans-serif;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -344,14 +296,17 @@ Start from here
     margin-right: 32px;
 }
 
+
+/*포스터 사이즈*/
 .img_wrap{
+	
 	    --swiper-theme-color: #007aff;
     --swiper-navigation-size: 44px;
     line-height: 1.2;
     color: #666;
-    font-weight: 400;
+    font-weight: 700;
     list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-family: '맑은 고딕', '돋움', sans-serif;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -365,76 +320,40 @@ Start from here
     border-radius: 10px;
 }
 
+
+/*포스터안에 연령, 파란줄*/
 .movieAge{
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    line-height: 1.2;
+	   
+    /*line-height: 1.2;
     color: #666;
     font-weight: 400;
     list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
     vertical-align: baseline;
-    word-break: break-all;
+    word-break: break-all;*/
+    
+    border: solid  #007aff;
     position: absolute;
     right: 6px;
     top: 7px;
     z-index: 4;
 }
 
-.screenType_wrap{
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    z-index: 5;
-}
-
-.movieChart_btn{
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    display: none;
-}
 
 
+/*포스터 아래 글씨,주황선 글씨 이쁘게 다듬기*/
 .movie_info{
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
-    line-height: 1.2;
-    color: #666;
+	   
+    line-height: 1.5;
+    color: #fff;
     font-weight: 400;
     list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
+    font-family: '맑은 고딕', '돋움', sans-serif;
+    font-size: 101%;
     margin: 0;
     padding: 0;
-    border: 0;
+    border: solid #ff8000; /*나중에 0으로변경*/
     vertical-align: baseline;
     word-break: break-all;
     display: flex;
@@ -442,16 +361,29 @@ Start from here
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .swiper-button-next{
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
+	    
     line-height: 1.2;
     font-weight: 400;
     list-style: none;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
     margin: 0;
     padding: 0;
-    border: 0;
+    border:solid #8000ff; 
     vertical-align: baseline;
     word-break: break-all;
     position: absolute;
@@ -526,8 +458,4 @@ Start from here
     z-index: -1000;
 }
 
-
-    
-
-
-
+*/

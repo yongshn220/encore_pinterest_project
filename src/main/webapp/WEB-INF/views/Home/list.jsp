@@ -8,7 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<header id="header">
+<!--상단--> 
+<header id="header">
 		<div class="contatiner">
 			<div class="row">
 				<div class="header">
@@ -21,8 +22,8 @@
 					<nav class="nav">
 						<ul class="clearfix">
 							<li>
-                            <a href="/user/logout">
-                            <img src="/images/login.png" alt="로그인" class="img-1">
+                            <a href="/user/login/">
+                            <img src="/images/login.png" alt="로그인" ">
                             <span>로그인</span>
                              </a>
                              </li>
@@ -39,81 +40,29 @@
                             </a>
                              </li>
 						</ul>
+
 					</nav>
+					
 				</div>
 			</div>
 		</div>
-	</header>
+</header>
 
-<div id="wrap" >
-  <div class="head">
-    <div class="header_content">
-    <div class="contents">
-    <!-- 
-       <h1>
-       <a href="/Home/list">
-         <img src="/images/logo.png" alt="ElVOM">
-       </a>
-       <span>ENCOREPLEX</span>
-       </h1>
-  
-   <ul class="info">
-     <li>
-      <a href="로그인url">
-        <img src="/images/login.png" alt="로그인">
-        <span>로그인</span>
-      </a>
-      </li>
-      <li>
-      <a href="회원가입url">
-        <img src="/images/join.png" alt="회원가입">
-        <span>회원가입</span>
-      </a>
-      </li>
-      <li>
-      <a href="내정보url">
-        <img src="/images/info.png" alt="MY ElVOM">
-        <span>MY ElVOM</span>
-      </a>
-      </li>
-   </ul> 
-   -->
-  </div>
-  </div>
+<!-- 무비차트 -->
    
-   <div class="search">
-     <label for="search">
-       <input type="text" id="keyword" value>
-       <input type="hidden" id="hi_keyword" name="hi_keyword">
-     </label>
-     <button type="button" class="buttonSearch" id="id_buttonSearch">검색</button>
-     <iframe src=""rame src=""  width="0" height="0" title="" frameborder="0" scrolling="no" marginwidth="0" 
-     marginheight="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" 
-     oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
-       <html>
-         <head></head>
-         <body marginwidth="0" marginheight="0"></body>
-       </html>
-     </iframe>
-  
-   </div>
-   </div>
-    -->
-    
-   <!-- 무비차트 -->
-   
-  <div id="cont" class>
-  <!-- <input type="hidden" id="isOpenUserEmailYNPopup" name="isOpenUserEmailYNPopup" value="False"> -->
+  <header id="cont">
+ 
    <div class="movieChart">
-     <div class="movie_contents">
+     <div class="contents">
+        <h3><a href="목록페이지" class="active" id="btnMovie">무비차트</a></h3>
        <div class="movieChartBeScreen_btn_wrap">
           <div class="tabBtn_wrap">
-          <h3><a href="#none" class="active" id="btnMovie">무비차트</a></h3>
+          
      </div>
-     <div class="movieChart_list" id="id_movieChart_list">
-                        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                                
-                           <!-- 스파이더맨 -->
+     <div class="movieChart_list">
+                        <div class="swiper" style="transform: translate3d(0px, 0px, 0px);">
+                        
+                         <!-- 스파이더맨 -->
                                 <div class="slide_movie" style="width: 170.4px; margin-right: 32px;">
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/1.jpg" alt="스파이더맨-노 웨이 홈" onerror="errorImage(this)" style= width:600px;height:859px>
@@ -122,15 +71,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                          <!--   <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/imax_white.png" alt="imax"></i>
-                                            
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/forDX_white.png" alt="forDX"></i>
-                                            
-                                            <i class="screenType"><img src="https://img.cgv.co.kr/R2014/images/common/logo/screenx_white.png" alt="screenx"></i> -->
-                                            
-                                        </div>
+                                      
                                         <div class="movieChart_btn">
                                             <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -145,8 +86,7 @@
                                     </div>
                                 </div>
                                 
-                                
-                            <!-- 경관의피 -->    
+                                    <!-- 경관의피 -->    
                                 <div class="slide_movie" style="width: 170.4px; margin-right: 32px;">
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/2.jpg" alt="경관의 피" onerror="errorImage(this)" style= width:600px;height:859px>
@@ -155,9 +95,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                       
                                         <div class="movieChart_btn">
                                           <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -172,8 +110,7 @@
                                     </div>
                                 </div>
                                 
-                                
-                             <!-- 씽2게더 -->   
+                                <!-- 씽2게더 -->   
                                 <div class="slide_movie" style="width: 170.4px; margin-right: 32px;">
                                     <div class="img_wrap" data-scale="false">
                                         <img src="../images/posters/3.jpg" alt="씽2게더" onerror="errorImage(this)" style= width:600px;height:859px>
@@ -182,9 +119,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                       
                                         <div class="movieChart_btn">
                                            <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -208,9 +143,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                      
                                         <div class="movieChart_btn">
                                            <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -235,9 +168,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                        
                                         <div class="movieChart_btn">
                                            <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -262,9 +193,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                        
                                         <div class="movieChart_btn">
                                            <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -289,9 +218,7 @@
                                             
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                      
                                         <div class="movieChart_btn">
                                             <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -314,9 +241,7 @@
                                             <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                       
                                         <div class="movieChart_btn">
                                             <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -340,9 +265,7 @@
                                             <img src="../images/posters/grade-15.png" alt="15세 이상세">
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                       
                                         <div class="movieChart_btn">
                                             <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -367,9 +290,7 @@
                                             <!-- <div class="dDay_wrap"><span>8</span></div> -->
                                         
                                         </div>
-                                        <div class="screenType_wrap">
-                                            
-                                        </div>
+                                       
                                         <div class="movieChart_btn">
                                             <a href="상세페이지" class="btn_movieChart_detail">상세보기</a>
                                         
@@ -383,23 +304,21 @@
                                         <span>예매율 0.1%</span>
                                     </div>
                                 </div>
-                                
+                                  
 
                         </div>
-
-                        <div class="swiper-button-next" tabindex="0" role="button" aria-label="다음 슬라이드" aria-disabled="false"></div>
+                        <!--
+                          <div class="swiper-button-next" tabindex="0" role="button" aria-label="다음 슬라이드" aria-disabled="false"></div>
                         <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="이전 슬라이드" aria-disabled="true"></div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                    
-                    </div>
-                </div>
-           </div>
-    </div>
-                    
-     
-<!-- 하단 -->
-
-
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>  -->
+                     
+  
 </div>
+</div>
+</div>
+
+</header>
+   
 </body>
+
 </html>
