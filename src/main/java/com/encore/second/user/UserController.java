@@ -72,9 +72,10 @@ public class UserController {
 	}
 	
 	@PostMapping("/edit")
-	public String edit(User u) {
+	public String edit(User u, Map map) {
 		service.saveUser(u);
-		return "redirect:/Use/myinfo";
+		map.put("u", u);
+		return "redirect:/User/myinfo";
 	}
 	
 	@GetMapping("/out")
@@ -87,7 +88,7 @@ public class UserController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/home";
+		return "redirect:/Home/list";
 	}
 }
 
