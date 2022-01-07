@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/login.css">
-	<title>Insert title here</title>
+	<title>로그인</title>
 </head>
 <body>
 	<header id="header">
@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="#">
+						<a href="Home/list">
 							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
@@ -25,7 +25,7 @@
 							<li><a href="">예매 </a></li>
 							<li><a href="">스토어 </a></li>
 							<li><a href="">이벤트 </a></li>
-							<li><a href="/User/logout">로그인</a></li>
+							<li><a href="/User/login">로그인</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -76,8 +76,14 @@
 	</section>
 	<!-- //login -->
 	
-	<section>
-		<img alt="down_banner" class="down_banner" src="/images/banner_down.png">
+	<section id="banner">
+		<div class="container">
+			<div class="row">
+				<div class="banner_img">
+					<img alt="down_banner" class="down_banner" src="/images/banner.png">
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<script type="text/javascript" src="/js/jquery.js"></script>

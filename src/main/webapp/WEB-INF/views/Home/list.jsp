@@ -19,6 +19,26 @@
 					</h1>
 					<nav class="nav">
 						<ul class="clearfix">
+<<<<<<< HEAD
+							<li>
+                            <a href="/User/login">
+                            <img src="/images/login.png" alt="로그인">
+                            <span>로그인</span>
+                             </a>
+                             </li>
+                             <li>
+                             <a href="/User/join">
+                             <img src="/images/join.png" alt="회원가입">
+                             <span>회원가입</span>
+                             </a>
+                             </li>
+                             <li>
+                             <a href="/User/myinfo">
+                            <img src="/images/info.png" alt="MY ElVOM">
+                           <span>MY ElVOM</span>
+                            </a>
+                             </li>
+=======
 							<li><a href="/User/login"> <img src="/images/login.png"
 									alt="로그인"> <span>로그인</span>
 							</a></li>
@@ -28,6 +48,7 @@
 							<li><a href="/User/myinfo"> <img src="/images/info.png"
 									alt="MY ElVOM"> <span>MY ElVOM</span>
 							</a></li>
+>>>>>>> 73e44c9cf6cce435e24eb62f4a7e69d6d254fadb
 						</ul>
 
 					</nav>
