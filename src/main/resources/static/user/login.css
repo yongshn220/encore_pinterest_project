@@ -81,21 +81,29 @@ Start from here
 .header .nav ul li a:hover {color: blue}
 
 /* 로그인 */
-.login_inf {position: absolut; left: 0; top: 20px; width: 100%; height: 100px;}
-.login_inf a {color: green; font-size: 12px;}
+.login_inf {position: absolut; left: 0; top: 20px; width: 100%; height: 550px;}
+.login_inf a {color: #00e600; font-size: 12px;}
 .login_inf a:hover {color: black;}
 .login_inf .login_left {float: left;}
 .login_inf .login_left img {width: 300px; height: 300px; padding: 100px 0 10px 340px; display:block}
 
-.login_inf .login_right {float: right; padding: 146px 340px 10px 0; display:block}
-.login_inf .login_right li.box {font-size: 20px; padding: 7px 5px; display: block; border: 2px solid #c6c6c6;}
-.login_inf .login_right li.box2 {font-size: 20px; padding: 7px 5px; display: block; border: 2px solid #c6c6c6;}
-.login_inf .login_right li.button {font-size: 20px; padding: 5px 5px; display: block; border: 2px solid #c6c6c6;}
-.login_inf .login_right li.blank {padding-top: 4px; display: block;}
-.login_inf .login_right .login_button ul {padding: 3px 3px; }
+.login_inf .box {display: block; width:255px; height:30px; border: solid 2px #c0c0c0; box-sizing: border-box; position: relative; margin: 3px;}
+.login_inf .int {display: block; width:247px; height:24px; border: none; font-size: 15px}
+.login_inf label {color:#c6c6c6;}
+
+.login_inf .login_right {float: right; padding: 135px 340px 10px 0; position: relative; display:block}
+.login_inf .login_right .box.int_button {height: 39px; border:none; }
+.login_inf .login_right .login {padding: 9px 98px 9px 98px; background-color: pink; color: white; border: solid 2px pink;}
+.login_inf .login_right .login:hover {color: black; }
+
+.login_inf .login_right .login_button ul {padding: 2px 3px;}
 .login_inf .login_right .login_button li {display: inline; }
 .login_inf .login_right .login_button li.green {padding: 10px 92px 10px 10px; }
 
+.login_inf .login_right .login_naver img {display: block; width: 256px; height: 40px; padding: 2px}
+
+/* 배너 */
+img.down_banner {width: 100%; height: 300px; }
 
 
 
