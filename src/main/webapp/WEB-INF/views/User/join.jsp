@@ -94,8 +94,8 @@ const idCheck=()=>{
 								<div>
 									<h3><label for="gender">성별</label></h3>
 									<span class="box int_gender">
-									<input type="radio" name="gender" id="gender" value="xx" checked>남
-									<input type="radio" name="gender" value="xy">여
+									<input type="radio" name="gender" id="gender" value="xy" checked>남성
+									<input type="radio" name="gender" value="xx">여성
 									</span>
 								</div>
 								<div>

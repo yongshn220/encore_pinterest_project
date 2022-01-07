@@ -7,6 +7,15 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/myinfo.css">
 <title>내 정보</title>
+<script type="text/javascript">
+window.onload = () => {
+	if("${u.gender}"=="xy"){
+		document.getElementById("gender").checked = true;
+	}else {
+		document.getElementById("gender2").checked = true;
+	}
+}
+</script>
 </head>
 <body>
 	<header id="header">
@@ -51,37 +60,37 @@
 								<div class="pwd">
 									<h3><label for="pwd">비밀번호</label></h3>
 									<span class="box int_pwd">
-									<input type="password" name="pwd" id="pwd" class="int" readonly>
+									<input type="password" name="pwd" id="pwd" value="${u.pwd }" class="int" readonly>
 									</span>
 								</div>
 								<div>
 									<h3><label for="name">이름</label></h3>
 									<span class="box int_name">
-									<input type="text" name="name" id="name" class="int" >
+									<input type="text" name="name" id="name" value="${u.name }"  class="int" >
 									</span>
 								</div>
 								<div>
 									<h3><label for="email">이메일</label></h3>
 									<span class="box int_email">
-									<input type="email" name="email" id="email" class="int" >
+									<input type="email" name="email" id="email"  value="${u.email }" class="int" >
 									</span>
 								</div>
 								<div>
 									<h3><label for="gender">성별</label></h3>
 									<span class="box int_gender">
-									<input type="radio" name="gender" id="gender" value="xx" checked>남
-									<input type="radio" name="gender" value="xy">여
+									<input type="radio" name="gender" id="gender" value="xy">남성
+									<input type="radio" name="gender" id="gender2" value="xx">여성
 									</span>
 								</div>
 								<div>
 									<h3 class="age"><label for="age">나이</label></h3>
 									<span class="box int_age">
-									<input type="number" name=age id="age" class="int" >
+									<input type="number" name=age id="age" value="${u.age }" class="int" >
 									</span>
 								</div>
 								<div class="buttons">
 								<input class="eidt_button" type="submit" value="수정하기">
-								<a href="#">
+								<a href="/User/out">
 								<input class="out_button" type="button" value="탈퇴하기">
 								</a>
 								</div>
