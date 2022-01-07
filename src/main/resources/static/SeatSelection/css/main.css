@@ -378,6 +378,10 @@ Start from here
 	background-color: blue;
 }
 
+#contents #seat_area #seat_selection_box .seatList.clicked
+{
+	background-color: red;
+}
 
 #contents #seat_area #seat_selection_box .seatList div
 {

@@ -3,6 +3,13 @@ class PageEventHandler
 	constructor(controller)
 	{
 		this.controller = controller;
+		this.curSeatHovering = [];
+	}
+	
+	init()
+	{
+		this.data = this.controller.data;
+		this.room = this.data.room;
 	}
 	
 	adultAmountSelectClicked = (event, element) => {
@@ -39,72 +46,60 @@ class PageEventHandler
 	}
 	
 	seatPositionSelectClicked = (event, element) => {
-		let eleArray = element.toArray();
-		eleArray.forEach(e => {
-			if(e.classList.contains('hover'))
-			{
-				e.classList.add('clicked');	
-			}
-		});
+		let id = event.target.getAttribute("data-count");
+		let pos = numToRowCol(parseInt(id));
+		let seatState = this.room.seatList[pos.row][pos.col].state;
+		if(seatState == SEATSTATE.clicked)
+		{
+			this.room.unclicked(pos.row, pos.col);
+		}
+		else if(seatState == SEATSTATE.hovered)
+		{
+			this.room.clicked();	
+		}
 	}
 	
+	
+	
 	seatPositionSelectHovered = (event, element) => {
-		this.seatRemoveHover(element);
+	
 		// number of people 
-		let amount = this.controller.data.getAmount();
-		// 2D array of seats
-		let seatList = this.controller.data.room.seatList;
+		let amount = this.data.getAmount();
+		let curAmount = this.data.curAmount;
+		
+		let finAmount = amount - curAmount;
+		
 		// id of hovering element
 		let seatId = Math.floor(event.target.getAttribute("data-count"));
 		// pos.row & pos.col of hovering element;
 		let pos = numToRowCol(seatId);
 		
-		if(amount > 1)
+		if(finAmount > 1)
 		{
-			if(this.isSeatValid(pos.row, pos.col))
+			if(this.room.isSeatValid(pos.row, pos.col))
 			{
-				if(this.isSeatValid(pos.row, pos.col + 1))
+				if(this.room.isSeatValid(pos.row, pos.col + 1) )
 				{
-					$(`#seat_id_${seatId}`).addClass('hover');
-					$(`#seat_id_${seatId + 1}`).addClass('hover');
+					this.room.chageSeatState(pos.row, pos.col, SEATSTATE.hovered);
+					this.room.chageSeatState(pos.row, pos.col+1, SEATSTATE.hovered);
 				}
 			}
 		}
-		else if(amount > 0)
+		else if(finAmount > 0)
 		{
-			if(this.isSeatValid(pos.row, pos.col))
+			if(this.room.isSeatValid(pos.row, pos.col))
 			{
-				event.target.classList.add('hover');							
+				this.room.chageSeatState(pos.row, pos.col, SEATSTATE.hovered);					
 			}
 		}
 		else
 		{
 			
 		}
+		this.room.drawRoom();
 	}
 	
-	seatRemoveHover(element)
-	{
-		let eleArray = element.toArray();
-		eleArray.forEach(e => {
-			if(!e.classList.contains('clicked'))
-			{
-				e.classList.remove('hover');
-			}
-		})
-	}
-	
-	seatPositionSelectMouseleave = (event, element) => {
-		this.seatRemoveHover(element);
-	}
-	
-	isSeatValid(row, col)
-	{
-		if(row < 5 && col < 5)
-		{
-			let seatList = this.controller.data.room.seatList;
-			return seatList[row][col].isEmpty;			
-		}
-		return false;
+	seatPositionSelectMouseleave = () => {
+		this.room.removeHovered();
 	}
 }
