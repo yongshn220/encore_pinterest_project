@@ -80,6 +80,26 @@ class Data
 		return this.amountAdult + this.amountChild;
 	}
 	
+	selectSeat(seatIdList)
+	{
+		let seatList = [];
+		seatIdList.forEach(id => {
+			let pos = numToRowCol(parseInt(id));
+			seatList.push(this.room.seatList[pos.row][pos.col]);
+		})
+		this.selectedSeatList.push(seatList);
+	}
+	
+	unselectSeat(id)
+	{
+		let pos = numToRowCol(parseInt(id));
+		let seat = this.room.seatList[pos.row][pos.col];
+		this.selectedSeatList.forEach(seatList => {
+			if(seatList.includes(seat)){
+				
+			}
+		})
+	}
 }
 
 class Room
@@ -107,6 +127,11 @@ class Room
 	updateRoom()
 	{
 		
+	}
+	
+	drawRoom()
+	{
+		elmt_seat_list = ducument.querySelectAll('#')
 	}
 }
 

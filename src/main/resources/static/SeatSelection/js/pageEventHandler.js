@@ -3,6 +3,7 @@ class PageEventHandler
 	constructor(controller)
 	{
 		this.controller = controller;
+		this.curSeatHovering = [];
 	}
 	
 	adultAmountSelectClicked = (event, element) => {
@@ -39,13 +40,22 @@ class PageEventHandler
 	}
 	
 	seatPositionSelectClicked = (event, element) => {
-		let eleArray = element.toArray();
-		eleArray.forEach(e => {
-			if(e.classList.contains('hover'))
-			{
-				e.classList.add('clicked');	
-			}
-		});
+		console.log(this.curSeatHovering);
+		
+		if(event.target.classList.contains('selected'))
+		{
+			this.controller.data.unselectSeat(event.target.getAttribute("data-count"));
+		}
+		else
+		{
+			let seatIdList = [];
+			this.curSeatHovering.forEach(e => {
+				e.addClass('clicked');
+				
+				seatIdList.push(e.attr("data-count"))
+			});
+			this.controller.data.selectSeat(seatIdList);
+		}
 	}
 	
 	seatPositionSelectHovered = (event, element) => {
@@ -61,12 +71,13 @@ class PageEventHandler
 		
 		if(amount > 1)
 		{
-			if(this.isSeatValid(pos.row, pos.col))
+			if(this.isSeatValid(pos.row, pos.col, seatId))
 			{
-				if(this.isSeatValid(pos.row, pos.col + 1))
+				if(this.isSeatValid(pos.row, pos.col + 1, seatId + 1) )
 				{
-					$(`#seat_id_${seatId}`).addClass('hover');
-					$(`#seat_id_${seatId + 1}`).addClass('hover');
+					let seatA = $(`#seat_id_${seatId}`).addClass('hover');
+					let seatB = $(`#seat_id_${seatId + 1}`).addClass('hover');
+					this.curSeatHovering = [seatA, seatB];
 				}
 			}
 		}
@@ -74,7 +85,8 @@ class PageEventHandler
 		{
 			if(this.isSeatValid(pos.row, pos.col))
 			{
-				event.target.classList.add('hover');							
+				let seatA = $(`#seat_id_${seatId}`).addClass('hover');	
+				this.curSeatHovering = [seatA];						
 			}
 		}
 		else
@@ -98,8 +110,12 @@ class PageEventHandler
 		this.seatRemoveHover(element);
 	}
 	
-	isSeatValid(row, col)
+	isSeatValid(row, col, seatId)
 	{
+		if($(`#seat_id_${seatId}`).hasClass('clicked'))
+		{
+			return false;
+		}
 		if(row < 5 && col < 5)
 		{
 			let seatList = this.controller.data.room.seatList;
