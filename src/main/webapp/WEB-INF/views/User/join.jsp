@@ -35,7 +35,7 @@ const idCheck=()=>{
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="#">
+						<a href="Home/list">
 							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
@@ -46,7 +46,7 @@ const idCheck=()=>{
 							<li><a href="">예매 </a></li>
 							<li><a href="">스토어 </a></li>
 							<li><a href="">이벤트 </a></li>
-							<li><a href="/User/logout">로그인</a></li>
+							<li><a href="/User/login">로그인</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -99,12 +99,12 @@ const idCheck=()=>{
 									</span>
 								</div>
 								<div>
-									<h3><label for="age">나이</label></h3>
+									<h3 class="age"><label for="age">나이</label></h3>
 									<span class="box int_age">
 									<input type="number" name=age id="age" class="int" required>
 									</span>
 								</div>
-								<input type="submit" value="회원가입">
+								<input class="join_button" type="submit" value="가입하기">
 							</form>
 						</div>
 					</div>

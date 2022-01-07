@@ -22,19 +22,19 @@
 					<nav class="nav">
 						<ul class="clearfix">
 							<li>
-                            <a href="/user/login/">
-                            <img src="/images/login.png" alt="로그인" ">
+                            <a href="/User/login">
+                            <img src="/images/login.png" alt="로그인">
                             <span>로그인</span>
                              </a>
                              </li>
                              <li>
-                             <a href="회원가입url">
+                             <a href="/User/join">
                              <img src="/images/join.png" alt="회원가입">
                              <span>회원가입</span>
                              </a>
                              </li>
                              <li>
-                             <a href="내정보url">
+                             <a href="/User/myinfo">
                             <img src="/images/info.png" alt="MY ElVOM">
                            <span>MY ElVOM</span>
                             </a>

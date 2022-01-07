@@ -68,11 +68,7 @@ public class UserController {
 	public void editForm(HttpSession session, Map map) {
 		String id = (String) session.getAttribute("loginid");
 		User u = service.getUser(id);
-		ArrayList<Reserve> r = serviceR.getByUser_id(u);
-		//ArrayList<Seat> s = serviceS.getByReserve_id(r);		
 		map.put("u", u);
-		map.put("r", r);
-		//map.put("s", s);
 	}
 	
 	@PostMapping("/edit")
