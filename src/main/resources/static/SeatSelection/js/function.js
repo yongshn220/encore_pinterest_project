@@ -12,6 +12,7 @@ class MainController
 	{
 		this.data.init();
 		this.generator.init();
+		this.pageEventHandler.init();
 	}
 	
 	//amount select events
@@ -107,6 +108,7 @@ class Room
 	constructor()
 	{
 		this.seatList = new Array(5);
+		this.clickedSeatList = [];
 	}
 	
 	createNewRoom()
@@ -131,9 +133,92 @@ class Room
 	
 	drawRoom()
 	{
-		elmt_seat_list = ducument.querySelectAll('#seat_selection_box .seatList');
-		//test develop;
+		this.seatList.forEach(row => {
+			row.forEach(seat => {
+				let elmt_seat = $(`#seat_selection_box #seat_id_${seat.id}`);
+				elmt_seat.removeClass('hover');
+				elmt_seat.removeClass('clicked');
+				switch(seat.state)
+				{
+					case SEATSTATE.reserved: elmt_seat.addClass('reserved');
+					break;
+					case SEATSTATE.clicked: elmt_seat.addClass('clicked');
+					break;
+					case SEATSTATE.hovered: elmt_seat.addClass('hover');
+					break;
+					default: null;
+					break;
+				}				
+			})
+		});
 	}
+	
+	removeHovered()
+	{
+		this.seatList.forEach(row => {
+			row.forEach(seat => {
+				if(seat.state == SEATSTATE.hovered)
+				{
+					seat.state = SEATSTATE.empty;
+				}				
+			})
+		});
+		this.drawRoom();
+	}
+	
+	chageSeatState(row, col, state)
+	{
+		this.seatList[row][col].state = state;
+	}
+	
+	clicked()
+	{
+		let clickedSeat = [];
+		this.seatList.forEach(row => {
+			row.forEach(seat => {
+				if(seat.state == SEATSTATE.hovered)
+				{
+					seat.state = SEATSTATE.clicked;
+					clickedSeat.push(seat);
+				}				
+			})
+		});
+		this.clickedSeatList.push(clickedSeat);
+		
+		this.drawRoom();
+	}
+	
+	unclicked(row, col)
+	{
+		this.clickedSeatList.forEach(clickedSeat => {
+			if(clickedSeat.includes(this.seatList[row][col]))
+			{
+				clickedSeat.forEach(seat => {
+					this.seatList[seat.row][seat.col].state = SEATSTATE.empty;
+				});
+			}
+		})
+		this.drawRoom();
+	}
+	
+	
+	isSeatValid(row, col)
+	{
+		if(this.isPosValid(row, col))
+		{
+			return this.seatList[row][col].state == SEATSTATE.empty			
+		}
+		return false;
+	}
+	
+	isPosValid(row, col)
+	{
+		if(row >= 0 && row < 5 && col >= 0 && col < 5)
+		{
+			return true;
+		}
+		return false;
+	}	
 }
 
 class Seat
@@ -143,7 +228,7 @@ class Seat
 		this.id = id;
 		this.row = row;
 		this.col = col;
-		this.isEmpty = true;
+		this.state = SEATSTATE.empty;
 	}
 }
 

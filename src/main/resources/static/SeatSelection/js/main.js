@@ -15,3 +15,11 @@ function numToRowCol(num)
 	return {"row": row, "col": col};
 }
 
+
+const SEATSTATE = 
+{
+	empty: 0,
+	reserved: 1,
+	clicked: 2,
+	hovered: 3,
+}
