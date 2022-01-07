@@ -47,7 +47,7 @@ public class UserController {
 	@PostMapping("/join") 
 	public String join(User u) {
 		service.saveUser(u);
-		return "redirect:/User/home";
+		return "redirect:/Home/list";
 	}
 	
 	@GetMapping("/login") //홈페이지에서 로그인 버튼 클릭시 login 페이지로 넘어감

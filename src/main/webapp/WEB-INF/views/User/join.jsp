@@ -23,7 +23,7 @@ xhttp.onload = function() {
 
 const idCheck=()=>{
 	const idVal = document.getElementById("id").value;
-	xhttp.open("GET", "/user/idcheck?id="+idVal);
+	xhttp.open("GET", "/User/idcheck?id="+idVal);
 	xhttp.send();
 }
 
