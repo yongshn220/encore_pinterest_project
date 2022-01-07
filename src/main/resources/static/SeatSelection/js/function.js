@@ -55,10 +55,9 @@ class Data
 	constructor(controller)
 	{
 		this.controller = controller;
-		this.room = new Room();
+		this.room = new Room(controller);
 		this.maxAmount = 4;
 		this.curAmount = 0;
-		this.selectedSeatList = [];
 		this.amountAdult = 0;
 		this.amountChild = 0;
 		this.adultPrice = 10000;
@@ -80,33 +79,13 @@ class Data
 	{
 		return this.amountAdult + this.amountChild;
 	}
-	
-	selectSeat(seatIdList)
-	{
-		let seatList = [];
-		seatIdList.forEach(id => {
-			let pos = numToRowCol(parseInt(id));
-			seatList.push(this.room.seatList[pos.row][pos.col]);
-		})
-		this.selectedSeatList.push(seatList);
-	}
-	
-	unselectSeat(id)
-	{
-		let pos = numToRowCol(parseInt(id));
-		let seat = this.room.seatList[pos.row][pos.col];
-		this.selectedSeatList.forEach(seatList => {
-			if(seatList.includes(seat)){
-				
-			}
-		})
-	}
 }
 
 class Room
 {
-	constructor()
+	constructor(controller)
 	{
+		this.controller = controller;
 		this.seatList = new Array(5);
 		this.clickedSeatList = [];
 	}
@@ -133,6 +112,7 @@ class Room
 	
 	drawRoom()
 	{
+		let clicked = 0;
 		this.seatList.forEach(row => {
 			row.forEach(seat => {
 				let elmt_seat = $(`#seat_selection_box #seat_id_${seat.id}`);
@@ -142,7 +122,7 @@ class Room
 				{
 					case SEATSTATE.reserved: elmt_seat.addClass('reserved');
 					break;
-					case SEATSTATE.clicked: elmt_seat.addClass('clicked');
+					case SEATSTATE.clicked: elmt_seat.addClass('clicked'); clicked++;
 					break;
 					case SEATSTATE.hovered: elmt_seat.addClass('hover');
 					break;
@@ -151,6 +131,7 @@ class Room
 				}				
 			})
 		});
+		this.controller.data.curAmount = clicked;
 	}
 	
 	removeHovered()

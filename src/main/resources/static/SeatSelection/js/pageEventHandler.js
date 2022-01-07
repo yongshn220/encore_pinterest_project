@@ -64,13 +64,17 @@ class PageEventHandler
 	seatPositionSelectHovered = (event, element) => {
 	
 		// number of people 
-		let amount = this.controller.data.getAmount();
+		let amount = this.data.getAmount();
+		let curAmount = this.data.curAmount;
+		
+		let finAmount = amount - curAmount;
+		
 		// id of hovering element
 		let seatId = Math.floor(event.target.getAttribute("data-count"));
 		// pos.row & pos.col of hovering element;
 		let pos = numToRowCol(seatId);
 		
-		if(amount > 1)
+		if(finAmount > 1)
 		{
 			if(this.room.isSeatValid(pos.row, pos.col))
 			{
@@ -81,7 +85,7 @@ class PageEventHandler
 				}
 			}
 		}
-		else if(amount > 0)
+		else if(finAmount > 0)
 		{
 			if(this.room.isSeatValid(pos.row, pos.col))
 			{
