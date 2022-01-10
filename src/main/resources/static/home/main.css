@@ -167,8 +167,9 @@ Start from here
     width: auto;
 	height: 80%; 
 	background-color: #fff;
-	background-image: url('/images/main.jpg');
-	background-size: cover;
+	
+	/*background-image: url('/images/main.jpg');
+	background-size: cover;*/
 	background-attachment: fixed; /*배경고정*/
 	opacity: 1;
 	position: sticky; /*헤더고정*/
@@ -201,16 +202,17 @@ Start from here
 .movieChart h3 a{ font-size: 50px; }
 
 
-/*외곽 흰선*/
+/*외곽 검은선*/
 .contents {
    
     line-height: 2;
-    color: #fff;
+    color: #000;
     font-weight: 700;
     font-family: 'Times New Roman', '돋움', sans-serif;
     font-size: 100%;
     
-    border: solid #fff; /*나중에 0으로 변경*/
+    border: solid #c6c6c6; /*나중에 0으로 변경*/
+     border-radius: 20px;
     vertical-align: baseline;
     word-break: break-all;
     overflow: hidden;
@@ -218,14 +220,16 @@ Start from here
     width: 1200px;
     height: 100%;
     margin: 0 auto;
+    margin-bottom: 20px;
+    
+    
+    
     
 }
 
-/*중간 분홍선*/
+/*중간 분홍선 섹션*/
 .movieChartBeScreen_btn_wrap{ 
 	
-	width: 300vW;
-	transform: translate(-100vw);
    
     line-height: 2;
     color: #ff8080;
@@ -240,31 +244,18 @@ Start from here
     clear: none;
     float: none;
     overflow: hidden;
-	  
-	/*
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
+    width: 100%;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;*/
+       
+
 }
 
 
 
 .tabBtn_wrap{
 	
-	width: 100vw;
-	float: left;
-	
+
 	 line-height: 1.2;
     color: #00ff80;
     font-weight: 400;
@@ -275,7 +266,13 @@ Start from here
     border: 0;
     vertical-align: baseline;
     word-break: break-all;
-    display: inline-flex;
+    display: flex;
+     justify-content: space-evenly;
+     flex-direction: row;
+     flex-wrap: norap;
+     
+     
+    
 }
 
 
@@ -290,6 +287,7 @@ Start from here
     font-weight: 400;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
     font-size: 100%;*/
+    
     margin: 0;
     border: 0;
     vertical-align: baseline;
@@ -303,7 +301,8 @@ Start from here
     z-index: 1; /*겹치는 경우 우선순위*/
     overflow: visible;
     position: relative;
-    display: inline-flex;
+    display: flex;
+    
     
 }
 
@@ -311,27 +310,37 @@ Start from here
 .swiper{
 	
 	
-    line-height: 1.2;
+  /*  line-height: 1.2;
     color: #666;
     font-weight: 400;
     list-style: none;
     font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
+    font-size: 100%; */
+    
     vertical-align: baseline;
     word-break: break-all;
+    
+    /*display: flex;*/
+    
+    margin: 0;
+    box-sizing: content-box;
+    
+    /*margin: 0;
+    padding: 0;
+    border: 0;
+    
     position: relative;
     width: 100%;
     height: 100%;
     z-index: 1;
-    display: flex;
+   
     transition-property: transform;
     box-sizing: content-box;
     counter-reset: movie-chart-counter;
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);*/
 }
+
+
 
 
 
@@ -354,16 +363,18 @@ Start from here
     height: 100%;
     position: relative;
     transition-property: transform;
-    width: 170.4px;
-    margin-right: 32px;
+    width: 300px;
+    height: 350px;
+    margin-right: 130px;
+    margin-left: 50px;
 }
+
+
 
 
 /*포스터 사이즈*/
 .img_wrap{
 	
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
     line-height: 1.2;
     color: #666;
     font-weight: 700;
@@ -372,14 +383,17 @@ Start from here
     font-size: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
+    border: solid #80ff00;
     vertical-align: baseline;
     word-break: break-all;
     overflow: hidden;
     position: relative;
     width: 300px;
-    height: 145px;
+    height: 350px;
     border-radius: 10px;
+
+    
+    
 }
 
 
@@ -409,7 +423,7 @@ Start from here
 .movie_info{
 	   
     line-height: 1.5;
-    color: #fff;
+    color: #000;
     font-weight: 400;
     list-style: none;
     font-family: '맑은 고딕', '돋움', sans-serif;
@@ -428,88 +442,4 @@ Start from here
 
 
 
-/*
-.swiper-button-next{
-	    
-    line-height: 1.2;
-    font-weight: 400;
-    list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    margin: 0;
-    padding: 0;
-    border:solid #8000ff; 
-    vertical-align: baseline;
-    word-break: break-all;
-    position: absolute;
-    z-index: 10;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color,var(--swiper-theme-color));
-    left: auto;
-    overflow: hidden;
-    right: -20px;
-    top: calc(50% - 26px);
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    font-size: 0;
-    border-radius: 50%;
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
-.swiper-button-prevswiper-button-disabled{
-	
-    line-height: 1.2;
-    font-weight: 400;
-    list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    position: absolute;
-    z-index: 10;
-    align-items: center;
-    justify-content: center;
-    color: var(--swiper-navigation-color,var(--swiper-theme-color));
-    right: auto;
-    overflow: hidden;
-    left: -20px;
-    top: calc(50% - 26px);
-    width: 40px;
-    height: 40px;
-    margin-top: -20px;
-    font-size: 0;
-    border-radius: 50%;
-    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.2);
-    display: none;
-    opacity: .35;
-    cursor: auto;
-    pointer-events: none;
-}
-
-.swiper-notification{
-
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    position: absolute;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    opacity: 0;
-    z-index: -1000;
-}
-
-*/
