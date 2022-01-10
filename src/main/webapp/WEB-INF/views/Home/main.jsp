@@ -6,7 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <link rel="stylesheet" type="text/css" href="/home/main.css">
-<title>Insert title here</title>
+<title>영화 그 이상의 감동. ElVOM</title>
 </head>
 <body>
 	<!--상단-->
@@ -64,7 +64,7 @@
 					<!-- 스파이더맨 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<a href="/Home/detail"><img src="../images/posters/1.jpg"
+							<a href="/Reservation/DateSelection/main"><img src="../images/posters/1.jpg"
 								alt="스파이더맨-노 웨이 홈" onerror="errorImage(this)"
 								style="width: 280px; height: 350px"></a>
 
