@@ -68,17 +68,14 @@ public class UserController {
 	public void editForm(HttpSession session, Map map) {
 		String id = (String) session.getAttribute("loginid");
 		User u = service.getUser(id);
-		ArrayList<Reserve> r = serviceR.getByUser_id(u);
-		//ArrayList<Seat> s = serviceS.getByReserve_id(r);		
 		map.put("u", u);
-		map.put("r", r);
-		//map.put("s", s);
 	}
 	
 	@PostMapping("/edit")
-	public String edit(User u) {
+	public String edit(User u, Map map) {
 		service.saveUser(u);
-		return "redirect:/Use/myinfo";
+		map.put("u", u);
+		return "redirect:/User/myinfo";
 	}
 	
 	@GetMapping("/out")
@@ -91,7 +88,7 @@ public class UserController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:/home";
+		return "redirect:/Home/list";
 	}
 }
 

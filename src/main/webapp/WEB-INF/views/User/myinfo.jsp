@@ -4,23 +4,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/user/myinfo.css">
+<title>내 정보</title>
+<script type="text/javascript">
+window.onload = () => {
+	if("${u.gender}"=="xy"){
+		document.getElementById("gender").checked = true;
+	}else {
+		document.getElementById("gender2").checked = true;
+	}
+}
+</script>
 </head>
 <body>
 	<header id="header">
-		<div class="contatiner">
+		<div class="container">
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="#">
+						<a href="Home/list">
 							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>
-					<nav class="nav"></nav>
-						<ul>
-							<li><a href="/User/logout">로그아웃</a></li>
+					<nav class="nav">
+						<ul class="clearfix">
+							<li><a href="">영화 </a></li>
+							<li><a href="">극장 </a></li>
+							<li><a href="">예매 </a></li>
+							<li><a href="">스토어 </a></li>
+							<li><a href="">이벤트 </a></li>
+							<li><a href="/User/login">로그인</a></li>
 						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
@@ -28,28 +44,62 @@
 	<!-- //header -->
 	
 	<section id="myinfo">
-	<div class="title"><h3>내 정보 확인 및 수정</h3></div>
-	<div class="myinfo">
-		<div class="contatiner">
-			<div class="row">
-				<div class="join_insert">
-					<form action="/User/edit" method="post">
-						<ul>
-							<li>id:<input type="text" name="id" value="${u.id }" readonly></li>
-							<li>pwd:<input type="password" name="pwd" value="${u.pwd }" ></li>
-							<li>name:<input type="text" name="name" value="${u.name }" ></li>
-							<li>email:<input type="email" name="email" value="${u.email }" ></li>
-							<li>gender:<input type="radio" name=gender value="xx">남
-							<input type="radio" name=gender value="xy">여</li>
-							<li>age:<input type="number" name=age value="${u.age }" ></li>
-							<li>edit:<input type="submit" value="내 정보 수정"></li>
-							<li><a href="/member/out">탈퇴</a><br/></li>
-						</ul>
-					</form>
+		<div class="myinfo">
+		<h2>내 정보 확인 및 수정</h2>
+			<div class="contatiner">
+				<div class="row">
+					<div class="wrapper">
+						<div class="myinfo_insert">
+							<form action="/User/edit" method="post">
+								<div>
+									<h3><label for="id">아이디</label></h3>
+									<span class="box int_id">
+										<input type="text" name="id" id="id" class="int" size=20 value="${u.id }" readonly>
+									</span>
+								</div>
+								<div class="pwd">
+									<h3><label for="pwd">비밀번호</label></h3>
+									<span class="box int_pwd">
+									<input type="password" name="pwd" id="pwd" value="${u.pwd }" class="int" readonly>
+									</span>
+								</div>
+								<div>
+									<h3><label for="name">이름</label></h3>
+									<span class="box int_name">
+									<input type="text" name="name" id="name" value="${u.name }"  class="int" >
+									</span>
+								</div>
+								<div>
+									<h3><label for="email">이메일</label></h3>
+									<span class="box int_email">
+									<input type="email" name="email" id="email"  value="${u.email }" class="int" >
+									</span>
+								</div>
+								<div>
+									<h3><label for="gender">성별</label></h3>
+									<span class="box int_gender">
+									<input type="radio" name="gender" id="gender" value="xy">남성
+									<input type="radio" name="gender" id="gender2" value="xx">여성
+									</span>
+								</div>
+								<div>
+									<h3 class="age"><label for="age">나이</label></h3>
+									<span class="box int_age">
+									<input type="number" name=age id="age" value="${u.age }" class="int" >
+									</span>
+								</div>
+								<div class="buttons">
+								<input class="eidt_button" type="submit" value="수정하기">
+								<a href="/User/out">
+								<input class="out_button" type="button" value="탈퇴하기">
+								</a>
+								</div>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	</section>
 	<!-- //info -->
 	

@@ -22,6 +22,10 @@ public class MovieService {
 		return (ArrayList<Movie>) dao.findAll();
 	}
 	
+	public Movie getById(int id) {
+		return dao.getById(id);
+	}
+	
 	
 	//영화삭제
 	public void delMovie(int id) {

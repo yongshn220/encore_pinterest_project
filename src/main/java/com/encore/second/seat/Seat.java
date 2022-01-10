@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
-import com.encore.second.movie_detail.Movie_detail;
+import com.encore.second.time.Time;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -23,7 +23,7 @@ public class Seat {
 	
 	@ManyToOne
 	@JoinColumn(nullable=false)
-	private Movie_detail movieDetail; //상영관
+	private Time time; //상영관
 	
 	@Column(nullable = false)
 	private int row2;        //좌석행
