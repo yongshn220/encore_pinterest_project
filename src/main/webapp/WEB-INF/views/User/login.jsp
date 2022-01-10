@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="Home/list">
+						<a href="Home/main">
 							<em><img alt="logo" src="/images/logo.png"></em>
 						</a>
 					</h1>

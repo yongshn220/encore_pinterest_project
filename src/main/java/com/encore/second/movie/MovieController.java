@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 @Controller
 @RequestMapping("/Home")
 public class MovieController {
@@ -24,6 +25,11 @@ public class MovieController {
 		map.put("main", list);
 	}
 
+	@RequestMapping("/list")
+	public void list(Map map) {
+		ArrayList<Movie> list = service.getAll();
+		map.put("list", list);
+	}
 
 
 	@GetMapping("/detail/{id}")
@@ -34,16 +40,15 @@ public class MovieController {
 
 	}
 
-	@PostMapping("/getbytitle/{title}")
-	public String getByTitle(String title, Map map) {
-		ArrayList<Movie> list = service.getByTitle(title);
+	@PostMapping("/getbytitle")
+	public String getByTitle(String word, Map map) {
+		ArrayList<Movie> list = service.getByTitle(word);
 		map.put("list", list);
 		return "Home/list";
 	}
 
 	
-	
-	
+
 	
 	
 	
