@@ -24,7 +24,9 @@ class PageEventHandler
 		else
 		{
 			element.removeClass("selected");
-			event.target.classList.add("selected");			
+			event.target.classList.add("selected");		
+			this.controller.receipt.drawAmount();	
+			this.controller.receipt.drawPrice();	
 		}
 		
 	}
@@ -41,7 +43,9 @@ class PageEventHandler
 		else
 		{
 			element.removeClass("selected");
-			event.target.classList.add("selected");		
+			event.target.classList.add("selected");
+			this.controller.receipt.drawAmount();	
+			this.controller.receipt.drawPrice();
 		}
 	}
 	
@@ -57,6 +61,7 @@ class PageEventHandler
 		{
 			this.room.clicked();	
 		}
+		this.controller.receipt.drawSeatId();
 	}
 	
 	
