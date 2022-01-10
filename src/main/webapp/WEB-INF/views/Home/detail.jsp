@@ -53,7 +53,7 @@
 			
 					<div class="left">
 					<h2>
-						<img src="/images/posters/${img_path }" width="300" height="350">
+						<img src="./images/posters/${m.img_path }" width="300" height="350">
 					</h2>
 					</div>
 					<div class="right">

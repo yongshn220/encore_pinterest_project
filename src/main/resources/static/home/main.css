@@ -1,18 +1,12 @@
 @charset "UTF-8";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,425 +15,281 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+	color: inherit;
+	text-decoration: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
 
 /*
 ---------------------------------------------------------------------
 Start from here
 */
 
-	
-
-/* 레이아웃 */
+/* 
+---------------------------------------------------------------------
+레이아웃 
+---------------------------------------------------------------------
+*/
 #header {
 	width: 100%;
 	height: 170px; /*헤더고정*/
 	background-color: #fff;
-	border-bottom: 1px solid #c6c6c6; 
-	
-	}
-	
-
-	
-/* 가운데 영역 */
-.contatiner {position: relative; width:1700px; margin: 0 50 50 50px; background: rgba(0,0,0,0);}
-
-
-/* 로우 영역 */
-.row {padding: 0 120px;}	
-
-/* 헤더 영역 */
-.header {
-	overflow: hidden; 
-	position: Fixed;
-	width: 85%;
-	height: 170px; 
-	
-	
+	border-bottom: 1px solid #c6c6c6;
 }
 
-.header h1 {float: left;}
+/* 
+---------------------------------------------------------------------
+가운데 영역 
+---------------------------------------------------------------------
+*/
+.contatiner {
+	position: relative;
+	width: 1700px;
+	margin: 0 50 50 50px;
+	background: rgba(0, 0, 0, 0);
+}
+
+/* 
+---------------------------------------------------------------------
+로우 영역 
+---------------------------------------------------------------------
+*/
+.row {
+	padding: 0 120px;
+}
+
+/* 
+---------------------------------------------------------------------
+헤더 영역 
+---------------------------------------------------------------------
+*/
+.header {
+	overflow: hidden;
+	position: Fixed;
+	width: 85%;
+	height: 170px;
+}
+
+.header h1 {
+	float: left;
+}
 
 /*로고위치*/
-.header h1 em {padding: 13px 10px 10px 0; display:block; }
-.header h1 img {width: 50%; vertical-align: sub; margin-top:20px;} 
+.header h1 em {
+	padding: 13px 10px 10px 0;
+	display: block;
+}
+
+.header h1 img {
+	width: 50%;
+	vertical-align: sub;
+	margin-top: 20px;
+}
 
 /*오른쪽 서비스 위치*/
-.nav  {float:right; margin-top:25px;}
-.header .nav ul {border-left: 0px solid #777;  }
-.clearfix li {display: inline-flex; font-size:13px; font-weight: 500; }
-.clearfix img {display: flex; margin-bottom:10px;  padding-left:5px; width:40px; height:40px;}
-.clearfix span {display: flex; margin-bottom:10px; margin-right:20px; padding-left: -5px;}
+.nav {
+	float: right;
+	margin-top: 25px;
+}
 
+.header .nav ul {
+	border-left: 0px solid #777;
+}
 
+.clearfix li {
+	display: inline-flex;
+	font-size: 13px;
+	font-weight: 500;
+}
 
-/*검색창*/
+.clearfix img {
+	display: flex;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	width: 40px;
+	height: 40px;
+}
 
+.clearfix span {
+	display: flex;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	padding-left: -5px;
+}
 
-.search-box{
-		position: absolute;
-		top: 75%; left: 90%;
-		transform: translate(-50%, -50%);
-		background: #c0c0c0;
-		height: 30px;
-		border-radius: 30px;
-		padding: 10px;
-	}
+/*
+---------------------------------------------------------------------
+검색창
+---------------------------------------------------------------------
+*/
+.search-box {
+	position: absolute;
+	top: 75%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+	background: #c0c0c0;
+	height: 30px;
+	border-radius: 30px;
+	padding: 10px;
+}
 
 /*검색폭 */
-.search-box:hover > .search-txt {
-		width: 200px;
-		padding:0 6px;
-		
-	}
+.search-box:hover>.search-txt {
+	width: 200px;
+	padding: 0 6px;
+}
 
 /*돋보기*/
-.search-box:hover > .search-btn {
-	    position: absolute;
-	    right: 5px;
-		background: white;
-		color: #1e1e1e;
-	}
+.search-box:hover>.search-btn {
+	position: absolute;
+	right: 5px;
+	background: white;
+	color: #1e1e1e;
+}
 
-.search-btn{
-		color:#d9d9d9;
-		float: right; 
-		width: 30px; height: 30px;
-		border-radius: 50%;
-		background:#ffffff;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		transition: 0.4s;
-		
-		
-		
-	}
+.search-btn {
+	color: #d9d9d9;
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
 
 .search-txt {
-		border : none;
-		background : none;
-		outline: none;
-		float: left;
-		padding: 0;
-		color: white;
-		font-size: 16px;
-		transition: 0.4s;
-		line-height: 30px;
-		width: 0px;
-	}
-	
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 30px;
+	width: 0px;
+}
 
-
-
-
-/*메인*/
-#cont{
-
-    width: auto;
-	height: 80%; 
+/*
+---------------------------------------------------------------------
+메인
+---------------------------------------------------------------------
+*/
+#cont {
+	width: auto;
+	height: 80%;
 	background-color: #fff;
-	
 	/*background-image: url('/images/main.jpg');
 	background-size: cover;*/
 	background-attachment: fixed; /*배경고정*/
-	opacity: 1;
 	position: sticky; /*헤더고정*/
-	top:0;             /*헤더고정*/ 
-	
-		
-	
+	top: 0; /*헤더고정*/
 }
 
-/*메인칸 전체 적용*/
-.movieChart{
-
-    line-height: 2;
-    color: #ff8080;
-    font-weight: 700;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding-top: 50px;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    clear: none;
-    float: none;
-    overflow: hidden;
-    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(232, 232, 232, 0.37));*/
-   
+.contents h3 {
+	line-height: 2;
+	color: #000;
+	font-weight: 700;
+	font-family: 'Times New Roman', '돋움', sans-serif;
+	font-size: 50px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
 }
 
-.movieChart h3 a{ font-size: 50px; }
-
-
-/*외곽 검은선*/
 .contents {
-   
-    line-height: 2;
-    color: #000;
-    font-weight: 700;
-    font-family: 'Times New Roman', '돋움', sans-serif;
-    font-size: 100%;
-    
-    border: solid #c6c6c6; /*나중에 0으로 변경*/
-     border-radius: 20px;
-    vertical-align: baseline;
-    word-break: break-all;
-    overflow: hidden;
-    padding: 50px 30px 60px;
-    width: 1200px;
-    height: 100%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    
-    
-    
-    
+	margin: 50px;
+	border-radius: 20px;
 }
 
-/*중간 분홍선 섹션*/
-.movieChartBeScreen_btn_wrap{ 
-	
-   
-    line-height: 2;
-    color: #ff8080;
-    font-weight: 700;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding-top: 50px;
-    border: solid; /*나중에 0으로 변경*/
-    vertical-align: baseline;
-    word-break: break-all;
-    clear: none;
-    float: none;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    display: flex;
-       
-
+.movieChartScreen .movie_info strong {
+	color: dimgrey;
+	font-weight: 700;
+	font-family: '맑은 고딕', '돋움', sans-serif;
+	font-size: 23px;
+	font-weight: 700;
 }
 
-
-
-.tabBtn_wrap{
-	
-
-	 line-height: 1.2;
-    color: #00ff80;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    display: flex;
-     justify-content: space-evenly;
-     flex-direction: row;
-     flex-wrap: norap;
-     
-     
-    
+.movieChartScreen {
+	width: auto;
+	height: auto;
+	background-color: maroon;
 }
 
-
-
-.movieChart_list{
-
-	
-
-	
-   /* line-height: 2;
-    color: #666;
-    font-weight: 400;
-    font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
-    font-size: 100%;*/
-    
-    margin: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all; /*줄바꿈*/
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-    list-style: none;
-    padding: 0;
-    z-index: 1; /*겹치는 경우 우선순위*/
-    overflow: visible;
-    position: relative;
-    display: flex;
-    
-    
+.movieChart_list {
+	height: 550px;
+	display: flex;
+	border: 0;
+	overflow: scroll;
 }
 
-
-.swiper{
-	
-	
-  /*  line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%; */
-    
-    vertical-align: baseline;
-    word-break: break-all;
-    
-    /*display: flex;*/
-    
-    margin: 0;
-    box-sizing: content-box;
-    
-    /*margin: 0;
-    padding: 0;
-    border: 0;
-    
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-   
-    transition-property: transform;
-    box-sizing: content-box;
-    counter-reset: movie-chart-counter;
-    transform: translate3d(0px, 0px, 0px);*/
+.slide_movie {
+	line-height: 1.2;
+	margin: 20px;
+	padding: 20px;
+	border: 0;
+	margin-left: 20px;
+	align-self: center;
 }
 
-
-
-
-
-.slide_movie{
-	
-	
-
-    line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    word-break: break-all;
-    flex-shrink: 0;
-    height: 100%;
-    position: relative;
-    transition-property: transform;
-    width: 300px;
-    height: 350px;
-    margin-right: 130px;
-    margin-left: 50px;
+.img_wrap {
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	overflow: hidden;
+	position: relative;
+	width: 280px;
+	height: 350px;
+	border-radius: 13px;
 }
 
-
-
-
-/*포스터 사이즈*/
-.img_wrap{
-	
-    line-height: 1.2;
-    color: #666;
-    font-weight: 700;
-    list-style: none;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    border: solid #80ff00;
-    vertical-align: baseline;
-    word-break: break-all;
-    overflow: hidden;
-    position: relative;
-    width: 300px;
-    height: 350px;
-    border-radius: 10px;
-
-    
-    
+.movieAge {
+	position: absolute;
+	right: 6px;
+	top: 7px;
+	z-index: 4;
 }
 
-
-
-/*포스터안에 연령, 파란줄*/
-.movieAge{
-	   
-    /*line-height: 1.2;
-    color: #666;
-    font-weight: 400;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
-    word-break: break-all;*/
-    
-    border: solid  #007aff;
-    position: absolute;
-    right: 6px;
-    top: 7px;
-    z-index: 4;
+.movie_info {
+	line-height: 1.8;
+	font-size: 101%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	word-break: break-all;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	align-content: center;
 }
-
-
-
-/*포스터 아래 글씨,주황선 글씨 이쁘게 다듬기*/
-.movie_info{
-	   
-    line-height: 1.5;
-    color: #000;
-    font-weight: 400;
-    list-style: none;
-    font-family: '맑은 고딕', '돋움', sans-serif;
-    font-size: 101%;
-    margin: 0;
-    padding: 0;
-    border: solid #ff8000; /*나중에 0으로변경*/
-    vertical-align: baseline;
-    word-break: break-all;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-
-
-
-
-
