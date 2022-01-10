@@ -6,6 +6,7 @@ class MainController
 		this.data = new Data(this);
         this.generator = new Generator(this);
         this.pageEventHandler = new PageEventHandler(this);
+        this.receipt = new Receipt(this);
 	}
 	
 	init()
@@ -13,6 +14,7 @@ class MainController
 		this.data.init();
 		this.generator.init();
 		this.pageEventHandler.init();
+		this.receipt.drawAll();
 	}
 	
 	//amount select events
@@ -60,8 +62,8 @@ class Data
 		this.curAmount = 0;
 		this.amountAdult = 0;
 		this.amountChild = 0;
-		this.adultPrice = 10000;
-		this.childPrice = 8000;
+		this.adultPrice = 15000;
+		this.childPrice = 11000;
 	}
 	
 	init()
@@ -78,6 +80,109 @@ class Data
 	getAmount()
 	{
 		return this.amountAdult + this.amountChild;
+	}
+}
+
+class Receipt
+{
+	constructor(controller)
+	{
+		this.controller = controller;
+		this.elmt_area2Date = document.querySelector('#res_area2 #res_value #res_date')
+		this.elmt_area2Amount = document.querySelector('#res_area2 #res_value #res_amount');
+		this.elmt_area3SeatId = document.querySelector('#res_area3 #res_seatId');
+		this.elmt_area4AdultPrice = document.querySelector('#res_area4 #res_adultPrice');
+		this.elmt_area4ChildPrice = document.querySelector('#res_area4 #res_childPrice');
+		this.elmt_area4TotalPrice = document.querySelector('#res_area4 #res_totalPrice');
+	}
+	
+	drawAll()
+	{
+		this.drawDate();
+		this.drawAmount();
+		this.drawSeatId();
+		this.drawPrice();
+	}
+	drawDate()
+	{
+		let data = this.controller.data;
+		console.log(this.elmt_area2Date.innerHTML);
+		this.elmt_area2Date.innerHTML = this.getStrOfDate(data);
+	}
+	
+	drawAmount()
+	{
+		let data = this.controller.data;
+		this.elmt_area2Amount.innerHTML  = this.getStrOfAmount(data);
+	}
+	
+	drawSeatId()
+	{
+		let data = this.controller.data;
+		this.elmt_area3SeatId.innerHTML = this.getStrOfSeatId(data);
+	}
+	
+	drawPrice()
+	{
+		let data = this.controller.data;
+		this.elmt_area4AdultPrice.innerHTML = this.getStrOfAdultPrice(data);
+		this.elmt_area4ChildPrice.innerHTML = this.getStrOfChildPrice(data);
+		this.elmt_area4TotalPrice.innerHTML = this.getStrOfTotalPrice(data);
+	}
+	
+
+	getStrOfDate(data)
+	{
+		return "test date";
+	}
+	
+	getStrOfAmount(data)
+	{
+		if(data.amountAdult > 0)
+		{
+			if(data.amountChild > 0)
+			{
+				return `일반 ${data.amountAdult}명, 청소년 ${data.amountChild}명`;						
+			}
+			return `일반 ${data.amountAdult}명`;	
+		}
+		else
+		{
+			if(data.amountChild > 0)
+			{
+				return `청소년 ${data.amountChild}명`;	
+			}
+			return "없음";
+		}
+	}
+	
+	getStrOfSeatId(data)
+	{
+		let str = "";
+		let seatGroupList = data.room.clickedSeatList;
+		
+		seatGroupList.forEach(seatGroup => {
+			seatGroup.forEach(seat =>{
+				str += seat.getSeatCode() + " ";
+			})
+		})
+		return str;
+	}
+	
+	getStrOfAdultPrice(data)
+	{
+		return `${data.adultPrice}원 X ${data.amountAdult}`;
+	}
+	
+	getStrOfChildPrice(data)
+	{
+		return `${data.childPrice}원 X ${data.amountChild}`;
+	}
+	
+	getStrOfTotalPrice(data)
+	{
+		let price = (data.adultPrice * data.amountAdult) + (data.childPrice * data.amountChild);
+		return price.toLocaleString('ko-KR');
 	}
 }
 
@@ -171,17 +276,19 @@ class Room
 	
 	unclicked(row, col)
 	{
-		this.clickedSeatList.forEach(clickedSeat => {
+		this.clickedSeatList = this.clickedSeatList.filter(clickedSeat => {
 			if(clickedSeat.includes(this.seatList[row][col]))
 			{
 				clickedSeat.forEach(seat => {
 					this.seatList[seat.row][seat.col].state = SEATSTATE.empty;
 				});
+				return false;
 			}
-		})
+			return true;
+		});
+		console.log(this.clickedSeatList);
 		this.drawRoom();
 	}
-	
 	
 	isSeatValid(row, col)
 	{
@@ -210,6 +317,12 @@ class Seat
 		this.row = row;
 		this.col = col;
 		this.state = SEATSTATE.empty;
+	}
+	
+	getSeatCode()
+	{
+		let rowCode = ['A', 'B', 'C', 'D', 'E'];
+		return rowCode[this.row] + (this.col + 1); 
 	}
 }
 
