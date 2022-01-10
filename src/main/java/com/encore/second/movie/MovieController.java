@@ -42,6 +42,7 @@ public class MovieController {
 		map.put("list", list);
 	}
 	
+	
 	//제목으로 검색
 	@PostMapping("/getbytitle/{title}")
 	public String getByTitle(String word, Map map) {

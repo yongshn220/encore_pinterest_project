@@ -32,7 +32,9 @@
 
 					</nav>
 					<!-- 검색창 -->
-					<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"><!-- 돋보기아이콘 -->
+					<link rel="stylesheet"
+						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+					<!-- 돋보기아이콘 -->
 					<div class="search-box">
 						<input type="text" class="search-txt" name=""
 							placeholder="검색어를 입력하세요"> <a class="search-btn"
@@ -47,18 +49,21 @@
 
 	<!-- 무비차트 -->
 
-	<header id="cont">
 
+
+	<header id="cont">
 		<div class="movieChart">
 			<div class="contents">
 				<h3>
 					<a href="목록페이지" class="active" id="btnMovie">MovieChart</a>
 				</h3>
 				<div class="movieChartBeScreen_btn_wrap">
-					<div class="tabBtn_wrap"></div>
+					<div class="tabBtn_wrap">
+					
+					
 					<div class="movieChart_list">
-						<div class="swiper" style="transform: translate3d(0px, 0px, 0px);">
-
+					 <div class="swiper">
+ 
 							<!-- 스파이더맨 -->
 							<div class="slide_movie"
 								style="width: 170.4px; margin-right: 32px;">
@@ -131,6 +136,7 @@
 									<strong class="movieName">씽2게더</strong> <span>예매율 20.5%</span>
 								</div>
 							</div>
+
 
 							<!-- 해피뉴이어 -->
 							<div class="slide_movie"
@@ -208,6 +214,7 @@
 										1.7%</span>
 								</div>
 							</div>
+
 
 
 							<!-- 피드백 -->
@@ -306,19 +313,29 @@
 								<div class="movie_info">
 									<strong class="movieName">프랑스</strong> <span>예매율 0.1%</span>
 								</div>
+								
 							</div>
-
-
 						</div>
-						<!--
-                          <div class="swiper-button-next" tabindex="0" role="button" aria-label="다음 슬라이드" aria-disabled="false"></div>
-                        <div class="swiper-button-prev swiper-button-disabled" tabindex="0" role="button" aria-label="이전 슬라이드" aria-disabled="true"></div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>  -->
-
 					</div>
+					</div>
+					
+					<button class="버튼1">1</button>
+					<button class="버튼2">1</button>
+					<button class="버튼3">1</button>
+					<button class="버튼4">1</button>
+					<button class="버튼5">1</button>
+					<button class="버튼6">1</button>
+					<button class="버튼7">1</button>
+					<button class="버튼8">1</button>
+					<button class="버튼9">1</button>
+					<button class="버튼10">1</button>
+					
+					
 				</div>
+				
 			</div>
 		</div>
+
 
 	</header>
 

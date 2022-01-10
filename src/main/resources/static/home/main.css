@@ -223,6 +223,10 @@ Start from here
 
 /*중간 분홍선*/
 .movieChartBeScreen_btn_wrap{ 
+	
+	width: 300vW;
+	transform: translate(-100vw);
+   
     line-height: 2;
     color: #ff8080;
     font-weight: 700;
@@ -255,11 +259,13 @@ Start from here
 }
 
 
-/*
+
 .tabBtn_wrap{
 	
+	width: 100vw;
+	float: left;
 	
-    line-height: 1.2;
+	 line-height: 1.2;
     color: #00ff80;
     font-weight: 400;
     font-family: 'Noto Sans KR', 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
@@ -271,12 +277,13 @@ Start from here
     word-break: break-all;
     display: inline-flex;
 }
-*/
+
 
 
 .movieChart_list{
 
 	
+
 	
    /* line-height: 2;
     color: #666;
@@ -331,8 +338,7 @@ Start from here
 .slide_movie{
 	
 	
-	    --swiper-theme-color: #007aff;
-    --swiper-navigation-size: 44px;
+
     line-height: 1.2;
     color: #666;
     font-weight: 400;
@@ -371,10 +377,11 @@ Start from here
     word-break: break-all;
     overflow: hidden;
     position: relative;
-    width: 170px;
-    height: 234px;
+    width: 300px;
+    height: 145px;
     border-radius: 10px;
 }
+
 
 
 /*포스터안에 연령, 파란줄*/
@@ -415,15 +422,6 @@ Start from here
     display: flex;
     flex-wrap: wrap;
 }
-
-
-
-
-
-
-
-
-
 
 
 
