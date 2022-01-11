@@ -38,7 +38,7 @@ class PageEventHandler
 		if(this.controller.data.isAmountFull())
 		{
 			this.controller.data.amountChild = tmpAmount;
-			alert("최대 4명만 선택 가능합니다.");
+			alert("최대 8명만 선택 가능합니다.");
 		}
 		else
 		{

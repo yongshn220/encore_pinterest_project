@@ -114,7 +114,7 @@ Start from here
 #screen #body #container #contents
 {
 	position: relative;
-	top: 80px;
+	top: 20px;
 	margin: 0 auto;
 	width: 100%;
 	height: 673px;
@@ -541,11 +541,30 @@ Start from here
 	border: 3px solid #c1c1c1;
 	border-radius: 20px;
 }
-
+#result_area #previous_btn #res_icon
+{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 50%;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+}
 #result_area #previous_btn #res_text
 {
-	
+	position:relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	top: 70%;
+	text-align:center;
+	color: white;
 }
+
 
 #result_area #progress_btn
 {
@@ -563,7 +582,28 @@ Start from here
 
 #result_area #progress_btn #res_text
 {
+	position:relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	top: 70%;
+	text-align:center;
+	color: white;
 	
+}
+
+#result_area #progress_btn #res_icon
+{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 50%;
+	font-size: 30px;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
 }
 
 #result_area #center_area
@@ -644,6 +684,12 @@ Start from here
 	color: white;
 	font-weight: 700;
 }
+
+#result_area #center_area #res_area2 #res_value li
+{
+	overflow: hidden;
+}
+
 
 /* area3 */
 #result_area #center_area #res_area3::after

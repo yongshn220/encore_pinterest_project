@@ -1,5 +1,7 @@
 package com.encore.second.seat;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +24,9 @@ public class SeatController {
 	}
 	
 	@GetMapping("/Select")
-	public String SelectSeat(Movie_detail detail)
+	public String SelectSeat(Map<String, Movie_detail> map, Movie_detail schedule)
 	{
-		return "";
+		map.put("schedule", schedule);
+		return "/Reservation/SeatSelection/SeatSelection";
 	}
-
 }
