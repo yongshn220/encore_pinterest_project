@@ -24,3 +24,11 @@ const SEATSTATE =
 	clicked: 2,
 	hovered: 3,
 }
+
+function onPreviousButtonEvent() 
+{
+	let elmt_previousButton = document.querySelector(`#result_area #previous_btn`);
+	elmt_previousButton.addEventListener("click", () => {
+		const url = "/Reservation/DateSelection/main/{movie_id}";
+	});
+}

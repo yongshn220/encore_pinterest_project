@@ -13,6 +13,8 @@ public class ReserveService {
 	@Autowired
 	private ReserveDao dao;
 	
+	
+	
 	public void add(Reserve r) {
 		dao.save(r);
 	}
@@ -29,3 +31,4 @@ public class ReserveService {
 		dao.deleteById(id);
 	}
 }
+ 
