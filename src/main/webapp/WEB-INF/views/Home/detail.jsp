@@ -75,11 +75,16 @@
 				</div>
 
 				<div class="Bottom">
-					<p>${m.content }</p><br/>
+					<p>${m.content }</p>
 
+					<div class="video">
+						<iframe width="660" height="415" src="${m.video }"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
 
+					</div>
 				</div>
-
 
 			</div>
 		</div>

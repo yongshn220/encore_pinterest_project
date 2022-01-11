@@ -231,6 +231,8 @@ Start from here
 .contents {
 	margin: 50px;
 	border-radius: 20px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
 
 .movieChartScreen .movie_info strong {
@@ -269,8 +271,8 @@ Start from here
 	vertical-align: baseline;
 	overflow: hidden;
 	position: relative;
-	width: 280px;
-	height: 350px;
+	width: 250px;
+	height: 320px;
 	border-radius: 13px;
 }
 

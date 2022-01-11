@@ -34,6 +34,9 @@ public class Movie {
 	private boolean screen_flag; //개봉유무
 	   
 	private String img_path; //포스터
+	private String video; //동영상
+	
+	
 	
 	@Transient
 	private MultipartFile img_file;
