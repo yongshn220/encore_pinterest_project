@@ -464,6 +464,11 @@ Start from here
 
 #contents #seat_area #seat_selection_box .seatList.hover
 {
+	background-color: grey;
+}
+
+#contents #seat_area #seat_selection_box .seatList.hover
+{
 	background-color: #fefefe;
 }
 
@@ -541,6 +546,11 @@ Start from here
 	border: 3px solid #c1c1c1;
 	border-radius: 20px;
 }
+#result_area #previous_btn:hover
+{
+	border: 3px solid #cce2ff;
+}
+
 #result_area #previous_btn #res_icon
 {
 	position: absolute;
@@ -563,6 +573,7 @@ Start from here
 	top: 70%;
 	text-align:center;
 	color: white;
+	pointer-events: none;
 }
 
 
@@ -580,6 +591,11 @@ Start from here
 	border-radius: 20px;
 }
 
+#result_area #progress_btn:hover
+{
+	border: 3px solid #cce2ff;
+}
+
 #result_area #progress_btn #res_text
 {
 	position:relative;
@@ -589,6 +605,7 @@ Start from here
 	top: 70%;
 	text-align:center;
 	color: white;
+	pointer-events: none;
 	
 }
 
@@ -688,6 +705,8 @@ Start from here
 #result_area #center_area #res_area2 #res_value li
 {
 	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 }
 
 
@@ -727,16 +746,6 @@ Start from here
 
 /* area4 */
 
-#result_area #center_area #res_area4::after
-{
-    content: "";
-    display: block;
-    left: 210px;
-    width: 1px;
-    height: 100%;
-    background: #bbbbbb;
-    position: absolute;
-}
 #result_area #center_area #res_area4 #res_name
 {
 	position: absolute;

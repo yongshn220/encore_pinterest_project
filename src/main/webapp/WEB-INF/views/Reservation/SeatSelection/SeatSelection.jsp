@@ -11,6 +11,7 @@
 <body>
 	<script>
 		const attr_TIME = ${time};
+		const attr_SEATLIST = ${seatList};
 	</script>
 	<div id=screen>
 		<div id="header">
@@ -94,7 +95,7 @@
 						<div id="center_area">
 							<div id="res_area1" class="res_area">
 								<ul>
-									<li id="res_title">스파이더맨<파 프럼 홈></li>
+									<li id="res_title"></li>
 								</ul>
 							</div>
 							<div id="res_area2" class="res_area">

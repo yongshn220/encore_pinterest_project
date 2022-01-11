@@ -1,5 +1,6 @@
 package com.encore.second.seat;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +28,14 @@ public class SeatController {
 	public String SelectSeat(@PathVariable("time_id") String time_id, Map<String, String> map)
 	{
 		Time time = timeService.getById(Integer.parseInt(time_id));
-		ObjectMapper mapper = new ObjectMapper();
+		ArrayList<Seat> seatList = seatService.getByTime(time);
+		
 		try {
-			String jsonTime = mapper.writeValueAsString(time);		
+			ObjectMapper mapper = new ObjectMapper();
+			String jsonTime = mapper.writeValueAsString(time);
+			String jsonSeatList = mapper.writeValueAsString(seatList);
 			map.put("time", jsonTime);
+			map.put("seatList", jsonSeatList);
 		}
 		catch(Exception e)
 		{
@@ -39,28 +44,34 @@ public class SeatController {
 		}
 		return "/Reservation/SeatSelection/SeatSelection";
 	}
-	/*
+	
 	//mysql Seat Data Helper
 	@GetMapping("/Helper/AddSeatData")
-	public void AddSeatData()
+	public String AddSeatData()
 	{
-		ArrayList<Time> timeList = timeService.get
+		ArrayList<Time> timeList = timeService.getAll();
 		Seat newSeat;
 		Time newTime;
-		
-		for(int t = 0; t < 10; t++)
+		int id = 1;
+		for(int t = 0; t < timeList.size(); t++)
 		{
-			newTime = 
+			newTime = timeList.get(t);
 			for(int r = 0; r < 5; r++)
 			{
 				for(int c = 0; c < 5; c++)
 				{
-					newSeat.setTime(null)
+					newSeat = new Seat();
+					newSeat.setId(id);
+					newSeat.setTime(newTime);
 					newSeat.setRow2(r);
 					newSeat.setCol2(c);
+					newSeat.setSeat_info(false);
+	
+					seatService.save(newSeat);
+					id++;
 				}
 			}
 		}
+		return "/Reservation/SeatSelection/Test";
 	}
-	*/
 }
