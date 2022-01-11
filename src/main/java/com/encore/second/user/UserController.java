@@ -23,10 +23,6 @@ public class UserController {
 
 	@Autowired
 	private UserService service;
-	@Autowired
-	private ReserveService serviceR;
-	@Autowired
-	private SeatService serviceS;
 	
 	@GetMapping("/join") //로그인 페이지에서 회원가입 버튼 클릭시 join 페이지로 넘어감
 	public void joinForm() {}
@@ -47,7 +43,7 @@ public class UserController {
 	@PostMapping("/join") 
 	public String join(User u) {
 		service.saveUser(u);
-		return "redirect:/Home/list";
+		return "redirect:/Home/main";
 	}
 	
 	@GetMapping("/login") //홈페이지에서 로그인 버튼 클릭시 login 페이지로 넘어감
@@ -59,7 +55,7 @@ public class UserController {
 		String path = "User/login";
 		if(u != null && u.getPwd().equals(pwd)) {
 			session.setAttribute("loginid",	id);
-			path = "redirect:/Home/list";
+			path = "redirect:/Home/main";
 		}
 		return path;
 	}

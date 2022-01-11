@@ -7,23 +7,35 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/date.css">
 <title>TIME 예약</title>
+<script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript">
-const xhttp = new XMLHttpRequest();
-xhttp.onload = function(){
-	let obj = JSON.parse(xhttp.responseText);
-	let arr = obj.tl;
-	let txt = "";
-	for(let i=0; i<arr.length; i++){				
-		txt+="<span><a href='/Seat/?id="+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span><br>";
+	const xhttp = new XMLHttpRequest();
+	xhttp.onload = function(){
+		let obj = JSON.parse(xhttp.responseText);
+		let arr = obj.tl;
+		let txt = "";
+		for(let i=0; i<arr.length; i++){				
+			txt+="<span><a href='/Seat/?id="+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span><br>";
+		}
+		document.getElementById("listT").innerHTML = txt;
 	}
-	document.getElementById("listT").innerHTML = txt;
-}
-
-const timelist = (id) => {
-	let param = id;
-	xhttp.open("GET", "/Reservation/DateSelection/timelist?id="+param);
-	xhttp.send();
-}
+	
+	const timelist = (id) => {
+		let param = id;
+		xhttp.open("GET", "/Reservation/DateSelection/timelist?id="+param);
+		xhttp.send();
+	}
+	
+	function showDetail() {
+		document.querySelector(".reserve_right").style.display="block";
+		document.querySelector(".map_button").style.border="solid 1px red";
+	}
+	
+	$(document).ready(function(){
+		$(".map_button2").click(function(){
+			alert("공사 중 입니다.");
+		});
+	});
 </script>
 </head>
 
@@ -101,21 +113,47 @@ const timelist = (id) => {
 		<h2 class="reserve_title">────────────── 영화 예매 ──────────────</h2>
 			<div class="container">
 				<div class="row">
-					<div class="list">
-						<div class="list_date">
-						<c:if test="${empty list}">
-						개봉전 영화입니다.
-						</c:if>
-						<c:if test="${not empty list }">
-							<c:forEach var="ld" items="${list }">
-								<span>
-								<input type="button" value="${ld.date }" onclick="timelist(${ld.id })">
-								</span>
-								<br>
-							</c:forEach>
-						</c:if>
+					<div class="reserve_left">
+						<img class="map_img" alt="map" src="/images/map.png">
+						<div class="text">
+							<input class="map_button" type="button" value="서울특별시" onclick="showDetail()">
 						</div>
-						<div class="list_time" id="listT">
+						<div class="text2">
+							<input class="map_button2" type="button" value="인천광역시" >
+						</div>
+						<div class="text3">
+							<input class="map_button2" type="button" value="대전광역시" >
+						</div>
+						<div class="text4">
+							<input class="map_button2" type="button" value="광주광역시" >
+						</div>
+						<div class="text5">
+							<input class="map_button2" type="button" value="대구광역시" >
+						</div>
+						<div class="text6">
+							<input class="map_button2" type="button" value="울산광역시" >
+						</div>
+						<div class="text7">
+							<input class="map_button2" type="button" value="부산광역시" >
+						</div>
+					</div>
+					<div class="reserve_right">
+						<div class="list">
+							<div class="list_date">
+							<c:if test="${empty list}">
+							개봉전 영화입니다.
+							</c:if>
+							<c:if test="${not empty list }">
+								<c:forEach var="ld" items="${list }">
+									<span>
+									<input type="button" value="${ld.date }" onclick="timelist(${ld.id })">
+									</span>
+									<br>
+								</c:forEach>
+							</c:if>
+							</div>
+							<div class="list_time" id="listT">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -123,5 +161,6 @@ const timelist = (id) => {
 		</div>
 	</section>
 	
+
 </body>
 </html>
