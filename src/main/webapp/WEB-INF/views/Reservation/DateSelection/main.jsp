@@ -4,27 +4,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/user/date.css">
 <title>TIME 예약</title>
 <script type="text/javascript">
-
 const xhttp = new XMLHttpRequest();
 xhttp.onload = function(){
-	if(xhttp.readyState==4){
-		if(xhttp.status==200){
-			let obj = JSON.parse(xhttp.responseText);
-			let arr = obj.tl;
-			let txt = "";
-			for(let i=0; i<arr.length; i++){				
-				txt+="<span><a href='/Seat/?id="+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span>";
-			}
-			document.getElementById("listT").innerHTML = txt;
-		}else{
-			alert("응답 error code1:"+xhttp.status);
-		}
-	}else{
-		alert("요청 error code2:"+xhttp.readState);
+	let obj = JSON.parse(xhttp.responseText);
+	let arr = obj.tl;
+	let txt = "";
+	for(let i=0; i<arr.length; i++){				
+		txt+="<span><a href='/Seat/?id="+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span><br>";
 	}
+	document.getElementById("listT").innerHTML = txt;
 }
 
 const timelist = (id) => {
@@ -32,9 +24,9 @@ const timelist = (id) => {
 	xhttp.open("GET", "/Reservation/DateSelection/timelist?id="+param);
 	xhttp.send();
 }
-
 </script>
 </head>
+
 <body>
 	<header id="header">
 		<div class="container">
@@ -64,7 +56,7 @@ const timelist = (id) => {
 	<!-- //movie -->
 	<section id="movie">
 		<div class="movie">
-		<h2>date 예약</h2>
+		<h2 class="ir_so">선택 영화</h2>
 			<div class="container">
 				<div class="row">
 					<div class="content">
@@ -75,23 +67,23 @@ const timelist = (id) => {
 						</div>
 						<div class="movie_right">
 							<div>
-								<span class="moive_title">
+								<span class="movie_title">
 								${m.title }
 								</span>
 							</div>
 							<div class="detail">
 								<div>
-									<span class="moive_act">
+									<span class="movie_act">
 									${m.act_director }
 									</span>
 								</div>
 								<div>
-									<span class="moive_content">
+									<span class="movie_content">
 									${m.content }
 									</span>
 								</div>
 								<div>
-									<span class="moive_genre">
+									<span class="movie_genre">
 									${m.genre_bas }
 									</span>
 								</div>
@@ -106,7 +98,7 @@ const timelist = (id) => {
 
 	<section id="reserve">
 		<div class="reserve">
-		<h2>영화 예매</h2>
+		<h2 class="reserve_title">────────────── 영화 예매 ──────────────</h2>
 			<div class="container">
 				<div class="row">
 					<div class="list">
@@ -119,6 +111,7 @@ const timelist = (id) => {
 								<span>
 								<input type="button" value="${ld.date }" onclick="timelist(${ld.id })">
 								</span>
+								<br>
 							</c:forEach>
 						</c:if>
 						</div>

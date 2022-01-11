@@ -250,7 +250,7 @@ Start from here
 .movieChart_list {
 	height: 550px;
 	display: flex;
-	border: 0;
+	border: none;
 	overflow: scroll;
 }
 
