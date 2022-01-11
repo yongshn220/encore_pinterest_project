@@ -8,28 +8,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>지금 예매 가능한 영화</h3>
+	<h3>MovieChart</h3>
 	<table border="1">
 		<c:forEach var="m" items="${list }">
 
-			<div class="movie_left">
+			<div class="movieImg">
 				<h3>
 					<img src="${m.img_path }" style="width: 280px; height: 350px">
 				</h3>
 			</div>
-			<div class="movie_right">
+			<div class="movieInfo">
 				<div>
-					<span class="moive_title"><a href="/Home/detail/${m.id }">${m.title }</a></span>
+					<span class="moiveTitle"><a href="/Home/detail/${m.id }">${m.title }</a></span>
 				</div>
-				<div class="detail">
+				<div class="movieInfoDetail">
 					<div>
-						<span class="moive_act"> ${m.act_director } </span>
+						<span class="moiveAct"> ${m.act_director } </span>
 					</div>
 					<div>
-						<span class="moive_content"> ${m.content } </span>
+						<span class="moiveContent"> ${m.content } </span>
 					</div>
 					<div>
-						<span class="moive_genre"> ${m.genre_bas } </span>
+						<span class="moiveGenre"> ${m.genre_bas } </span>
 					</div>
 				</div>
 			</div>

@@ -9,7 +9,7 @@
 <title>영화 그 이상의 감동. ElVOM</title>
 </head>
 <body>
-	<!--상단-->
+	<!--header-->
 	<header id="header">
 		<div class="contatiner">
 			<div class="row">
@@ -32,7 +32,7 @@
 						</ul>
 
 					</nav>
-					<!-- 검색창 -->
+					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
@@ -50,7 +50,7 @@
 
 
 
-	<!-- 무비차트 -->
+	<!-- MovieChart -->
 	<section id="cont">
 		<div class="contents">
 			<h3>
@@ -64,7 +64,7 @@
 					<!-- 스파이더맨 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<a href="/Reservation/DateSelection/main"><img src="../images/posters/1.jpg"
+							<a href="/Home/detail/1"><img src="../images/posters/1.jpg"
 								alt="스파이더맨-노 웨이 홈" onerror="errorImage(this)"
 								style="width: 280px; height: 350px"></a>
 
@@ -84,8 +84,9 @@
 					<!-- 경관의피 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<img src="../images/posters/2.jpg" alt="경관의 피"
-								onerror="errorImage(this)" style="width: 280px; height: 350px">
+							<a href="/Home/detail/2"><img src="../images/posters/2.jpg" alt="경관의 피"
+								onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+								
 							<div class="movieAge">
 								<img src="../images/posters/grade-15.png" alt="15세 이상세">
 
@@ -104,8 +105,9 @@
 					<!-- 씽2게더 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<img src="../images/posters/3.jpg" alt="씽2게더"
-								onerror="errorImage(this)" style="width: 280px; height: 350px">
+							<a href="/Home/detail/3"><img src="../images/posters/3.jpg" alt="씽2게더"
+								onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+								
 							<div class="movieAge">
 								<img src="../images/posters/grade-all.png" alt="전체세">
 
@@ -122,8 +124,8 @@
 					<!-- 해피뉴이어 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<img src="../images/posters/4.jpg" alt="해피 뉴 이어"
-								onerror="errorImage(this)" style="width: 280px; height: 350px">
+							<a href="/Home/detail/4"><img src="../images/posters/4.jpg" alt="해피 뉴 이어"
+								onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
 							<div class="movieAge">
 								<img src="../images/posters/grade-12.png" alt="12세 이상세">
 
@@ -140,8 +142,9 @@
 					<!-- 킹스맨 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<img src="../images/posters/5.jpg" alt="킹스맨-퍼스트 에이전트"
-								onerror="errorImage(this)" style="width: 280px; height: 350px">
+							<a href="/Home/detail/5"><img src="../images/posters/5.jpg" alt="킹스맨-퍼스트 에이전트"
+								onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+								
 							<div class="movieAge">
 								<img src="../images/posters/grade-19.png" alt="청소년 관람불가세">
 
@@ -159,8 +162,9 @@
 					<!-- 드라이브 마이카 -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
-							<img src="../images/posters/6.jpg" alt="드라이브 마이 카"
-								onerror="errorImage(this)" style="width: 280px; height: 350px">
+							<a href="/Home/detail/6"><img src="../images/posters/6.jpg" alt="드라이브 마이 카"
+								onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+								
 							<div class="movieAge">
 								<img src="../images/posters/grade-15.png" alt="15세 이상세">
 
@@ -178,8 +182,9 @@
 				<!-- 피드백 -->
 				<div class="slide_movie">
 					<div class="img_wrap" data-scale="false">
-						<img src="../images/posters/7.jpg" alt="피드백"
-							onerror="errorImage(this)" style="width: 280px; height: 350px">
+						<a href="/Home/detail/7"><img src="../images/posters/7.jpg" alt="피드백"
+							onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+							
 						<div class="movieAge">
 							<img src="../images/posters/grade-19.png" alt="청소년 관람불가세">
 
@@ -196,8 +201,9 @@
 				<div class="slide_movie">
 
 					<div class="img_wrap" data-scale="false">
-						<img src="../images/posters/8.jpg" alt="매트릭스-리저렉션"
-							onerror="errorImage(this)" style="width: 280px; height: 350px">
+						<a href="/Home/detail/8"><img src="../images/posters/8.jpg" alt="매트릭스-리저렉션"
+							onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+							
 						<div class="movieAge">
 							<img src="../images/posters/grade-15.png" alt="15세 이상세">
 
@@ -214,8 +220,9 @@
 				<!-- 하우스오브구찌 -->
 				<div class="slide_movie">
 					<div class="img_wrap" data-scale="false">
-						<img src="../images/posters/9.jpg" alt="하우스 오브 구찌"
-							onerror="errorImage(this)" style="width: 280px; height: 350px">
+						<a href="/Home/detail/9"><img src="../images/posters/9.jpg" alt="하우스 오브 구찌"
+							onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+							
 						<div class="movieAge">
 							<img src="../images/posters/grade-15.png" alt="15세 이상세">
 
@@ -230,8 +237,9 @@
 				<!-- 프랑스 -->
 				<div class="slide_movie">
 					<div class="img_wrap" data-scale="false">
-						<img src="../images/posters/10.jpg" alt="프랑스"
-							onerror="errorImage(this)" style="width: 280px; height: 350px">
+						<a href="/Home/detail/10"><img src="../images/posters/10.jpg" alt="프랑스"
+							onerror="errorImage(this)" style="width: 280px; height: 350px"></a>
+							
 						<div class="movieAge">
 							<img src="../images/posters/grade-12.png" alt="12세 이상세">
 
