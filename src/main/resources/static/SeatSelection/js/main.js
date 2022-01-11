@@ -2,7 +2,6 @@
 let controller = new MainController();
 
 $(document).ready(function(){
-	
 	controller.init();
 })
 
@@ -31,4 +30,10 @@ function onPreviousButtonEvent()
 	elmt_previousButton.addEventListener("click", () => {
 		const url = "/Reservation/DateSelection/main/{movie_id}";
 	});
+}
+
+
+function updateData()
+{
+	
 }

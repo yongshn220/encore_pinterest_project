@@ -9,6 +9,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<script>
+		const attr_TIME = ${time};
+	</script>
 	<div id=screen>
 		<div id="header">
 		</div>

@@ -30,6 +30,6 @@ public class Seat {
 	@Column(nullable = false)
 	private int col2;        //좌석열
 	@Column(nullable = false)
-	private int seat_info;  //좌석 예매 유무
+	private boolean seat_info;  //좌석 예매 유무
 	
 }
