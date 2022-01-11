@@ -58,10 +58,11 @@ class Data
 	{
 		this.controller = controller;
 		this.room = new Room(controller);
-		this.maxAmount = 4;
+		this.maxAmount = 8;
 		this.curAmount = 0;
 		this.amountAdult = 0;
 		this.amountChild = 0;
+		this.amountSeatAvailable = 25;
 		this.adultPrice = 15000;
 		this.childPrice = 11000;
 	}
@@ -88,6 +89,9 @@ class Receipt
 	constructor(controller)
 	{
 		this.controller = controller;
+		this.elmt_movieTitle = document.querySelector('#res_area1 #res_title');
+		this.elmt_infoDate = document.querySelector('#info_area #date_text');
+		this.elmt_infoSeatAvailable = document.querySelector('#seat_available #seat_available_text');
 		this.elmt_area2Date = document.querySelector('#res_area2 #res_value #res_date')
 		this.elmt_area2Amount = document.querySelector('#res_area2 #res_value #res_amount');
 		this.elmt_area3SeatId = document.querySelector('#res_area3 #res_seatId');
@@ -98,15 +102,23 @@ class Receipt
 	
 	drawAll()
 	{
-		this.drawDate();
+		this.drawInfoDate();
+		this.drawReceiptDate();
 		this.drawAmount();
 		this.drawSeatId();
 		this.drawPrice();
+		
 	}
-	drawDate()
+	
+	drawInfoDate()
+	{
+		let data = this.controller.data; 
+		this.elmt_infoDate.innerHTML = this.getStrOfDate(data);
+	}
+	
+	drawReceiptDate()
 	{
 		let data = this.controller.data;
-		console.log(this.elmt_area2Date.innerHTML);
 		this.elmt_area2Date.innerHTML = this.getStrOfDate(data);
 	}
 	
@@ -130,10 +142,16 @@ class Receipt
 		this.elmt_area4TotalPrice.innerHTML = this.getStrOfTotalPrice(data);
 	}
 	
+	drawSeatAvailable()
+	{
+		let data = this.controller.data;
+		this.elmt_infoSeatAvailable.innerHTML = this.getStrOfSeatAvailable(data);
+	}
+	
 
 	getStrOfDate(data)
 	{
-		return "test date";
+		return "2022.01.07(금) 13:00~15:38";
 	}
 	
 	getStrOfAmount(data)
@@ -171,18 +189,23 @@ class Receipt
 	
 	getStrOfAdultPrice(data)
 	{
-		return `${data.adultPrice}원 X ${data.amountAdult}`;
+		return `${data.adultPrice.toLocaleString('ko-KR')}원 X ${data.amountAdult.toLocaleString('ko-KR')}`;
 	}
 	
 	getStrOfChildPrice(data)
 	{
-		return `${data.childPrice}원 X ${data.amountChild}`;
+		return `${data.childPrice.toLocaleString('ko-KR')}원 X ${data.amountChild.toLocaleString('ko-KR')}`;
 	}
 	
 	getStrOfTotalPrice(data)
 	{
 		let price = (data.adultPrice * data.amountAdult) + (data.childPrice * data.amountChild);
 		return price.toLocaleString('ko-KR');
+	}
+	
+	getStrOfSeatAvailable(data)
+	{
+		return `남은좌석 ${data.amountSeatAvailable} / 25`;
 	}
 }
 

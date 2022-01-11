@@ -23,10 +23,6 @@ public class UserController {
 
 	@Autowired
 	private UserService service;
-	@Autowired
-	private ReserveService serviceR;
-	@Autowired
-	private SeatService serviceS;
 	
 	@GetMapping("/join") //로그인 페이지에서 회원가입 버튼 클릭시 join 페이지로 넘어감
 	public void joinForm() {}
