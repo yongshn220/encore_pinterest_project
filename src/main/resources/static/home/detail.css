@@ -291,3 +291,14 @@ Start from here
 	color: dimgray;
 	font-weight: 500;
 }
+
+.Bottom p{
+	padding-bottom: 20px;
+	border-bottom: 3px solid;
+}
+
+.video {
+	padding: 70px;
+	padding-inline: 153px;
+}
+
