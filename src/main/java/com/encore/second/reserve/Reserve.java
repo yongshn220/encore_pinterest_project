@@ -35,6 +35,4 @@ public class Reserve {
 	@JoinColumn(nullable=false)
 	@OnDelete(action= OnDeleteAction.CASCADE)
 	private Movie_detail detail;
-	
-
 }
