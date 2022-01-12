@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-Index
+Index 룰루랄라
 </body>
 </html>
