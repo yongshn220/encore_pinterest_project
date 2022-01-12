@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="UTF-8"%>
+	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/login.css">
-	<title>로그인</title>
+	<title>�α���</title>
 </head>
 <body>
 	<header id="header">
@@ -19,14 +19,6 @@
 					</h1>
 					<nav class="nav">
 						<ul class="clearfix">
-<<<<<<< HEAD
-							<li><a href="">영화 </a></li>
-							<li><a href="">극장 </a></li>
-							<li><a href="">예매 </a></li>
-							<li><a href="">스토어 </a></li>
-							<li><a href="">이벤트 </a></li>
-							<li><a href="/User/login">로그인</a></li>
-=======
 							<li><a href="/User/login"> <img src="/images/login.png"
 									alt="�α���"> <span>�α���</span>
 							</a></li>
@@ -36,7 +28,6 @@
 							<li><a href="/User/myinfo"> <img src="/images/info.png"
 									alt="MY ElVOM"> <span>MY ElVOM</span>
 							</a></li>
->>>>>>> d587171a156514dc389035891f356d628c8bc7e3
 						</ul>
 
 					</nav>
@@ -59,7 +50,7 @@
 <!--header-->
 
  	<section id="login">
- 		<h2 class="ir_so">로그인</h2>
+ 		<h2 class="ir_so">�α���</h2>
 		<div class="login_inf">
 			<div class="container">
 				<div class="row">
@@ -71,11 +62,11 @@
 					<div class="login_right">
 						<div class="login_insert">
 							<form action="/User/login" method="post">
-							<label for="id">아이디</label>
+							<label for="id">���̵�</label>
 								<span class="box int_id">
 									<input type="text" name="id" id="id" class="int" size=20 required>
 								</span>
-							<label for="pwd">비밀번호</label>
+							<label for="pwd">��й�ȣ</label>
 								<span class="box int_pwd">
 								<input type="password" name="pwd" id="pwd" class="int" required>
 								</span>
@@ -85,9 +76,9 @@
 						</div>
 						<div class="login_button">
 							<ul>
-								<li class="green"><a href="/User/join">회원가입</a></li>
-								<li class="red"><a href="#">Id찾기</a></li>
-								<li class="red2"><a href="#">Pwd찾기</a></li>
+								<li class="green"><a href="/User/join">ȸ������</a></li>
+								<li class="red"><a href="#">Idã��</a></li>
+								<li class="red2"><a href="#">Pwdã��</a></li>
 							</ul>
 						</div>
 						<a class="login_naver" href="#">
