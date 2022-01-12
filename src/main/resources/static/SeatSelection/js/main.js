@@ -30,6 +30,7 @@ const SEATSTATE =
 function initEvents()
 {
 	previousButtonClickEvent();
+	progressButtonClickEvent();
 }
 
 function previousButtonClickEvent() 
@@ -44,10 +45,10 @@ function previousButtonClickEvent()
 function progressButtonClickEvent()
 {
 	let elmt_progressButton = document.querySelector('#result_area #progress_btn');
-	let anum = this.controller.data.amountAdult;
-	let cnum = this.controller.data.amountChild;
+	let anum = controller.data.amountAdult;
+	let cnum = controller.data.amountChild;
 	elmt_progressButton.addEventListener("click", () => {
-		const url = `/Reservation/pay?id=${attr_TIME.movieDetail.movie.id}&anum=${anum}&cnum=${cnum}`;
+		const url = `/ReservationCheck/pay?id=${attr_TIME.movieDetail.movie.id}&anum=${anum}&cnum=${cnum}`;
 		window.location.href = url;
 	});
 }
