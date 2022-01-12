@@ -7,12 +7,14 @@ import org.springframework.stereotype.Service;
 
 import com.encore.second.user.User;
 
+
 @Service
 public class ReserveService {
 	
 	@Autowired
 	private ReserveDao dao;
 	
+
 	
 	
 	public void add(Reserve r) {
@@ -23,7 +25,7 @@ public class ReserveService {
 		return dao.findById(id).orElse(null);
 	}
 	
-	public ArrayList<Reserve> getByUser_id(User user) {
+	public ArrayList<Reserve> getByUser_id(String user) {
 		return dao.findByUser(user);
 	}
 	
