@@ -74,4 +74,26 @@ public class SeatController {
 		}
 		return "/Reservation/SeatSelection/Test";
 	}
+	
+	
+	@GetMapping("/Helper/AddReservedSeat")
+	public String AddReservedSeat()
+	{
+		Time newTime = timeService.getById(1);
+		ArrayList<Seat> seatList = seatService.getByTime(newTime);
+		
+		int idOffset = seatList.get(0).getId();
+		for(int i = 0; i < seatList.size(); i++)
+		{
+			int relId = seatList.get(i).getId() - idOffset;
+			if(relId == 4 || relId == 5 || relId == 6 || relId ==7)
+			{
+				Seat nSeat = seatList.get(i);
+				nSeat.setSeat_info(true);
+				seatService.save(nSeat);
+			}
+		}
+		
+		return "/Reservation/SeatSelection/Test";
+	}
 }
