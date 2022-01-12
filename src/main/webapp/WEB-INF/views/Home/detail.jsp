@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
-<script type="text/javascript" src="/js/jquery.js"></script>
+<!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
 <script type="text/javascript">
 
 /* if (loginid()) {
@@ -15,20 +15,20 @@
 } */
 
 
-/* function loginCheck(){ 
+function loginCheck(){ 
 	alert("로그인");
     var uid = ${SessionScope.loginid}; 
-
-     if(uid == "null"){ 
+     if(uid == null){ 
         alert("로그인이 필요한 서비스입니다.","로그인 페이지로 이동하시겠습니까?"); 
+        location.href = "/User/login.jsp";
      }
-     else{
-    	 alert("에러");
-    	 location.replace("/User/login.jsp");
-     }
-}   */
+     else{}
+     
+     alert(loginid)
+    	
+  
 
-$(document).ready(function(){
+/* $(document).ready(function(){
 	alert("로그인");
 	$("loginCheck").on("click", function(e){
 		
@@ -46,7 +46,7 @@ $(document).ready(function(){
 			e.preventDefault();
 		};
 	});
-});
+}); */
 
 
 </script>
@@ -120,7 +120,7 @@ $(document).ready(function(){
 
 						<a class="link-reservation"
 						href="/Reservation/DateSelection/main/${m.id }" class="loginCheck"
-						type="button"></a>
+						type="button" ></a>
 					</span>
 				</div>
 
