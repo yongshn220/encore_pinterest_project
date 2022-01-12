@@ -43,7 +43,13 @@ function previousButtonClickEvent()
 
 function progressButtonClickEvent()
 {
-	let elmt_progressButton = document.querySelector('');
+	let elmt_progressButton = document.querySelector('#result_area #progress_btn');
+	let anum = this.controller.data.amountAdult;
+	let cnum = this.controller.data.amountChild;
+	elmt_progressButton.addEventListener("click", () => {
+		const url = `/Reservation/DateSelection/main/?id=${attr_TIME.movieDetail.movie.id}&anum=${anum}&cnum=${cnum}`;
+		window.location.href = url;
+	});
 }
 
 function updateData()
