@@ -11,6 +11,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie_detail.Movie_detail;
+import com.encore.second.time.Time;
 import com.encore.second.user.User;
 
 import lombok.Getter;
@@ -34,5 +35,9 @@ public class Reserve {
 	@ManyToOne
 	@JoinColumn(nullable=false)
 	@OnDelete(action= OnDeleteAction.CASCADE)
-	private Movie_detail detail;
+	private Time time;
+	
+//	adult_num
+//	child_num
+//	price
 }

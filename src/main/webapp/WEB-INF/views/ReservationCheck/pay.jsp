@@ -48,7 +48,7 @@
 
 	<h3>${sessionScope.loingid}님로그인</h3>
 	영화 이름/ 선택 날짜
-	<form action="/user/myinfo" method="post">
+	<form action="/ReservationCheck/reservechecksubmit" method="post">
 	<table border="1">
 		<tr>
 			<th>제목</th>
