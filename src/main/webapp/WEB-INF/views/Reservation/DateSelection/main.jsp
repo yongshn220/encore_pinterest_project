@@ -15,7 +15,7 @@
 		let arr = obj.tl;
 		let txt = "";
 		for(let i=0; i<arr.length; i++){				
-			txt+="<span><a href='/Seat/Selecet/?id="+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span><br>";
+			txt+="<span><a href='/Seat/Select/"+arr[i].id+"'><input type='button' class='"+i+"' value='"+arr[i].timeRoom+"'></a></span><br>";
 		}
 		document.getElementById("listT").innerHTML = txt;
 	}

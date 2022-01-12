@@ -1,9 +1,12 @@
 package com.encore.second.user;
 
-import java.util.ArrayList;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.encore.second.reserve.Reserve;
-import com.encore.second.reserve.ReserveService;
-import com.encore.second.seat.SeatService;
-
 @Controller
 @RequestMapping("/User")
 public class UserController {
@@ -24,7 +23,7 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@GetMapping("/join") //로그인 페이지에서 회원가입 버튼 클릭시 join 페이지로 넘어감
+	@GetMapping("/join")
 	public void joinForm() {}
 	
 	@ResponseBody
@@ -40,22 +39,35 @@ public class UserController {
 		return map;
 	}
 	
-	@PostMapping("/join") 
+	@PostMapping("/join")
 	public String join(User u) {
 		service.saveUser(u);
 		return "redirect:/Home/main";
 	}
 	
-	@GetMapping("/login") //홈페이지에서 로그인 버튼 클릭시 login 페이지로 넘어감
+	@GetMapping("/login")
 	public void loginForm() {}
 	
-	@PostMapping("/login") 
-	public String login(String id, String pwd, HttpSession session) {
+	@PostMapping("/login")
+	public String login(String id, String pwd, HttpSession session, HttpServletResponse response) {
 		User u = service.getUser(id);
 		String path = "User/login";
 		if(u != null && u.getPwd().equals(pwd)) {
 			session.setAttribute("loginid",	id);
 			path = "redirect:/Home/main";
+		}else {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out;
+			try {
+				out = response.getWriter();
+				out.println("<script language='javascript'>");
+				out.println("alert('잘못 입력하셨습니다.')");
+				out.println("</script>");
+				out.flush();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		return path;
 	}
