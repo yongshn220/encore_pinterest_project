@@ -41,6 +41,10 @@ function previousButtonClickEvent()
 	});
 }
 
+function progressButtonClickEvent()
+{
+	let elmt_progressButton = document.querySelector('');
+}
 
 function updateData()
 {
