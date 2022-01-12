@@ -6,6 +6,50 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+
+/* if (loginid()) {
+    alert("로그인하세요.");
+    window.location = "/User/login.jsp";
+} */
+
+
+/* function loginCheck(){ 
+	alert("로그인");
+    var uid = ${SessionScope.loginid}; 
+
+     if(uid == "null"){ 
+        alert("로그인이 필요한 서비스입니다.","로그인 페이지로 이동하시겠습니까?"); 
+     }
+     else{
+    	 alert("에러");
+    	 location.replace("/User/login.jsp");
+     }
+}   */
+
+$(document).ready(function(){
+	alert("로그인");
+	$("loginCheck").on("click", function(e){
+		
+		var returnValue = prompt('비밀번호를 입력해주세요.');
+		
+		if(returnValue==${SessionScope.loginid}){
+			var returnValue2 = confirm("정말로 탈퇴하시겠습니까? ㅠㅠ");
+			if(returnValue2){
+				alert("안녕히가세요.");
+			}else{
+				e.preventDefault();
+			}
+		}else{
+			alert("비밀번호가 틀렸습니다. 확인 후 다시 이용해주세요.");
+			e.preventDefault();
+		};
+	});
+});
+
+
+</script>
 </head>
 <body>
 	<!--header-->
@@ -36,12 +80,12 @@
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
 					<form action="/Home/getbytitle" method="post">
-					<div class="search-box">
-						<input type="text" class="search-txt" name="title"
-							placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
-							class="fas fa-search"></i>
-						</a>
-					</div>
+						<div class="search-box">
+							<input type="text" class="search-txt" name="title"
+								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+								class="fas fa-search"></i>
+							</a>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -72,8 +116,11 @@
 						</dl>
 					</div>
 
-					<span> <a class="link-reservation"
-						href="/Reservation/DateSelection/main/${m.id }"></a>
+					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
+
+						<a class="link-reservation"
+						href="/Reservation/DateSelection/main/${m.id }" class="loginCheck"
+						type="button"></a>
 					</span>
 				</div>
 
