@@ -45,9 +45,9 @@ function previousButtonClickEvent()
 function progressButtonClickEvent()
 {
 	let elmt_progressButton = document.querySelector('#result_area #progress_btn');
-	let anum = controller.data.amountAdult;
-	let cnum = controller.data.amountChild;
 	elmt_progressButton.addEventListener("click", () => {
+		let anum = controller.data.amountAdult;
+		let cnum = controller.data.amountChild;
 		const url = `/ReservationCheck/pay?id=${attr_TIME.movieDetail.movie.id}&anum=${anum}&cnum=${cnum}`;
 		window.location.href = url;
 	});
