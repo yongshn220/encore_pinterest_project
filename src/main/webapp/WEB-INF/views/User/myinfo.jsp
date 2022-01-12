@@ -10,6 +10,18 @@
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript">
 
+$(document).ready(function(){
+	$(".inout_button").on("click", function(e){
+		if(${SessionScope.loginld==null }){
+		}else{
+			alert('test');
+			location.href = "/User/logout";
+		};
+	});
+	
+</script>
+<script type="text/javascript">
+
  	$(document).ready(function(){
 		$(".edit_button").on("click", function(e){
 			var returnValue = prompt('비밀번호를 입려해주세요.');
