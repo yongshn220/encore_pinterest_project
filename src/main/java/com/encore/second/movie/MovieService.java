@@ -32,8 +32,8 @@ public class MovieService {
 	}
 	
 	//영화제목으로 검색
-	public ArrayList<Movie> getByTitle(String word){
-		return dao.findBytitleLike("%"+word+"%");
+	public ArrayList<Movie> getByTitle(String title){
+		return dao.findBytitleLike("%"+title+"%");
 	}
 
 }

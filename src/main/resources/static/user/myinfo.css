@@ -92,8 +92,8 @@ Start from here
 
 .myinfo .box.int_gender {border: solid 0px #fff}
 .myinfo .age {margin: 1px 0 8px; }
-.myinfo .eidt_button {display: inline_block; border: none; font-size: 20px; margin: 15px 0; padding: 5px 40px 5px 40px; background-color: pink; border: none; color: white; }
-.myinfo .eidt_button:hover {color: gray; }
+.myinfo .edit_button {display: inline_block; border: none; font-size: 20px; margin: 15px 0; padding: 5px 40px 5px 40px; background-color: pink; border: none; color: white; }
+.myinfo .edit_button:hover {color: gray; }
 .myinfo .out_button {display: inline_block; border: none; font-size: 20px; margin: 15px 0; padding: 5px 30px 5px 40px; background-color: white; border: none; color: #c0c0c0; }
 .myinfo .out_button:hover {color: black; }
 

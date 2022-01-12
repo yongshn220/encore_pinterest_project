@@ -35,13 +35,14 @@
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
-					<div class="search-box">
-						<input type="text" class="search-txt" name="searchForm"
-							placeholder="검색어를 입력하세요"> <a class="search-btn"
-							href="/Home/getbytitle" > <i class="fas fa-search"></i>
-						</a>
-					</div>
-
+					<form action="/Home/getbytitle/${m.title }" method="post">
+						<div class="search-box">
+							<input type="text" class="search-txt" name="word"
+								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+								class="fas fa-search"></i>
+							</a>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
