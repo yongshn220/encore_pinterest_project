@@ -7,14 +7,53 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/myinfo.css">
 <title>내 정보</title>
+<script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript">
-window.onload = () => {
-	if("${u.gender}"=="xy"){
-		document.getElementById("gender").checked = true;
-	}else {
-		document.getElementById("gender2").checked = true;
+
+ 	$(document).ready(function(){
+		$(".edit_button").on("click", function(e){
+			var returnValue = prompt('비밀번호를 입려해주세요.');
+			if(returnValue==${u.pwd}){
+				alert("인증에 성공하였습니다");
+				document.getElementById("edit_inf").submit();
+			}else{
+				alert("비밀번호가 틀렸습니다. 확인 후 다시 이용해주세요.");
+				e.preventDefault();
+			};
+		});
+	});
+
+</script>
+<script type="text/javascript">
+
+ 	$(document).ready(function(){
+		$(".out_button").on("click", function(e){
+			var returnValue = prompt('비밀번호를 입려해주세요.');
+			if(returnValue==${u.pwd}){
+				var returnValue2 = confirm("정말로 탈퇴하시겠습니까? ㅠㅠ");
+				if(returnValue2){
+					alert("안녕히가세요.");
+				}else{
+					e.preventDefault();
+				}
+			}else{
+				alert("비밀번호가 틀렸습니다. 확인 후 다시 이용해주세요.");
+				e.preventDefault();
+			};
+		});
+	});
+
+</script>
+<script type="text/javascript">
+
+	window.onload = () => {
+		if("${u.gender}"=="xy"){
+			document.getElementById("gender").checked = true;
+		}else {
+			document.getElementById("gender2").checked = true;
+		}
 	}
-}
+
 </script>
 </head>
 <body>
@@ -50,7 +89,7 @@ window.onload = () => {
 				<div class="row">
 					<div class="wrapper">
 						<div class="myinfo_insert">
-							<form action="/User/edit" method="post">
+							<form id="edit_inf" action="/User/edit" method="post">
 								<div>
 									<h3><label for="id">아이디</label></h3>
 									<span class="box int_id">
@@ -89,10 +128,8 @@ window.onload = () => {
 									</span>
 								</div>
 								<div class="buttons">
-								<input class="eidt_button" type="submit" value="수정하기">
-								<a href="/User/out">
-								<input class="out_button" type="button" value="탈퇴하기">
-								</a>
+								<input class="edit_button" type="button" value="수정하기">
+								<a href="/User/out" class="out_button" type="button">탈퇴하기</a>
 								</div>
 							</form>
 						</div>
