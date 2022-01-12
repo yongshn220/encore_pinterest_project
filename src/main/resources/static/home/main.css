@@ -209,8 +209,6 @@ Start from here
 	width: auto;
 	height: 80%;
 	background-color: #fff;
-	/*background-image: url('/images/main.jpg');
-	background-size: cover;*/
 	background-attachment: fixed; /*배경고정*/
 	position: sticky; /*헤더고정*/
 	top: 0; /*헤더고정*/
