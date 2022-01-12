@@ -107,6 +107,7 @@ class Receipt
 	
 	drawAll()
 	{
+		this.drawInfoSeatAvailable();
 		this.drawTitle();
 		this.drawInfoDate();
 		this.drawReceiptDate();
@@ -115,6 +116,13 @@ class Receipt
 		this.drawPrice();
 		
 	}
+	
+	drawInfoSeatAvailable()
+	{
+		let availableNum = this.controller.data.amountSeatAvailable;
+		this.elmt_infoSeatAvailable.innerHTML = `남은좌석 ${availableNum} / 25`;
+	}
+	
 	
 	drawTitle()
 	{
@@ -249,6 +257,7 @@ class Room
 	
 	updateRoom()
 	{
+		let reservedNum = 0;
 		attr_SEATLIST.forEach(seat => {
 			if(!seat.seat_info)
 			{
@@ -257,8 +266,13 @@ class Room
 			else
 			{
 				this.seatList[seat.row2][seat.col2].state = SEATSTATE.reserved;
+				reservedNum++;
 			}
 		})
+		
+		this.controller.data.amountSeatAvailable = 25 - reservedNum;
+		this.drawRoom();
+		this.controller.receipt.drawInfoSeatAvailable();
 	}
 	
 	drawRoom()
@@ -332,7 +346,6 @@ class Room
 			}
 			return true;
 		});
-		console.log(this.clickedSeatList);
 		this.drawRoom();
 	}
 	
