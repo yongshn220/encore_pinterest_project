@@ -25,15 +25,13 @@ import lombok.ToString;
 public class Movie_detail {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name="movie_id", nullable=false)
+	@JoinColumn(nullable=false)
 	private Movie movie;
 	
-	private String date;
+	private String date; //상영하는 날짜 
 	
-	private String time;
-	
-	private String room;
 }

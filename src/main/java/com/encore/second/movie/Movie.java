@@ -20,24 +20,31 @@ import lombok.ToString;
 @Getter
 @ToString
 public class Movie {
+	
+
 	@Id  //primary key
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String title;
 	
-	private String content;
+	private String act_director; //감독: / 배우:  
+	private String genre_bas; //장르: / 기본:12세이상,148분,미국... 
+	private String open_date; //개봉일
+
+	private String content; //줄거리
+	private boolean screen_flag; //개봉유무
+	   
+	private String img_path; //포스터
+	private String video; //동영상
 	
-	private String screen_period; //상영기간
 	
-	private boolean screen_flag;  //개봉유무
-	
-	private Date open_date;  //상영 시작일
-	
-	private String img_path;
+
 	
 	@Transient
 	private MultipartFile img_file;
+	   
+	   
 	
 
 }

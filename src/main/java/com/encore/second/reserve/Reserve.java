@@ -11,7 +11,6 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import com.encore.second.movie_detail.Movie_detail;
-import com.encore.second.seat.Seat;
 import com.encore.second.user.User;
 
 import lombok.Getter;
@@ -26,16 +25,14 @@ public class Reserve {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int reserve_id;
+	private int id;
 	
 	@ManyToOne
-	@JoinColumn(name="user_id", nullable=false)
+	@JoinColumn(nullable=false)
 	private User user;
 	
 	@ManyToOne
-	@JoinColumn(name="detail_id", nullable=false)
+	@JoinColumn(nullable=false)
 	@OnDelete(action= OnDeleteAction.CASCADE)
 	private Movie_detail detail;
-	
-
 }

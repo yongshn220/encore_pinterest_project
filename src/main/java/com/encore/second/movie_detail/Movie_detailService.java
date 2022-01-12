@@ -29,8 +29,4 @@ public class Movie_detailService {
 		return dao.findByDate(date);
 	}
 	
-	public ArrayList<Movie_detail> getByMovie_detail_time(String time){
-		return dao.findByTime(time);
-	}
-	
 }

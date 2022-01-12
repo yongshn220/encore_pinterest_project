@@ -1,7 +1,5 @@
 package com.encore.second.movie;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -11,64 +9,91 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
 
 
 @Controller
 @RequestMapping("/Home")
 public class MovieController {
-	
+
 	@Autowired
 	MovieService service;
-	
-	//영화등록 
-	@GetMapping("/add")
-	public String addForm() {
-			return "movie/form";
+
+
+	@GetMapping("/main")
+	public void main(Map map) {
+		ArrayList<Movie> list = service.getAll();
+		map.put("main", list);
 	}
-	
-	
-	//영화등록
-	@PostMapping("/add")
-	public String add(Movie m) {
-		Movie m2 = service.saveMovie(m);
-		return "redirect:/movie/list";
-	}
-	
-	
-	//영화목록
-	//요청url: get: "/movie/list" , view: "movie/list"  
-	@GetMapping("/list")
+
+	@RequestMapping("/list")
 	public void list(Map map) {
 		ArrayList<Movie> list = service.getAll();
 		map.put("list", list);
 	}
-	
-	//제목으로 검색
-	//요청url: get: "/movie/getByTitle/{title}", view: "movie/list"
-	@PostMapping("/getbytitle/{title}")
-	public String getByTitle(String title, Map map) {
-		ArrayList<Movie> list = service.getByTitle(title);
+
+
+	@GetMapping("/detail/{id}")
+	public String detail(@PathVariable("id") int id, Map map) {
+		Movie m = service.getById(id);
+		map.put("m", m);
+		return "Home/detail";
+
+	}
+
+	@PostMapping("/getbytitle")
+	public String getByTitle(String word, Map map) {
+		ArrayList<Movie> list = service.getByTitle(word);
 		map.put("list", list);
-		return "movie/list";
+		return "Home/list";
 	}
+
+	
+
 	
 	
-	//수정
-	//요청url: post:"/movie/edit", view: "redirect:/movie/list"
-	@PostMapping("/edit")
-	public String edit(Movie m) {
-		service.saveMovie(m);
-		return "redirect:/movie/list";
-	}
 	
-	//삭제
-	//요청url: get:"/movie/del", view: "redirect:/movie/list"
-	@GetMapping("/del/{num}")
-	public String del(@PathVariable("num")int num, Map map) {
-		service.delMovie(num);
-		map.put("del", num);
-		return "movie/list";
-	}
+	
+	
+//	@GetMapping("/main")
+//	public String addForm() {
+//			return "movie/main";
+//	}
+//	
+//	
+//	
+//	@PostMapping("/main")
+//	public String add(Movie m) {
+//		Movie m2 = service.saveMovie(m);
+//		return "redirect:/movie/list";
+//	}
+//	
+	
+	
+	
+	
+//	// 제목으로 검색
+//	@PostMapping("/getbytitle/{title}")
+//	public String getByTitle(String word, Map map) {
+//		ArrayList<Movie> list = service.getByTitle(word);
+//		map.put("list", list);
+//		return "movie/list";
+//	}
+
+//	//수정
+//	//요청url: post:"/movie/edit", view: "redirect:/movie/list"
+//	@PostMapping("/edit")
+//	public String edit(Movie m) {
+//		service.saveMovie(m);
+//		return "redirect:/movie/list";
+//	}
+//	
+//	//삭제
+//	//요청url: get:"/movie/del", view: "redirect:/movie/list"
+//	@GetMapping("/del/{num}")
+//	public String del(@PathVariable("num")int num, Map map) {
+//		service.delMovie(num);
+//		map.put("del", num);
+//		return "movie/list";
+//	}
 
 }

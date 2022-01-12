@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SeatDao extends JpaRepository<Seat, Integer> {
+import com.encore.second.time.Time;
 
+public interface SeatDao extends JpaRepository<Seat, Integer> {
+	
+	public ArrayList<Seat> findByTime(Time time);
 }

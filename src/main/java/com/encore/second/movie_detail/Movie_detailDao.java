@@ -11,7 +11,5 @@ public interface Movie_detailDao extends JpaRepository<Movie_detail, Integer> {
 	ArrayList<Movie_detail> findByMovie(Movie movie);
 
 	ArrayList<Movie_detail> findByDate(String date);
-	
-	ArrayList<Movie_detail> findByTime(String time);
-	
+		
 }
