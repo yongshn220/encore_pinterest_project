@@ -25,12 +25,6 @@ public class MovieController {
 		map.put("main", list);
 	}
 
-	@RequestMapping("/list")
-	public void list(Map map) {
-		ArrayList<Movie> list = service.getAll();
-		map.put("list", list);
-	}
-
 
 	@GetMapping("/detail/{id}")
 	public String detail(@PathVariable("id") int id, Map map) {
@@ -41,17 +35,29 @@ public class MovieController {
 	}
 
 	@PostMapping("/getbytitle")
-	public String getByTitle(String word, Map map) {
-		ArrayList<Movie> list = service.getByTitle(word);
+	public String getByTitle(String title, Map map) {
+		ArrayList<Movie> list = service.getByTitle(title);
 		map.put("list", list);
-		return "Home/list";
+		return "redirect:/Home/detail";
 	}
 
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
-	
-	
+//@RequestMapping("/list")
+//	public void list(Map map) {
+//		ArrayList<Movie> list = service.getAll();
+//		map.put("list", list);
+//	}		
 	
 	
 //	@GetMapping("/main")
