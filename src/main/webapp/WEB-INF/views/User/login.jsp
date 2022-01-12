@@ -10,29 +10,53 @@
 </head>
 <body>
 	<header id="header">
-		<div class="container">
+		<div class="contatiner">
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="/Home/main">
-							<em><img alt="logo" src="/images/logo.png"></em>
-						</a>
+						<a href="/Home/main"> <img src="/images/logo.png" alt="ElVOM">
+						</a> <span>ENCOREPLEX</span>
 					</h1>
 					<nav class="nav">
 						<ul class="clearfix">
+<<<<<<< HEAD
 							<li><a href="">ì˜í™” </a></li>
 							<li><a href="">ê·¹ìž¥ </a></li>
 							<li><a href="">ì˜ˆë§¤ </a></li>
 							<li><a href="">ìŠ¤í† ì–´ </a></li>
 							<li><a href="">ì´ë²¤íŠ¸ </a></li>
 							<li><a href="/User/login">ë¡œê·¸ì¸</a></li>
+=======
+							<li><a href="/User/login"> <img src="/images/login.png"
+									alt="·Î±×ÀÎ"> <span>·Î±×ÀÎ</span>
+							</a></li>
+							<li><a href="/User/join"> <img src="/images/join.png"
+									alt="È¸¿ø°¡ÀÔ"> <span>È¸¿ø°¡ÀÔ</span>
+							</a></li>
+							<li><a href="/User/myinfo"> <img src="/images/info.png"
+									alt="MY ElVOM"> <span>MY ElVOM</span>
+							</a></li>
+>>>>>>> d587171a156514dc389035891f356d628c8bc7e3
 						</ul>
+
 					</nav>
+					<!-- search -->
+					<link rel="stylesheet"
+						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<form action="/Home/getbytitle" method="post">
+					<div class="search-box">
+						<input type="text" class="search-txt" name="title"
+							placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+							class="fas fa-search"></i>
+						</a>
+					</div>
+					</form>
 				</div>
 			</div>
 		</div>
 	</header>
-	<!-- //header -->
+<!--header-->
 
  	<section id="login">
  		<h2 class="ir_so">ë¡œê·¸ì¸</h2>
