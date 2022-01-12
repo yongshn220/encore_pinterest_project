@@ -349,6 +349,21 @@ class Room
 		this.drawRoom();
 	}
 	
+	unclickAll()
+	{
+		this.seatList.forEach(row => {
+			row.forEach(seat => {
+				if(seat.state == SEATSTATE.clicked)
+				{
+					seat.state = SEATSTATE.empty;
+					console.log("set empty");
+				}
+			})
+		})
+		this.clickedSeatList = [];
+		this.drawRoom();
+	}
+	
 	isSeatValid(row, col)
 	{
 		if(this.isPosValid(row, col))
