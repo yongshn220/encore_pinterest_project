@@ -38,7 +38,7 @@
 					<!-- 돋보기아이콘 -->
 						<form action="/Home/getbytitle" method="post">
 						<div class="search-box">
-							<input type="text" class="search-txt" name="word"
+							<input type="text" class="search-txt" name="title"
 								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
 								class="fas fa-search"></i>
 							</a>

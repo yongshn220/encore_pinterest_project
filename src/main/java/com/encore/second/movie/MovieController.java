@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
+
 @Controller
 @RequestMapping("/Home")
 public class MovieController {
@@ -36,14 +37,14 @@ public class MovieController {
 
 	@PostMapping("/getbytitle")
 	public String getByTitle(String title, Map map) {
+		System.out.println("title:"+title);
 		ArrayList<Movie> list = service.getByTitle(title);
 		map.put("list", list);
-		return "redirect:/Home/detail";
+		System.out.println(list);
+		return "Home/list";
 	}
 
-	
-	
-	
+
 	
 	
 	

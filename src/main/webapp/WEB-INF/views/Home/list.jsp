@@ -1,14 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
+<link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
 </head>
 <body>
-	<!--header-->
+<!--header-->
 	<header id="header">
 		<div class="contatiner">
 			<div class="row">
@@ -35,48 +36,65 @@
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
-					<form action="/Home/getbytitle/${m.title }" method="post">
-						<div class="search-box">
-							<input type="text" class="search-txt" name="word"
-								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
-								class="fas fa-search"></i>
-							</a>
-						</div>
+					<form action="/Home/getbytitle" method="post">
+					<div class="search-box">
+						<input type="text" class="search-txt" name="title"
+							placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+							class="fas fa-search"></i>
+						</a>
+					</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<!--list-->
-	<h3>MovieChart</h3>
-	<table border="1">
-		<c:forEach var="m" items="${list }">
 
-			<div class="movieImg">
-				<h3>
-					<img src="${m.img_path }" style="width: 280px; height: 350px">
-				</h3>
-			</div>
-			<div class="movieInfo">
-				<div>
-					<span class="moiveTitle"><a href="/Home/detail/${m.id }">${m.title }</a></span>
-				</div>
-				<div class="movieInfoDetail">
-					<div>
-						<span class="moiveAct"> ${m.act_director } </span>
-					</div>
-					<div>
-						<span class="moiveContent"> ${m.content } </span>
-					</div>
-					<div>
-						<span class="moiveGenre"> ${m.genre_bas } </span>
-					</div>
-				</div>
-			</div>
 
-		</c:forEach>
-	</table>
+	<!-- detail -->
+	<section id="detail">
+		<div class="movieDetail">
+			<h3>영화상세</h3>
+			<c:forEach var="m" items="${list}">
+			<div class="content">
+
+				<div class="leftBox">
+					<img src="${m.img_path }" style="width: 185px; height: 260px;">
+				</div>
+
+				<div class="RightBox">
+					<div class="title">
+						<a href="/Home/detail/${m.id }">${m.title }</a>
+					</div>
+					<div class="spec">
+						<dl>
+							<dd>${m.act_director }</dd>
+							<dd>${m.genre_bas }</dd>
+							<dd>개봉 : ${m.open_date }</dd>
+						</dl>
+					</div>
+
+					<span> <a class="link-reservation"
+						href="/Reservation/DateSelection/main"></a>
+					</span>
+				</div>
+
+				<div class="Bottom">
+					<p>${m.content }</p>
+
+					<div class="video">
+						<iframe width="660" height="415" src="${m.video }"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+
+					</div>
+				</div>
+
+			</div>
+			</c:forEach>
+		</div>
+	</section>
 
 </body>
 </html>
