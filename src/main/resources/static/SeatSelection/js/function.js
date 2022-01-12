@@ -17,6 +17,11 @@ class MainController
 		this.receipt.drawAll();
 	}
 	
+	updateRoom()
+	{
+		this.data.room.updateRoom();
+	}
+	
 	//amount select events
 	addEventAdultAmountSelectClicked(element)
 	{
@@ -102,12 +107,26 @@ class Receipt
 	
 	drawAll()
 	{
+		this.drawInfoSeatAvailable();
+		this.drawTitle();
 		this.drawInfoDate();
 		this.drawReceiptDate();
 		this.drawAmount();
 		this.drawSeatId();
 		this.drawPrice();
 		
+	}
+	
+	drawInfoSeatAvailable()
+	{
+		let availableNum = this.controller.data.amountSeatAvailable;
+		this.elmt_infoSeatAvailable.innerHTML = `남은좌석 ${availableNum} / 25`;
+	}
+	
+	
+	drawTitle()
+	{
+		this.elmt_movieTitle.innerHTML = attr_TIME.movieDetail.movie.title;
 	}
 	
 	drawInfoDate()
@@ -151,7 +170,10 @@ class Receipt
 
 	getStrOfDate(data)
 	{
-		return "2022.01.07(금) 13:00~15:38";
+		let date = attr_TIME.movieDetail.date;
+		let time = attr_TIME.timeRoom;
+		
+		return `[${date}] [${time}]`;
 	}
 	
 	getStrOfAmount(data)
@@ -235,7 +257,22 @@ class Room
 	
 	updateRoom()
 	{
+		let reservedNum = 0;
+		attr_SEATLIST.forEach(seat => {
+			if(!seat.seat_info)
+			{
+				this.seatList[seat.row2][seat.col2].state = SEATSTATE.empty;			
+			}
+			else
+			{
+				this.seatList[seat.row2][seat.col2].state = SEATSTATE.reserved;
+				reservedNum++;
+			}
+		})
 		
+		this.controller.data.amountSeatAvailable = 25 - reservedNum;
+		this.drawRoom();
+		this.controller.receipt.drawInfoSeatAvailable();
 	}
 	
 	drawRoom()
@@ -309,7 +346,21 @@ class Room
 			}
 			return true;
 		});
-		console.log(this.clickedSeatList);
+		this.drawRoom();
+	}
+	
+	unclickAll()
+	{
+		this.seatList.forEach(row => {
+			row.forEach(seat => {
+				if(seat.state == SEATSTATE.clicked)
+				{
+					seat.state = SEATSTATE.empty;
+					console.log("set empty");
+				}
+			})
+		})
+		this.clickedSeatList = [];
 		this.drawRoom();
 	}
 	

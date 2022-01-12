@@ -21,4 +21,16 @@ public class TimeService {
 	public ArrayList<Time> getByDetail(Movie_detail md){
 		return dao.findBymovieDetail(md);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public ArrayList<Time> getAll()
+	{
+		return (ArrayList<Time>) dao.findAll();
+	}
 }

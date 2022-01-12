@@ -1,6 +1,8 @@
 package com.encore.second.movie;
 
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -37,6 +39,7 @@ public class Movie {
 	private String video; //동영상
 	
 	
+
 	
 	@Transient
 	private MultipartFile img_file;

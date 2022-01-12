@@ -9,9 +9,34 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<script>
+		const attr_TIME = ${time};
+		const attr_SEATLIST = ${seatList};
+	</script>
 	<div id=screen>
-		<div id="header">
-		</div>
+		<header id="header">
+			<div class="container">
+				<div class="row">
+					<div class="header">
+						<h1>
+							<a href="Home/list">
+								<em><img alt="logo" src="/images/logo.png"></em>
+							</a>
+						</h1>
+						<nav class="nav">
+							<ul class="clearfix">
+								<li><a href="">영화 </a></li>
+								<li><a href="">극장 </a></li>
+								<li><a href="">예매 </a></li>
+								<li><a href="">스토어 </a></li>
+								<li><a href="">이벤트 </a></li>
+								<li><a href="/User/login">로그인</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
 		<div id="body">
 			<div id="container">
 				<div id="contents">
@@ -91,7 +116,7 @@
 						<div id="center_area">
 							<div id="res_area1" class="res_area">
 								<ul>
-									<li id="res_title">스파이더맨<파 프럼 홈></li>
+									<li id="res_title"></li>
 								</ul>
 							</div>
 							<div id="res_area2" class="res_area">

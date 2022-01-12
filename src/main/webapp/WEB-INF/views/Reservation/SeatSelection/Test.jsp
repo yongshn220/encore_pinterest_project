@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+Seat data creation test page.
 </body>
 </html>

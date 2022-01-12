@@ -27,6 +27,8 @@ class PageEventHandler
 			event.target.classList.add("selected");		
 			this.controller.receipt.drawAmount();	
 			this.controller.receipt.drawPrice();	
+			this.room.unclickAll();
+			this.controller.receipt.drawSeatId();
 		}
 		
 	}
@@ -46,6 +48,8 @@ class PageEventHandler
 			event.target.classList.add("selected");
 			this.controller.receipt.drawAmount();	
 			this.controller.receipt.drawPrice();
+			this.room.unclickAll();
+			this.controller.receipt.drawSeatId();
 		}
 	}
 	

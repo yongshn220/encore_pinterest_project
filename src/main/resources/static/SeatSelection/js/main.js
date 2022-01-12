@@ -2,8 +2,10 @@
 let controller = new MainController();
 
 $(document).ready(function(){
-	
 	controller.init();
+	
+	updateData();
+	initEvents();
 })
 
 
@@ -25,10 +27,27 @@ const SEATSTATE =
 	hovered: 3,
 }
 
-function onPreviousButtonEvent() 
+function initEvents()
+{
+	previousButtonClickEvent();
+}
+
+function previousButtonClickEvent() 
 {
 	let elmt_previousButton = document.querySelector(`#result_area #previous_btn`);
 	elmt_previousButton.addEventListener("click", () => {
-		const url = "/Reservation/DateSelection/main/{movie_id}";
+		const url = `/Reservation/DateSelection/main/${attr_TIME.movieDetail.movie.id}`;
+		window.location.href = url;
 	});
 }
+
+
+function updateData()
+{
+	console.log(attr_TIME);
+	console.log(attr_SEATLIST);	
+	
+	controller.updateRoom();
+}
+
+

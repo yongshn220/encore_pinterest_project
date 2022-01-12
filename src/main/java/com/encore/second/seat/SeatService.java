@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.encore.second.time.Time;
+
 @Service
 public class SeatService {
 	
@@ -20,5 +22,13 @@ public class SeatService {
 		dao.deleteById(id);
 	}
 	
+	public ArrayList<Seat> getAll()
+	{
+		return (ArrayList<Seat>) dao.findAll();
+	}
 	
+	public ArrayList<Seat> getByTime(Time time)
+	{
+		return dao.findByTime(time);
+	}
 }
