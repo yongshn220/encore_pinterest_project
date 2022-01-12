@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
 </head>
@@ -20,10 +20,10 @@
 					<nav class="nav">
 						<ul class="clearfix">
 							<li><a href="/User/login"> <img src="/images/login.png"
-									alt="·Î±×ÀÎ"> <span>·Î±×ÀÎ</span>
+									alt="ë¡œê·¸ì¸"> <span>ë¡œê·¸ì¸</span>
 							</a></li>
 							<li><a href="/User/join"> <img src="/images/join.png"
-									alt="È¸¿ø°¡ÀÔ"> <span>È¸¿ø°¡ÀÔ</span>
+									alt="íšŒì›ê°€ì…"> <span>íšŒì›ê°€ì…</span>
 							</a></li>
 							<li><a href="/User/myinfo"> <img src="/images/info.png"
 									alt="MY ElVOM"> <span>MY ElVOM</span>
@@ -34,11 +34,11 @@
 					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<!-- ë‹ë³´ê¸°ì•„ì´ì½˜ -->
 					<form action="/Home/getbytitle" method="post">
 					<div class="search-box">
 						<input type="text" class="search-txt" name="title"
-							placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+							placeholder="ê²€ìƒ‰ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”"> <a class="search-btn"> <i
 							class="fas fa-search"></i>
 						</a>
 					</div>
@@ -53,7 +53,7 @@
 	<!-- detail -->
 	<section id="detail">
 		<div class="movieDetail">
-			<h3>¿µÈ­»ó¼¼</h3>
+			<h3>ì˜í™”ìƒì„¸</h3>
 			<div class="content">
 
 				<div class="leftBox">
@@ -68,7 +68,7 @@
 						<dl>
 							<dd>${m.act_director }</dd>
 							<dd>${m.genre_bas }</dd>
-							<dd>°³ºÀ : ${m.open_date }</dd>
+							<dd>ê°œë´‰ : ${m.open_date }</dd>
 						</dl>
 					</div>
 

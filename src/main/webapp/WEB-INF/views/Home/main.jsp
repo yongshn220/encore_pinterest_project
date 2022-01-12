@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/main.css">
-<title>¿µÈ­ ±× ÀÌ»óÀÇ °¨µ¿. ElVOM</title>
+<title>ì˜í™” ê·¸ ì´ìƒì˜ ê°ë™. ElVOM</title>
 </head>
 <body>
 	<!--header-->
@@ -21,10 +21,10 @@
 					<nav class="nav">
 						<ul class="clearfix">
 							<li><a href="/User/login"> <img src="/images/login.png"
-									alt="·Î±×ÀÎ"> <span>·Î±×ÀÎ</span>
+									alt="ë¡œê·¸ì¸"> <span>ë¡œê·¸ì¸</span>
 							</a></li>
 							<li><a href="/User/join"> <img src="/images/join.png"
-									alt="È¸¿ø°¡ÀÔ"> <span>È¸¿ø°¡ÀÔ</span>
+									alt="íšŒì›ê°€ìž…"> <span>íšŒì›ê°€ìž…</span>
 							</a></li>
 							<li><a href="/User/myinfo"> <img src="/images/info.png"
 									alt="MY ElVOM"> <span>MY ElVOM</span>
@@ -35,11 +35,11 @@
 					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<!-- ë‹ë³´ê¸°ì•„ì´ì½˜ -->
 						<form action="/Home/getbytitle" method="post">
 						<div class="search-box">
 							<input type="text" class="search-txt" name="title"
-								placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+								placeholder="ê²€ìƒ‰ì–´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"> <a class="search-btn"> <i
 								class="fas fa-search"></i>
 							</a>
 						</div>
@@ -63,35 +63,35 @@
 
 				<div class="movieChart_list">
 
-					<!-- ½ºÆÄÀÌ´õ¸Ç -->
+					<!-- ìŠ¤íŒŒì´ë”ë§¨ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/1"><img src="../images/posters/1.jpg"
-								alt="½ºÆÄÀÌ´õ¸Ç-³ë ¿þÀÌ È¨" onerror="errorImage(this)"
+								alt="ìŠ¤íŒŒì´ë”ë§¨-ë…¸ ì›¨ì´ í™ˆ" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-12.png" alt="12¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-12.png" alt="12ì„¸ ì´ìƒì„¸">
 							</div>
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">½ºÆÄÀÌ´õ¸Ç-³ë ¿þÀÌ È¨</strong> <span>¿¹¸ÅÀ²
+							<strong class="movieName">ìŠ¤íŒŒì´ë”ë§¨-ë…¸ ì›¨ì´ í™ˆ</strong> <span>ì˜ˆë§¤ìœ¨
 								34.5%</span>
 						</div>
 					</div>
 
 
-					<!-- °æ°üÀÇÇÇ -->
+					<!-- ê²½ê´€ì˜í”¼ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/2"><img src="../images/posters/2.jpg"
-								alt="°æ°üÀÇ ÇÇ" onerror="errorImage(this)"
+								alt="ê²½ê´€ì˜ í”¼" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-15.png" alt="15¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-15.png" alt="15ì„¸ ì´ìƒì„¸">
 
 
 							</div>
@@ -100,20 +100,20 @@
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">°æ°üÀÇ ÇÇ</strong> <span>¿¹¸ÅÀ² 24.9%</span>
+							<strong class="movieName">ê²½ê´€ì˜ í”¼</strong> <span>ì˜ˆë§¤ìœ¨ 24.9%</span>
 						</div>
 					</div>
 
 
-					<!-- ¾Å2°Ô´õ -->
+					<!-- ì”½2ê²Œë” -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/3"><img src="../images/posters/3.jpg"
-								alt="¾Å2°Ô´õ" onerror="errorImage(this)"
+								alt="ì”½2ê²Œë”" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-all.png" alt="ÀüÃ¼¼¼">
+								<img src="../images/posters/grade-all.png" alt="ì „ì²´ì„¸">
 
 
 							</div>
@@ -121,18 +121,18 @@
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">¾Å2°Ô´õ</strong> <span>¿¹¸ÅÀ² 20.5%</span>
+							<strong class="movieName">ì”½2ê²Œë”</strong> <span>ì˜ˆë§¤ìœ¨ 20.5%</span>
 						</div>
 					</div>
 
-					<!-- ÇØÇÇ´ºÀÌ¾î -->
+					<!-- í•´í”¼ë‰´ì´ì–´ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/4"><img src="../images/posters/4.jpg"
-								alt="ÇØÇÇ ´º ÀÌ¾î" onerror="errorImage(this)"
+								alt="í•´í”¼ ë‰´ ì´ì–´" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 							<div class="movieAge">
-								<img src="../images/posters/grade-12.png" alt="12¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-12.png" alt="12ì„¸ ì´ìƒì„¸">
 
 
 							</div>
@@ -140,19 +140,19 @@
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">ÇØÇÇ ´º ÀÌ¾î</strong> <span>¿¹¸ÅÀ² 3.7%</span>
+							<strong class="movieName">í•´í”¼ ë‰´ ì´ì–´</strong> <span>ì˜ˆë§¤ìœ¨ 3.7%</span>
 						</div>
 					</div>
 
-					<!-- Å·½º¸Ç -->
+					<!-- í‚¹ìŠ¤ë§¨ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/5"><img src="../images/posters/5.jpg"
-								alt="Å·½º¸Ç-ÆÛ½ºÆ® ¿¡ÀÌÀüÆ®" onerror="errorImage(this)"
+								alt="í‚¹ìŠ¤ë§¨-í¼ìŠ¤íŠ¸ ì—ì´ì „íŠ¸" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-19.png" alt="Ã»¼Ò³â °ü¶÷ºÒ°¡¼¼">
+								<img src="../images/posters/grade-19.png" alt="ì²­ì†Œë…„ ê´€ëžŒë¶ˆê°€ì„¸">
 
 
 							</div>
@@ -160,20 +160,20 @@
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">Å·½º¸Ç-ÆÛ½ºÆ® ¿¡ÀÌÀüÆ®</strong> <span>¿¹¸ÅÀ²
+							<strong class="movieName">í‚¹ìŠ¤ë§¨-í¼ìŠ¤íŠ¸ ì—ì´ì „íŠ¸</strong> <span>ì˜ˆë§¤ìœ¨
 								3.6%</span>
 						</div>
 					</div>
 
-					<!-- µå¶óÀÌºê ¸¶ÀÌÄ« -->
+					<!-- ë“œë¼ì´ë¸Œ ë§ˆì´ì¹´ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/6"><img src="../images/posters/6.jpg"
-								alt="µå¶óÀÌºê ¸¶ÀÌ Ä«" onerror="errorImage(this)"
+								alt="ë“œë¼ì´ë¸Œ ë§ˆì´ ì¹´" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-15.png" alt="15¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-15.png" alt="15ì„¸ ì´ìƒì„¸">
 
 
 							</div>
@@ -181,86 +181,86 @@
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">µå¶óÀÌºê ¸¶ÀÌ Ä«</strong> <span>¿¹¸ÅÀ²
+							<strong class="movieName">ë“œë¼ì´ë¸Œ ë§ˆì´ ì¹´</strong> <span>ì˜ˆë§¤ìœ¨
 								1.7%</span>
 						</div>
 					</div>
 
-					<!-- ÇÇµå¹é -->
+					<!-- í”¼ë“œë°± -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/7"><img src="../images/posters/7.jpg"
-								alt="ÇÇµå¹é" onerror="errorImage(this)"
+								alt="í”¼ë“œë°±" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-19.png" alt="Ã»¼Ò³â °ü¶÷ºÒ°¡¼¼">
+								<img src="../images/posters/grade-19.png" alt="ì²­ì†Œë…„ ê´€ëžŒë¶ˆê°€ì„¸">
 
 
 							</div>
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">ÇÇµå¹é</strong> <span>¿¹¸ÅÀ² 1.5%</span>
+							<strong class="movieName">í”¼ë“œë°±</strong> <span>ì˜ˆë§¤ìœ¨ 1.5%</span>
 						</div>
 					</div>
 
-					<!-- ¸ÅÆ®¸¯½º -->
+					<!-- ë§¤íŠ¸ë¦­ìŠ¤ -->
 					<div class="slide_movie">
 
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/8"><img src="../images/posters/8.jpg"
-								alt="¸ÅÆ®¸¯½º-¸®Àú·º¼Ç" onerror="errorImage(this)"
+								alt="ë§¤íŠ¸ë¦­ìŠ¤-ë¦¬ì €ë ‰ì…˜" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-15.png" alt="15¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-15.png" alt="15ì„¸ ì´ìƒì„¸">
 
 							</div>
 
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">¸ÅÆ®¸¯½º-¸®Àú·º¼Ç</strong> <span>¿¹¸ÅÀ²
+							<strong class="movieName">ë§¤íŠ¸ë¦­ìŠ¤-ë¦¬ì €ë ‰ì…˜</strong> <span>ì˜ˆë§¤ìœ¨
 								0.7%</span>
 						</div>
 					</div>
 
 
-					<!-- ÇÏ¿ì½º¿Àºê±¸Âî -->
+					<!-- í•˜ìš°ìŠ¤ì˜¤ë¸Œêµ¬ì°Œ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/9"><img src="../images/posters/9.jpg"
-								alt="ÇÏ¿ì½º ¿Àºê ±¸Âî" onerror="errorImage(this)"
+								alt="í•˜ìš°ìŠ¤ ì˜¤ë¸Œ êµ¬ì°Œ" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-15.png" alt="15¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-15.png" alt="15ì„¸ ì´ìƒì„¸">
 
 							</div>
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">ÇÏ¿ì½º ¿Àºê ±¸Âî</strong> <span>¿¹¸ÅÀ²
+							<strong class="movieName">í•˜ìš°ìŠ¤ ì˜¤ë¸Œ êµ¬ì°Œ</strong> <span>ì˜ˆë§¤ìœ¨
 								0.4%</span>
 						</div>
 					</div>
 
-					<!-- ÇÁ¶û½º -->
+					<!-- í”„ëž‘ìŠ¤ -->
 					<div class="slide_movie">
 						<div class="img_wrap" data-scale="false">
 							<a href="/Home/detail/10"><img src="../images/posters/10.jpg"
-								alt="ÇÁ¶û½º" onerror="errorImage(this)"
+								alt="í”„ëž‘ìŠ¤" onerror="errorImage(this)"
 								style="width: 250px; height: 320px"></a>
 
 							<div class="movieAge">
-								<img src="../images/posters/grade-12.png" alt="12¼¼ ÀÌ»ó¼¼">
+								<img src="../images/posters/grade-12.png" alt="12ì„¸ ì´ìƒì„¸">
 
 							</div>
 
 						</div>
 						<div class="movie_info">
-							<strong class="movieName">ÇÁ¶û½º</strong> <span>¿¹¸ÅÀ² 0.1%</span>
+							<strong class="movieName">í”„ëž‘ìŠ¤</strong> <span>ì˜ˆë§¤ìœ¨ 0.1%</span>
 						</div>
 
 					</div>
