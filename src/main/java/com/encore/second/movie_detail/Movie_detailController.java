@@ -27,27 +27,21 @@ public class Movie_detailController {
 	@Autowired
 	private TimeService serviceT;
 	
-	/*
-	 * @GetMapping("/main/{movie}") public void main(@PathVariable("movie") Movie
-	 * movie, Map map) { ArrayList<Movie_detail> list =
-	 * service.getByMovie_detail_movie(movie); map.put("list", list); }
-	 */
-	
-	@GetMapping("/main/{movie}")
+/*	@GetMapping("/main/{movie}")
 	public void main(Map map) {
 		Movie movie = serviceM.getById(1);
 		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
 		map.put("m", movie);
 		map.put("list", list);
-	}
+	}*/
 	
-/*	@GetMapping("/main/{movie_id}")
-	public void main(@PathVariable("movie_id") int id, Map map) {
+	@GetMapping("/main/{movieId}")
+	public void main(@PathVariable("movieId") int id, Map map) {
 		Movie movie = serviceM.getById(id);
 		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
 		map.put("m", movie);
 		map.put("list", list);
-	}*/
+	}
 	
 	@ResponseBody
 	@RequestMapping("/timelist")
