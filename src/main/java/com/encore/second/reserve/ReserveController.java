@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.encore.second.seat.SeatService;
+import com.encore.second.time.TimeService;
 import com.encore.second.user.User;
 
 @Controller
@@ -20,6 +22,12 @@ public class ReserveController {
 	
 	@Autowired
 	private ReserveService service;
+	
+	@Autowired
+	private TimeService service1;
+	
+	@Autowired
+	private SeatService service2;
 	//private String path = "C:\\img\\movie\\";
 
 
@@ -36,16 +44,22 @@ public class ReserveController {
 	}
 	
 	
-	@GetMapping("/pay/{id}") // /user/myinfo/${sessionScope.loginid} 테이블마다 검색 후 map에등록
-	public String myinfo(@PathVariable("id") String loginid, Map map) {// myinfo.jsp에 로그인 사람의 정보를 출력
+	@GetMapping("/pay") // /user/myinfo/${sessionScope.loginid} 테이블마다 검색 후 map에등록
+	public String myinfo(int id, int anum, int cnum, Map map) {// myinfo.jsp에 로그인 사람의 정보를 출력
 		//User u = service.getUser(loginid);타임아이디?
+		//Time.id -> arrayList<Seat>
+		//Seat.seat_info = false -> true
+		System.out.println(id);
+		System.out.println(anum);
+		System.out.println(cnum);
+		//time id(Map/ Model) -> html(view page) -> controller(seat db update/ reserve db)  
 		
 		//map.put("u", u);// 뷰 페이지에 전달. 뷰 페이지에 데이터 전달하려면 메서드 파라메터에 맵을 추가하고, 데이터를 맵에 put()으로 추가
 		return "/myinfo"; 
 	}
 	//예매정보 db등록
 	//결제를 버튼 클릭시 db저장
-	@PostMapping("/")
+	@PostMapping("/reservechecksubmit")
 	public String reservecheck(User u) {
 		//service.save(r);// 예매정보를 db에 저장
 		return "redirect://";
