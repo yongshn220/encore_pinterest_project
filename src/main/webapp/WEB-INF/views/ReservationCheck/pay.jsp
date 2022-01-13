@@ -5,46 +5,61 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/ReservationCheck/pay.css">
 <title>Insert title here</title>
 </head>
 <body>
+		<!--header-->
+	<header id="header">
+		<div class="contatiner">
+			<div class="row">
+				<div class="header">
+					<h1>
+						<a href="/Home/main"> <img src="/images/logo.png" alt="ElVOM">
+						</a> <span>ENCOREPLEX</span>
+					</h1>
+					<nav class="nav">
+						<ul class="clearfix">
+							<li><a href="/User/login"> <img src="/images/login.png"
+									alt="로그인"> <span>로그인</span>
+							</a></li>
+							<li><a href="/User/join"> <img src="/images/join.png"
+									alt="회원가입"> <span>회원가입</span>
+							</a></li>
+							<li><a href="/User/myinfo"> <img src="/images/info.png"
+									alt="MY ElVOM"> <span>MY ElVOM</span>
+							</a></li>
+						</ul>
 
-
-
-<%-- 		if (${sessionScope.loginid} != null) { --%>
-
-		<div>
-
-			<button>${sessionScope.loginid}님 환영합니다
-			</button>
-
+					</nav>
+					<!-- search -->
+					<link rel="stylesheet"
+						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+					<!-- 돋보기아이콘 -->
+					<form action="/Home/getbytitle" method="post">
+						<div class="search-box">
+							<input type="text" class="search-txt" name="title"
+								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+								class="fas fa-search"></i>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<div>
-			<a href="moveMypage.do"><button>마이페이지</button></a> 
-		</div>
-		<div>
-			<a href="logout.do"><button>로그아웃</button></a> 
-		</div>
-<!-- 		} else { -->
-
-<!-- 		<div> -->
-<!-- 			<a href="moveLogin.do"><button>로그인</button></a> --> 
-<!-- 		<div> -->
-<!-- 			<a href="moveRegister.do"><button>회원가입</button></a> --> - 
-<!-- 		</div> -->
-
-<!-- 		} -->
-
-	</div>
+	</header>
 	
 
-	<h3>${sessionScope.loginid}님로그인</h3>
-	영화 이름/ 선택 날짜
+	
+	
 	<form action="/ReservationCheck/reservechecksubmit" method="post">
 
 		<!-- //movie -->
+		
 		<section id="movie">
+		
 			<div class="movie">
+			<h3>${sessionScope.loginid}님로그인</h3>
 				<h2 class="ir_so">결제 창</h2>
 				<div class="container">
 					<div class="row">
@@ -55,7 +70,7 @@
 								<div>
 								예약좌석
 								<c:forEach var="str" items="${strlist }">
-									${str }
+								${str }
 								</c:forEach>
 								</div>
 								<div>
