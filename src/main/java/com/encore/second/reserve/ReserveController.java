@@ -58,12 +58,13 @@ public class ReserveController {
 		ArrayList<Seat> s = service2.getByTime(t);
 		
 		
-		String[] array = seatList.split(",");
+		String[] array = seatList.split(",");//
 		ArrayList<Seat> list = new ArrayList<>();
 		String[] seatCode = {"A","B","C","D","E"};
 		
+		
 		for(int i =0 ; i<array.length; i++) {
-			Seat tempSeat = service2.getById(i+1);
+			Seat tempSeat = service2.getById(Integer.parseInt(array[i])+1);
 			list.add(tempSeat);
 		}
 		
@@ -76,6 +77,7 @@ public class ReserveController {
 			String strCode = seatCode[row]+(col+1);	
 			strlist[i] = strCode;
 		}
+		
 		
 		map.put("seatList", seatList);
 		map.put("strlist", strlist);
@@ -119,7 +121,7 @@ public class ReserveController {
 //			int id1 = Integer.parseInt(x);
 //			service2.Seat_info_Update(id1);
 
-		return "redirect:/ReservationCheck/check";
+		return "redirect:/Home/main";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
