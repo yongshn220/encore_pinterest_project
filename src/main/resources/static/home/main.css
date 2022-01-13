@@ -209,8 +209,6 @@ Start from here
 	width: auto;
 	height: 80%;
 	background-color: #fff;
-	/*background-image: url('/images/main.jpg');
-	background-size: cover;*/
 	background-attachment: fixed; /*배경고정*/
 	position: sticky; /*헤더고정*/
 	top: 0; /*헤더고정*/
@@ -236,7 +234,7 @@ Start from here
 }
 
 .movieChartScreen .movie_info strong {
-	color: dimgrey;
+	color: #bfc1c6;
 	font-weight: 700;
 	font-family: '맑은 고딕', '돋움', sans-serif;
 	font-size: 23px;
@@ -286,6 +284,7 @@ Start from here
 .movie_info {
 	line-height: 1.8;
 	font-size: 101%;
+	color: #bfc1c6;
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;

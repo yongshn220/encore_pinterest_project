@@ -1,18 +1,12 @@
 @charset "UTF-8";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,120 +15,383 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+	color: inherit;
+	text-decoration: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-.ir_so {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
-
+.ir_so {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
 
 /*
 ---------------------------------------------------------------------
 Start from here
 */
 
+/* 
+---------------------------------------------------------------------
+레이아웃 
+---------------------------------------------------------------------
+*/
+#header {
+	width: 100%;
+	height: 170px; /*헤더고정*/
+	background-color: #fff;
+	border-bottom: 1px solid #c6c6c6;
+}
 
-/* 레이아웃 */
-#header {width: 100%; height: 107px; border-bottom: 1px solid #c6c6c6; }
-#movie {position: relative; }
-#reservie {position: relative; }
+#movie {
+	position: relative;
+	background-color: #fff; /*배경*/
+}
 
-/* 가운데 영역 */
-.container {position: relative; width:1500px; margin: 0 auto; background: rgba(0,0,0,0); }
+#reservie {
+	position: relative;
+}
 
-/* 로우 영역 */
-.row {padding: 0 100px; }
+/* 
+---------------------------------------------------------------------
+가운데 영역 
+---------------------------------------------------------------------
+*/
+.contatiner {
+	position: relative;
+	width: 1700px;
+	margin: 0 50 50 50px;
+	background: rgba(0, 0, 0, 0);
+}
 
-/* 헤더 영역 */
-.header {overflow: hidden; }
-.header h1 {float: left; }
-.header h1 em {padding: 13px 10px 10px 0; display:inline-block; }
-.header h1 img {width: 200px; }
+/* 
+---------------------------------------------------------------------
+로우 영역 
+---------------------------------------------------------------------
+*/
+.row {
+	padding: 0 120px;
+}
 
-.header .nav {float: right; }
-.header .nav ul {border-left: 0px solid #777; }
-.header .nav ul li {float:left; width: 100xp; text-align: center; border-right: 0px solid #777; }
-.header .nav ul li a {display: block; padding: 40px 20px; font-size: 28px; font-weight: 700; color: #123; transition: all 0.4s; }
-.header .nav ul li a:hover {color: blue; }
+/* 
+---------------------------------------------------------------------
+헤더 영역 
+---------------------------------------------------------------------
+*/
+.header {
+	overflow: hidden;
+	position: Fixed;
+	width: 85%;
+	height: 170px;
+}
+
+.header h1 {
+	float: left;
+}
+
+/*로고위치*/
+.header h1 em {
+	padding: 13px 10px 10px 0;
+	display: block;
+}
+
+.header h1 img {
+	width: 50%;
+	vertical-align: sub;
+	margin-top: 20px;
+}
+
+/*오른쪽 서비스 위치*/
+.nav {
+	float: right;
+	margin-top: 25px;
+}
+
+.header .nav ul {
+	border-left: 0px solid #777;
+}
+
+.clearfix li {
+	display: inline-flex;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.clearfix img {
+	display: flex;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	width: 40px;
+	height: 40px;
+}
+
+.clearfix span {
+	display: flex;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	padding-left: -5px;
+}
+
+/*
+---------------------------------------------------------------------
+검색창
+---------------------------------------------------------------------
+*/
+.search-box {
+	position: absolute;
+	top: 75%;
+	left: 90%;
+	transform: translate(-50%, -50%);
+	background: #c0c0c0;
+	height: 30px;
+	border-radius: 30px;
+	padding: 10px;
+}
+
+/*검색폭 */
+.search-box:hover>.search-txt {
+	width: 200px;
+	padding: 0 6px;
+}
+
+/*돋보기*/
+.search-box:hover>.search-btn {
+	position: absolute;
+	right: 5px;
+	background: white;
+	color: #1e1e1e;
+}
+
+.search-btn {
+	color: #d9d9d9;
+	float: right;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+
+.search-txt {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 30px;
+	width: 0px;
+}
 
 /* 소개 영역 */
-.movie {overflow: hidden; position: absolut; height:380px; }
-.movie_left {float: left; }
-.movie_left img {width: 280px; height: 300px; margin: 0px 50px 50px 155px; border-radius: 20px; }
+.movie {
+	overflow: hidden;
+	position: absolut;
+	height: 380px;
+}
 
-.movie_right {position: relative; float: rignt; width: 1100px; margin: 40px 0 0 50px;}
-.movie_right .movie_title {display:block; font-size: 30px; margin: 20px; font-weight: 700; }
-.movie_right .movie_act {display:block; font-size: 15px; margin: 10px;}
-.movie_right .movie_content {display:block; font-size: 18px; margin: 20px;}
-.movie_right .movie_genre {display:block; font-size: 15px; margin: 10px;}
+.movie_left {
+	float: left;
+}
+
+.movie_left img {
+	width: 280px;
+	height: 300px;
+	margin: 0px 50px 50px 155px;
+	border-radius: 20px;
+}
+
+.movie_right {
+	position: relative;
+	float: rignt;
+	width: 1100px;
+	margin: 40px 0 0 50px;
+}
+
+.movie_right .movie_title {
+	display: block;
+	font-size: 30px;
+	margin: 20px;
+	font-weight: 700;
+}
+
+.movie_right .movie_act {
+	display: block;
+	font-size: 15px;
+	margin: 10px;
+}
+
+.movie_right .movie_content {
+	display: block;
+	font-size: 18px;
+	margin: 20px;
+}
+
+.movie_right .movie_genre {
+	display: block;
+	font-size: 15px;
+	margin: 10px;
+}
 
 /* 예매 영역 */
-.reserve {display: block; height:400px;}
-.reserve_title {font-size: 30px; font-weight: 700; text-align: center; }
-.reserve .reserve_left {display: block; float: left; width: 200px; height: 200px; }
-.reserve .reserve_left img {position: relative; width: 500px; height: 500px; padding: 0 0 0 70px}
-.reserve .reserve_left .text {position: absolute; top: 53px; left: 207px;}
-.reserve .reserve_left .map_button {background-color: skyblue; color: white; border: none; }
-.reserve .reserve_left .map_button:hover {color: gray; }
-.reserve .reserve_left .map_button2 {background-color: skyblue; color: white; border: none; }
-.reserve .reserve_left .map_button2:hover {color: gray; }
+.reserve {
+	display: block;
+	height: 400px;
+}
 
-.reserve .reserve_left .text2 {position: absolute; top: 140px; left: 190px;}
-.reserve .reserve_left .text3 {position: absolute; top: 243px; left: 228px;}
-.reserve .reserve_left .text4 {position: absolute; top: 342px; left: 190px;}
-.reserve .reserve_left .text5 {position: absolute; top: 195px; left: 550px;}
-.reserve .reserve_left .text6 {position: absolute; top: 264px; left: 560px;}
-.reserve .reserve_left .text7 {position: absolute; top: 315px; left: 565px;}
+.reserve_title {
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
 
-.reserve .reserve_right {display: none;}
-.reserve .list_date {display: block; float: left; margin: 50px 0 0 500px; }
-.reserve .list_date input {display: block; padding: 5px 15px 5px 15px; background-color: pink; color: white; border: solid 2px pink; }
-.reserve .list_date input:hover {color: gray; }
+.reserve .reserve_left {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 200px;
+}
 
-.reserve .list_time {display: block; float: right; margin: 50px 200px 0 0px; }
-.reserve .list_time input {display: block; padding: 5px 15px 5px 15px; background-color: skyblue; color: white; border: solid 2px skyblue; }
-.reserve .list_time input:hover {color: gray; }
+.reserve .reserve_left img {
+	position: relative;
+	width: 500px;
+	height: 500px;
+	padding: 0 0 0 70px
+}
 
+.reserve .reserve_left .text {
+	position: absolute;
+	top: 638px;
+	left: 232px;
+}
 
+.reserve .reserve_left .map_button {
+	background-color: skyblue;
+	color: white;
+	border: none;
+}
 
+.reserve .reserve_left .map_button:hover {
+	color: gray;
+}
 
+.reserve .reserve_left .map_button2 {
+	background-color: skyblue;
+	color: white;
+	border: none;
+}
 
+.reserve .reserve_left .map_button2:hover {
+	color: gray;
+}
 
+.reserve .reserve_left .text2 {
+	position: absolute;
+	top: 718px;
+	left: 207px;
+}
 
+.reserve .reserve_left .text3 {
+	position: absolute;
+	top: 825px;
+	left: 243px;
+}
 
+.reserve .reserve_left .text4 {
+	position: absolute;
+	top: 923px;
+	left: 202px;
+}
 
+.reserve .reserve_left .text5 {
+	position: absolute;
+	top: 779px;
+	left: 564px;
+}
 
+.reserve .reserve_left .text6 {
+	position: absolute;
+	top: 845px;
+	left: 580px;
+}
 
+.reserve .reserve_left .text7 {
+	position: absolute;
+	top: 895px;
+	left: 583px;
+}
 
+.reserve .reserve_right {
+	display: none;
+}
 
+.reserve .list_date {
+	display: block;
+	float: left;
+	margin: 50px 0 0 500px;
+}
 
+.reserve .list_date input {
+	display: block;
+	padding: 5px 15px 5px 15px;
+	background-color: pink;
+	color: white;
+	border: solid 2px pink;
+}
 
+.reserve .list_date input:hover {
+	color: gray;
+}
 
+.reserve .list_time {
+	display: block;
+	float: right;
+	margin: 50px 200px 0 0px;
+}
 
+.reserve .list_time input {
+	display: block;
+	padding: 5px 15px 5px 15px;
+	background-color: skyblue;
+	color: white;
+	border: solid 2px skyblue;
+}
 
-
-
+.reserve .list_time input:hover {
+	color: gray;
+}
