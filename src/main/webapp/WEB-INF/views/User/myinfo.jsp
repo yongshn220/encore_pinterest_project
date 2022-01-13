@@ -168,7 +168,7 @@
 					<c:if test="${not empty list }">
 						<ul>
 						<c:forEach var="l" items="${r }">
-							<li>"${r.reserve_id }","${r.user.name }", "${r.detial }", "${r.adult_num }", "${r.child_num }", "${r.price }", "${r.seats }"</li>
+							<li>"${l.reserve_id }","${l.user.name }", "${l.detial }", "${l.adult_num }", "${l.child_num }", "${l.price }", "${l.seats }"</li>
 							<li><a href="#">예매취소</a>
 						</c:forEach>
 						</ul>
