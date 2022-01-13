@@ -1,5 +1,6 @@
 package com.encore.second.movie_detail;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -39,8 +40,8 @@ public class Movie_detailController {
 	
 	@GetMapping("/main/{movie_id}")
 	public String main(@PathVariable("movie_id") int id, Map map, HttpSession session) {
-		String loginId = (String) session.getAttribute("loginid");
-		if(loginId == null || loginId.equals("") ) {
+		String loginid = (String) session.getAttribute("loginid");
+		if(loginid == null || loginid.equals("") ) {
 			return "User/login";
 		}
 		Movie movie = serviceM.getById(id);
