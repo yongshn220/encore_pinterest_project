@@ -12,7 +12,7 @@
 $(document).ready(function(){
 	$(".inout_button").on("click", function(e){
 		alert('test0');
-		if(${SessionScope.loginid }==null){
+		if(${sessionScope.loginid }==null){
 		}else{
 			alert('test');
 			location.href = "/User/logout";
