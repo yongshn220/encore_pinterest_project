@@ -8,18 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/user/myinfo.css">
 <title>³» Á¤º¸</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript">
 
-$(document).ready(function(){
-	$(".inout_button").on("click", function(e){
-		if(${SessionScope.loginld==null }){
-		}else{
-			alert('test');
-			location.href = "/User/logout";
-		};
-	});
-	
-</script>
 <script type="text/javascript">
 
  	$(document).ready(function(){
@@ -193,14 +182,3 @@ $(document).ready(function(){
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
