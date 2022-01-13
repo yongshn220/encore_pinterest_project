@@ -7,27 +7,40 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/login.css">
 	<title>로그인</title>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".inout_button").on("click", function(e){
+		alert('test0');
+		if(${sessionScope.loginid }==null){
+		}else{
+			alert('test');
+			location.href = "/User/logout";
+		};
+	});
+</script>	
 </head>
 <body>
+<!--header-->
 	<header id="header">
 		<div class="contatiner">
 			<div class="row">
 				<div class="header">
 					<h1>
-						<a href="/Home/main"> <img src="/images/logo.png" alt="ElVOM">
-						</a> <span>ENCOREPLEX</span>
+						<a href="/Home/main"><img src="/images/logo.png" alt="ElVOM"></a> 
+						<span class="addTag">ENCOREPLEX</span>
 					</h1>
 					<nav class="nav">
 						<ul class="clearfix">
-							<li><a href="/User/login"> <img src="/images/login.png"
-									alt="로그인"> <span>로그인</span>
-							</a></li>
-							<li><a href="/User/join"> <img src="/images/join.png"
-									alt="회원가입"> <span>회원가입</span>
-							</a></li>
-							<li><a href="/User/myinfo"> <img src="/images/info.png"
-									alt="MY ElVOM"> <span>MY ElVOM</span>
-							</a></li>
+							<li>
+								<a href="/User/login" class="inout_button" type="button"><img src="/images/login.png" alt="로그인"></a>
+							</li>
+							<li>
+								<a href="/User/join"><img src="/images/join.png" alt="회원가입"></a>
+							</li>
+							<li>
+								<a href="/User/myinfo"><img src="/images/info.png" alt="MY ElVOM"></a>
+							</li>
 						</ul>
 
 					</nav>
@@ -47,7 +60,7 @@
 			</div>
 		</div>
 	</header>
-<!--header-->
+	<!-- //header -->
 
  	<section id="login">
  		<h2 class="ir_so">로그인</h2>

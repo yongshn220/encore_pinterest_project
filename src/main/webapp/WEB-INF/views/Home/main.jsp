@@ -36,7 +36,7 @@
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
-						<form action="/Home/getbytitle" method="post">
+					<form action="/Home/getbytitle" method="post">
 						<div class="search-box">
 							<input type="text" class="search-txt" name="title"
 								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
@@ -55,9 +55,7 @@
 	<!-- MovieChart -->
 	<section id="cont">
 		<div class="contents">
-			<h3>
-				<a href="/Home/main">MovieChart</a>
-			</h3>
+			<h3>MovieChart</h3>
 
 			<div class="movieChartScreen">
 
