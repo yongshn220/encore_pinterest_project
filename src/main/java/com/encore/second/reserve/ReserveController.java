@@ -53,23 +53,24 @@ public class ReserveController {
 	@GetMapping("/pay") // /user/myinfo/${sessionScope.loginid} 테이블마다 검색 후 map에등록
 	public String myinfo(String seatList, int id, int anum, int cnum, Map map) {// myinfo.jsp에 로그인 사람의 정보를 출력
 		
-		System.out.println("myinfo - in");
 		Time t = service1.getById(id);
-		
-		System.out.println("myinfo - 2");
 		Movie_detail m =t.getMovieDetail();
 		ArrayList<Seat> s = service2.getByTime(t);
 		
-		System.out.println("myinfo - 3");
+		
 		String[] array = seatList.split(",");
 		ArrayList<Seat> list = new ArrayList<>();
 		String[] seatCode = {"A","B","C","D","E"};
-		String[] strlist = new String[list.size()];
 		
 		for(int i =0 ; i<array.length; i++) {
-			list.add(service2.getById(i));
+			Seat tempSeat = service2.getById(i+1);
+			list.add(tempSeat);
 		}
+		
+		String[] strlist = new String[list.size()];
+		System.out.println(list);
 		for(int i= 0 ; i <list.size(); i++) {
+	
 			int row = list.get(i).getRow2();
 			int col = list.get(i).getCol2();
 			String strCode = seatCode[row]+(col+1);	
@@ -88,7 +89,8 @@ public class ReserveController {
 		int ppay = apay+cpay;
 		map.put("apay",apay);
 		map.put("cpay",cpay);
-		System.out.println("myinfo - end");
+		map.put("ppay",ppay);
+		
 
 		//Time.id -> arrayList<Seat>
 		//Seat.seat_info = false -> true
@@ -96,7 +98,7 @@ public class ReserveController {
 		//time id(Map/ Model) -> html(view page) -> controller(seat db update/ reserve db)  
 		
 		//map.put("u", u);// 뷰 페이지에 전달. 뷰 페이지에 데이터 전달하려면 메서드 파라메터에 맵을 추가하고, 데이터를 맵에 put()으로 추가
-		return "/check"; 
+		return "/ReservationCheck/pay"; 
 	}
 	
 	
@@ -104,13 +106,20 @@ public class ReserveController {
 	//결제를 버튼 클릭시 db저장
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r) {
-//		service2.save(s);// 
+		System.out.println("--------------------------");
+		System.out.println(r);
+//		Time time = 1;
+//		
+//		Reserve newReserve = new Reserve();
+//		newReserve.setId(0)
+		
+		service.add(r);// 
 //		int id =s.getId();
 //		for(String x:array) {
 //			int id1 = Integer.parseInt(x);
 //			service2.Seat_info_Update(id1);
-//		//좌석의 아이디를 참조해서
-		return "redirect:/ReservationCheck/check/";
+
+		return "redirect:/ReservationCheck/check";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {

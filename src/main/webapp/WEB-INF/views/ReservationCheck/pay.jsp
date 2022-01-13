@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,52 +9,36 @@
 </head>
 <body>
 
-	<!--  	if (loginid == null) { -->
-
-	<!-- <!-- 	<script> -->
-	-->
-	<!-- // 		alert("로그인이 필요한 작업입니다 로그인을 진행해 주세요!") -->
-	<!-- // 		location.href = "moveMain.do" -->
-	<!-- <!-- 	</script> -->
-	-->
-
-	<!--  	} -->
 
 
-	<div class="header-inner">
-		-->
+<%-- 		if (${sessionScope.loginid} != null) { --%>
 
+		<div>
 
-		<!-- 		if (loginid != null) { -->
+			<button>${sessionScope.loginid}님 환영합니다
+			</button>
 
-		<!-- 	<div> -->
-		-->
-		<%--  			<button><%=loginid.getName()%>님 환영합니다 --%>
-		--%>
-		<!--  			</button> -->
-		-->
-	</div>
-	<div>
-		<a href="moveMypage.do"><button>마이페이지</button></a> -->
-	</div>
-	<div>
-		<a href="logout.do"><button>로그아웃</button></a> -->
-	</div>
-	} else {
+		</div>
+		<div>
+			<a href="moveMypage.do"><button>마이페이지</button></a> 
+		</div>
+		<div>
+			<a href="logout.do"><button>로그아웃</button></a> 
+		</div>
+<!-- 		} else { -->
 
-	<div>
-		<a href="moveLogin.do"><button>로그인</button></a> -->
-	</div>
-	<div>
-		<a href="moveRegister.do"><button>회원가입</button></a> --> -
-	</div>
+<!-- 		<div> -->
+<!-- 			<a href="moveLogin.do"><button>로그인</button></a> --> 
+<!-- 		<div> -->
+<!-- 			<a href="moveRegister.do"><button>회원가입</button></a> --> - 
+<!-- 		</div> -->
 
-	}
+<!-- 		} -->
 
 	</div>
-	-->
+	
 
-	<h3>${sessionScope.loingid}님로그인</h3>
+	<h3>${sessionScope.loginid}님로그인</h3>
 	영화 이름/ 선택 날짜
 	<form action="/ReservationCheck/reservechecksubmit" method="post">
 
@@ -66,17 +51,30 @@
 						<div class="content">
 							<div class="movie_left"></div>
 							<div class="movie_right">
-								<div >날짜 - ${m.date}</div>
-								<div> 좌석 - ${strlist}</div>  
-								<div> 성인 - <input type="text" name= "adult_num" value="${a}">명  </div>
-								<div> 청소년 -<${c}명 </div>
-								<div> 가격 - ${apay}원</div>
-								<div> 가격 - ${cpay}원</div>
-								<div> 합계금액 - <input type ="text" name ="price" value= "${ppay }" ></div>
-								<div> 시간 -<input type="text" name="time" value=" ${t.time}"></div>
-								<div> 타이틀 - ${t.detail.movie.title } </div>
-								
-								
+								<div>날짜 - ${m.date}</div>
+								<div>
+								예약좌석
+								<c:forEach var="str" items="${strlist }">
+									${str }
+								</c:forEach>
+								</div>
+								<div>
+									성인 - <input type="text" name="adult_num" value="${a}">명
+								</div>
+								<div>
+									청소년 -<input type="text" name="child_num" value="${c}">명
+								</div>
+								<div>성인가격 - ${apay}원</div>
+								<div>청소년가격 - ${cpay}원</div>
+								<div>
+									합계금액 - <input type="text" name="price" value="${ppay }">
+								</div>
+								<div>
+									시간 -${t.timeRoom}
+								</div>
+								<input type="hidden" name ="time" value ="${t.id }">
+								<%-- <div> 타이틀 - ${t.detail.movie.title } </div> --%>
+								<input type="hidden" name="user" value="${sessionScope.loginid }">
 								<input type="hidden" name="seatlist" value="${seatlist }">
 								<input type="submit" value="결제">
 							</div>
