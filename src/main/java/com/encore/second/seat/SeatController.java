@@ -3,6 +3,9 @@ package com.encore.second.seat;
 import java.util.ArrayList;
 import java.util.Map;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -96,4 +99,5 @@ public class SeatController {
 		
 		return "/Reservation/SeatSelection/Test";
 	}
+	
 }

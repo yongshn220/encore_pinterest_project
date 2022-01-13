@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,12 +38,17 @@ public class Movie_detailController {
 	}*/
 	
 	@GetMapping("/main/{movie_id}")
-	public String main(@PathVariable("movie_id") int id, Map map) {
+	public String main(@PathVariable("movie_id") int id, Map map, HttpSession session) {
+		String loginId = (String) session.getAttribute("loginid");
+		if(loginId == null || loginId.equals("") ) {
+			return "User/login";
+		}
 		Movie movie = serviceM.getById(id);
 		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
 		map.put("m", movie);
 		map.put("list", list);
 		return "/Reservation/DateSelection/main";
+		
 	}
 	
 	@ResponseBody

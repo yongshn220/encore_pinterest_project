@@ -19,7 +19,7 @@ class PageEventHandler
 		if(this.controller.data.isAmountFull())
 		{
 			this.controller.data.amountAdult = tmpAmount;
-			alert("최대 4명만 선택 가능합니다.");
+			alert("코로나로 인해 최대 8명만 선택 가능합니다.");
 		}
 		else
 		{
@@ -40,7 +40,7 @@ class PageEventHandler
 		if(this.controller.data.isAmountFull())
 		{
 			this.controller.data.amountChild = tmpAmount;
-			alert("최대 8명만 선택 가능합니다.");
+			alert("코로나로 인해 최대 8명만 선택 가능합니다.");
 		}
 		else
 		{

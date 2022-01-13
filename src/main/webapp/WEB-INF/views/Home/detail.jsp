@@ -6,6 +6,25 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
+<script type="text/javascript">
+
+	function loginCheck() {
+		alert("로그인");
+		var uid = $
+		{
+			SessionScope.loginid
+		}
+		;
+		if (uid == null) {
+			alert("로그인이 필요한 서비스입니다.", "로그인 페이지로 이동하시겠습니까?");
+			location.href = "/User/login.jsp";
+		} else {
+		}
+
+		alert(loginid)
+	}
+
+</script>
 </head>
 <body>
 	<!--header-->
@@ -36,12 +55,12 @@
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 					<!-- 돋보기아이콘 -->
 					<form action="/Home/getbytitle" method="post">
-					<div class="search-box">
-						<input type="text" class="search-txt" name="title"
-							placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
-							class="fas fa-search"></i>
-						</a>
-					</div>
+						<div class="search-box">
+							<input type="text" class="search-txt" name="title"
+								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+								class="fas fa-search"></i>
+							</a>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -72,8 +91,10 @@
 						</dl>
 					</div>
 
-					<span> <a class="link-reservation"
-						href="/Reservation/DateSelection/main/${m.id }"></a>
+					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
+						<a class="link-reservation"
+						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"
+						></a>
 					</span>
 				</div>
 
