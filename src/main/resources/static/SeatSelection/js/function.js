@@ -87,6 +87,28 @@ class Data
 	{
 		return this.amountAdult + this.amountChild;
 	}
+	
+	getStrReservedSeat()
+	{
+		let seatArray = [];
+		
+		this.room.clickedSeatList.forEach(seatList => {
+			seatList.forEach((seat, i) => {
+				seatArray.push(seat.id);
+			})
+		})
+		
+		let resultStr = "";
+		for(let i = 0; i < seatArray.length; i++)
+		{
+			resultStr += seatArray[i];
+			if(i != seatArray.length-1)
+			{
+				resultStr += ",";
+			}
+		}
+		return resultStr;
+	}
 }
 
 class Receipt
