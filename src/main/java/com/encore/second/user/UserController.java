@@ -46,7 +46,9 @@ public class UserController {
 	}
 	
 	@GetMapping("/login")
-	public void loginForm() {}
+	public void loginForm(HttpSession session) {
+		session.invalidate();
+	}
 	
 	@PostMapping("/login")
 	public String login(String id, String pwd, HttpSession session, HttpServletResponse response) {
