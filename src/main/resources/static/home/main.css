@@ -234,7 +234,7 @@ Start from here
 }
 
 .movieChartScreen .movie_info strong {
-	color: dimgrey;
+	color: #bfc1c6;
 	font-weight: 700;
 	font-family: '맑은 고딕', '돋움', sans-serif;
 	font-size: 23px;
@@ -284,6 +284,7 @@ Start from here
 .movie_info {
 	line-height: 1.8;
 	font-size: 101%;
+	color: #bfc1c6;
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
