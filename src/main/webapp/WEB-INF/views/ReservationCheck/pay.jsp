@@ -120,7 +120,9 @@
 							<iframe class="side"
 								src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle"></iframe>
 
-							<span> <a class="paybutton" href="결제페이지"></a>
+							<span> 	<input class="paybutton" type="submit" value="결제"> 
+							
+							<!-- <a class="paybutton"  type="submit"> -->
 							</span>
 						</div>
 
