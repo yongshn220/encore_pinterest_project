@@ -8,8 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.encore.second.movie_detail.Movie_detail;
 import com.encore.second.movie_detail.Movie_detailService;
@@ -104,6 +106,15 @@ public class ReserveController {
 	}
 	
 	
+	@GetMapping("/check") 
+	public void reservationinfo(int id, Map map) {
+		Reserve r = service.getByReserve_id(id);
+		//Time t = service1.getById(tid);
+		map.put("r",r);
+		//map.put("t", t);
+		// /WEB-INF/views/user/myinfo.jsp
+	}
+
 	//예매정보 db등록
 	//결제를 버튼 클릭시 db저장
 	@PostMapping("/reservechecksubmit")
@@ -121,7 +132,7 @@ public class ReserveController {
 //			int id1 = Integer.parseInt(x);
 //			service2.Seat_info_Update(id1);
 
-		return "redirect:/Home/main";
+		return "redirect:/ReservationCheck/check";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
