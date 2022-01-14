@@ -6,47 +6,16 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
-<!-- <script type="text/javascript" src="/js/jquery.js"></script> -->
 <script type="text/javascript">
 
-/* if (loginid()) {
-    alert("로그인하세요.");
-    window.location = "/User/login.jsp";
-} */
-
-
-function loginCheck(){ 
-	alert("로그인");
-    var uid = ${SessionScope.loginid}; 
-     if(uid == null){ 
-        alert("로그인이 필요한 서비스입니다.","로그인 페이지로 이동하시겠습니까?"); 
-        location.href = "/User/login.jsp";
-     }
-     else{}
-     
-     alert(loginid)
-    	
-  
-
-/* $(document).ready(function(){
-	alert("로그인");
-	$("loginCheck").on("click", function(e){
-		
-		var returnValue = prompt('비밀번호를 입력해주세요.');
-		
-		if(returnValue==${SessionScope.loginid}){
-			var returnValue2 = confirm("정말로 탈퇴하시겠습니까? ㅠㅠ");
-			if(returnValue2){
-				alert("안녕히가세요.");
-			}else{
-				e.preventDefault();
-			}
-		}else{
-			alert("비밀번호가 틀렸습니다. 확인 후 다시 이용해주세요.");
-			e.preventDefault();
-		};
-	});
-}); */
+function a() {	
+	alert('dddd')
+	if(${sessionScope.loginid} == null) {
+		alert("로그인이 필요한 서비스입니다." + "\n" + "로그인 페이지로 이동하시겠습니까?");
+	}else{
+		alert("ddd");
+	}
+}
 
 
 </script>
@@ -117,10 +86,9 @@ function loginCheck(){
 					</div>
 
 					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
-
 						<a class="link-reservation"
-						href="/Reservation/DateSelection/main/${m.id }" class="loginCheck"
-						type="button" ></a>
+						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"
+						></a>
 					</span>
 				</div>
 

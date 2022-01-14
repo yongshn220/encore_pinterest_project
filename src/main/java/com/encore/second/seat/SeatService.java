@@ -16,6 +16,7 @@ public class SeatService {
 	public void save(Seat r) {
 		dao.save(r);
 	}
+	//seatedit()
 	
 	
 	public void delete(int id) {
@@ -30,5 +31,11 @@ public class SeatService {
 	public ArrayList<Seat> getByTime(Time time)
 	{
 		return dao.findByTime(time);
+	}
+	public void Seat_info_Update(int num) {
+		dao.updateinfo(num);
+	}
+	public Seat getById(int id){
+		return dao.findById(id).orElse(null);
 	}
 }

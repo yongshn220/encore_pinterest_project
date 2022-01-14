@@ -1,8 +1,13 @@
 package com.encore.second.movie_detail;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,12 +41,29 @@ public class Movie_detailController {
 	}*/
 	
 	@GetMapping("/main/{movie_id}")
-	public String main(@PathVariable("movie_id") int id, Map map) {
+	public String main(@PathVariable("movie_id") int id, Map map, HttpSession session, HttpServletResponse response) {
+		String loginId = (String) session.getAttribute("loginid");
+		if(loginId == null || loginId.equals("") ) {
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter out;
+			try {
+				out = response.getWriter();
+				out.println("<script language='javascript'>");
+				out.println("alert('잘못 입력하셨습니다.')");
+				out.println("</script>");
+				out.flush();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return "User/login";
+		}
 		Movie movie = serviceM.getById(id);
 		ArrayList<Movie_detail> list = service.getByMovie_detail_movie(movie);
 		map.put("m", movie);
 		map.put("list", list);
 		return "/Reservation/DateSelection/main";
+		
 	}
 	
 	@ResponseBody

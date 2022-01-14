@@ -1,88 +1,105 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="/ReservationCheck/pay.css">
 <title>Insert title here</title>
 </head>
 <body>
+		<!--header-->
+	<header id="header">
+		<div class="contatiner">
+			<div class="row">
+				<div class="header">
+					<h1>
+						<a href="/Home/main"> <img src="/images/logo.png" alt="ElVOM">
+						</a> <span>ENCOREPLEX</span>
+					</h1>
+					<nav class="nav">
+						<ul class="clearfix">
+							<li><a href="/User/login"> <img src="/images/login.png"
+									alt="로그인"> <span>로그인</span>
+							</a></li>
+							<li><a href="/User/join"> <img src="/images/join.png"
+									alt="회원가입"> <span>회원가입</span>
+							</a></li>
+							<li><a href="/User/myinfo"> <img src="/images/info.png"
+									alt="MY ElVOM"> <span>MY ElVOM</span>
+							</a></li>
+						</ul>
 
-<!--  	if (loginid == null) { -->
+					</nav>
+					<!-- search -->
+					<link rel="stylesheet"
+						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+					<!-- 돋보기아이콘 -->
+					<form action="/Home/getbytitle" method="post">
+						<div class="search-box">
+							<input type="text" class="search-txt" name="title"
+								placeholder="검색어를 입력하세요"> <a class="search-btn"> <i
+								class="fas fa-search"></i>
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+	
 
-<!-- <!-- 	<script> --> -->
-<!-- // 		alert("로그인이 필요한 작업입니다 로그인을 진행해 주세요!") -->
-<!-- // 		location.href = "moveMain.do" -->
-<!-- <!-- 	</script> --> -->
+	
+	
+	<form action="/ReservationCheck/reservechecksubmit" method="post">
 
-<!--  	} -->
-
-
-	<div class="header-inner"> -->
-
-
-<!-- 		if (loginid != null) { -->
-
-<!-- 	<div> --> -->
-<%--  			<button><%=loginid.getName()%>님 환영합니다 --%> --%>
-<!--  			</button> --> -->
-		</div> -->
- 		<div> -->
-			<a href="moveMypage.do"><button>마이페이지</button></a> -->
- 		</div> -->
-		<div> -->
- 			<a href="logout.do"><button>로그아웃</button></a> -->
- 		</div> -->
-		} else {
-
- 		<div> -->
- 			<a href="moveLogin.do"><button>로그인</button></a> -->
-		</div> -->
- 		<div> -->
- 			<a href="moveRegister.do"><button>회원가입</button></a> -->
-- 		</div> -->
-
-	}
-
-	</div> -->
-
-	<h3>${sessionScope.loingid}님로그인</h3>
-	영화 이름/ 선택 날짜
-	<form action="/user/myinfo" method="post">
-	<table border="1">
-		<tr>
-			<th>제목</th>
-			<td><input type="text" name="title" value="${r.title }"></td>
-		</tr>
-		<tr>
-			<th>가격</th>
-			<td><input type="number" name="price" value="${r.price }"></td>
-		</tr>
-		<tr>
-			<th>이미지</th>
-			<td><img src="/${r.img_path }" width="200"
-				height="200"></td>
-		</tr>
-		<tr>
-			<th>선택날짜</th>
-			<td><input type="number" name="date" value=${r.date }" ></td>
-		</tr>
-		<tr>
-			<th>선택좌석</th>
-			<td><input type="number" name=seat value=${r.seat }"></td>
-		</tr>
-		<tr>
-			<th>선택시간</th>
-			<td><input type="number" name="time" value=${ r.time }" ></td>
-		</tr>
-		<tr>
-			<th>선택상영관</th>
-			<td><input type="number" name="room" value=${r.room }" ></td>
+		<!-- //movie -->
 		
-			<th>결제</th>
-			<td><input type="submit" value="결제"></td>
-		</tr>
-	</table>
+		<section id="movie">
+		
+			<div class="movie">
+			<h3>${sessionScope.loginid}님로그인</h3>
+				<h2 class="ir_so">결제 창</h2>
+				<div class="container">
+					<div class="row">
+						<div class="content">
+							<div class="movie_left"></div>
+							<div class="movie_right">
+								<div>날짜 - ${m.date}</div>
+								<div>
+								예약좌석
+								<c:forEach var="str" items="${strlist }">
+								${str }
+								</c:forEach>
+								</div>
+								<div>
+									성인 - <input type="text" name="adult_num" value="${a}">명
+								</div>
+								<div>
+									청소년 -<input type="text" name="child_num" value="${c}">명
+								</div>
+								<div>성인가격 - ${apay}원</div>
+								<div>청소년가격 - ${cpay}원</div>
+								<div>
+									합계금액 - <input type="text" name="price" value="${ppay }">
+								</div>
+								<div>
+									시간 -${t.timeRoom}
+								</div>
+								<input type="hidden" name ="time" value ="${t.id }">
+								<%-- <div> 타이틀 - ${t.detail.movie.title } </div> --%>
+								<input type="hidden" name="user" value="${sessionScope.loginid }">
+								<input type="hidden" name="seatlist" value="${seatlist }">
+								<input type="submit" value="결제">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<!-- //movie -->
 	</form>
 </body>
 
@@ -93,7 +110,7 @@
 <!-- 				 <input -->
 <!-- 					type="hidden" class="movieAge" name="movieAge"> <input -->
 <!-- 					type="hidden" class="selectedTheater" name="selectedTheater"> -->
-					
+
 <!-- 				<input type="hidden" class="reserveDate" name="movieDate">  -->
 <!-- 				<input type="hidden" class="runningTime" name="runningTime"> -->
 <!-- 				<button class="moveSeatButton" type="button">예약하기</button> -->
