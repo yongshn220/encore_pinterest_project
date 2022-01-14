@@ -6,13 +6,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
-<script type="text/javascript">
-	function a() {	
-		if(${sessionScope.loginid} == null) {
-		}
-	}
-
-</script>
 </head>
 <body>
 
@@ -79,9 +72,7 @@
 							<dd>개봉 : ${m.open_date }</dd>
 						</dl>
 					</div>
-
-					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
-						<a class="link-reservation"
+					<span> <a class="link-reservation"
 						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"></a>
 					</span>
 				</div>
