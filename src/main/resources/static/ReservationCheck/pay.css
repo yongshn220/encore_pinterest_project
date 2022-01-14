@@ -296,10 +296,6 @@ Start from here
 .movie_right {
 	margin-top: 309px;
 	margin-inline: -28px;
-	background: url(/images/pay_buttons.png) no-repeat;;
-	width: 300px;
-	height: 112px;
-	background-position: bottom;
 }
 
 .side {
@@ -308,4 +304,14 @@ Start from here
 	margin-top: -313px;
 	height: 330px;
 	margin-inline: 26px;
+}
+
+.paybutton {
+	margin-top: -13px;
+	margin-inline: -3px;
+	background: url(/images/pay_buttons.png) no-repeat;
+	width: 300px;
+	height: 112px;
+	background-position: bottom;
+	border: thin;
 }

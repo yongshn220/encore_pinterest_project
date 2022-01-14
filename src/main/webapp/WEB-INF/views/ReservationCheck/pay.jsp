@@ -90,10 +90,8 @@
 								<dd style="text-align: justify; margin-inline: 55px;">일시
 									${t.movieDetail.date }</dd>
 								<dd>시간 ${t.timeRoom}</dd>
-								<dd style="text-align: justify; margin-inline: 56px;">
-									좌석번호
-									${seatStr }
-								</dd>
+								<dd style="text-align: justify; margin-inline: 56px;">좌석번호
+									${seatStr }</dd>
 							</dl>
 
 							<h4 class="titlebar">
@@ -111,12 +109,12 @@
 							</dl>
 
 							<input type="hidden" name="user" value="${sessionScope.loginid }">
-							<input type="hidden" name="time" value="${t.id }">
-							<input type="hidden" name="adult_num" value="${a }">
-							<input type="hidden" name="child_num" value="${c }">
-							<input type="hidden" name="price" value="${ppay }">
-							<input type="hidden" name="seatStr" value="${seatStr }">
-							<input type="hidden" name="seatList" value="${seatList }">
+							<input type="hidden" name="time" value="${t.id }"> <input
+								type="hidden" name="adult_num" value="${a }"> <input
+								type="hidden" name="child_num" value="${c }"> <input
+								type="hidden" name="price" value="${ppay }"> <input
+								type="hidden" name="seatStr" value="${seatStr }"> <input
+								type="hidden" name="seatList" value="${seatList }">
 						</div>
 
 						<div class="movie_right">
@@ -125,12 +123,7 @@
 								src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle"></iframe>
 
 
-							<span> 	<input class="paybutton" type="submit" value="결제"> 
-							
-							<!-- <a class="paybutton"  type="submit"> -->
-
-							<span><input type="submit" value="결제" class="paybutton">
-							</span>
+							<button class="paybutton"></button>
 						</div>
 
 

@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/join.css">
-<title>È¸¿ø°¡ÀÔ</title>
+<title>íšŒì›ê°€ìž…</title>
 <script type="text/javascript">
 const xhttp = new XMLHttpRequest();
 
@@ -19,9 +19,9 @@ xhttp.onload = function() {
 			let res = JSON.parse(xhttp.responseText);
 			let txt = "";
 			if(res.flag){
-				txt = "»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµð";
+				txt = "ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë””";
 			}else{
-				txt = "»ç¿ë ºÒ°¡´ÉÇÑ ¾ÆÀÌµð";
+				txt = "ì‚¬ìš© ë¶ˆê°€ëŠ¥í•œ ì•„ì´ë””";
 			}
 			document.getElementById("res").innerHTML = txt;
 }
@@ -47,10 +47,10 @@ const idCheck=()=>{
 					<nav class="nav">
 						<ul class="clearfix">
 							<li>
-								<a href="/User/login"><img src="/images/login.png" alt="·Î±×ÀÎ"></a>
+								<a href="/User/login"><img src="/images/login.png" alt="ë¡œê·¸ì¸"></a>
 							</li>
 							<li>
-								<a href="/User/join"><img src="/images/join.png" alt="È¸¿ø°¡ÀÔ"></a>
+								<a href="/User/join"><img src="/images/join.png" alt="íšŒì›ê°€ìž…"></a>
 							</li>
 							<li>
 								<a href="/User/myinfo"><img src="/images/info.png" alt="MY ElVOM"></a>
@@ -61,11 +61,11 @@ const idCheck=()=>{
 					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<!-- ë‹ë³´ê¸°ì•„ì´ì½˜ -->
 					<form action="/Home/getbytitle" method="post">
 					<div class="search-box">
 						<input type="text" class="search-txt" name="title"
-							placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+							placeholder="ê²€ìƒ‰ì–´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"> <a class="search-btn"> <i
 							class="fas fa-search"></i>
 						</a>
 					</div>
@@ -78,54 +78,54 @@ const idCheck=()=>{
 	
 	<section id="join">
 		<div class="join">
-		<h2>EIVOM È¸¿ø °¡ÀÔ</h2>
+		<h2>EIVOM íšŒì› ê°€ìž…</h2>
 			<div class="container">
 				<div class="row">
 					<div class="wrapper">
 						<div class="content">
 							<form action="/User/join" method="post">
 							<div>
-								<h3><label for="id">¾ÆÀÌµð</label></h3>
+								<h3><label for="id">ì•„ì´ë””</label></h3>
 								<span class="box int_id">
 									<input type="text" name="id" id="id" class="int" size=20 required>
 								</span>
 								<span class="id_check">
-								<input type="button" value="Áßº¹Ã¼Å©" onclick="idCheck()">
+								<input type="button" value="ì¤‘ë³µì²´í¬" onclick="idCheck()">
 								</span>
 								<div id="res"></div>
 							</div>
 							<div class="pwd">
-								<h3><label for="pwd">ºñ¹Ð¹øÈ£</label></h3>
+								<h3><label for="pwd">ë¹„ë°€ë²ˆí˜¸</label></h3>
 								<span class="box int_pwd">
 								<input type="password" name="pwd" id="pwd" class="int" required>
 								</span>
 							</div>
 							<div>
-								<h3><label for="name">ÀÌ¸§</label></h3>
+								<h3><label for="name">ì´ë¦„</label></h3>
 								<span class="box int_name">
 								<input type="text" name="name" id="name" class="int" required>
 								</span>
 							</div>
 							<div>
-								<h3><label for="email">ÀÌ¸ÞÀÏ</label></h3>
+								<h3><label for="email">ì´ë©”ì¼</label></h3>
 								<span class="box int_email">
 								<input type="email" name="email" id="email" class="int" required>
 								</span>
 							</div>
 							<div>
-								<h3><label for="gender">¼ºº°</label></h3>
+								<h3><label for="gender">ì„±ë³„</label></h3>
 								<span class="box int_gender">
-								<input type="radio" name="gender" id="gender" value="xy" checked>³²¼º
-								<input type="radio" name="gender" value="xx">¿©¼º
+								<input type="radio" name="gender" id="gender" value="xy" checked>ë‚¨ì„±
+								<input type="radio" name="gender" value="xx">ì—¬ì„±
 								</span>
 							</div>
 							<div>
-								<h3 class="age"><label for="age">³ªÀÌ</label></h3>
+								<h3 class="age"><label for="age">ë‚˜ì´</label></h3>
 								<span class="box int_age">
 								<input type="number" name=age id="age" class="int" required>
 								</span>
 							</div>
-								<input class="join_button" type="submit" value="°¡ÀÔÇÏ±â">
+								<input class="join_button" type="submit" value="ê°€ìž…í•˜ê¸°">
 							</form>
 						</div>
 					</div>
