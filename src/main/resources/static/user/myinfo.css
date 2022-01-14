@@ -109,7 +109,6 @@ Start from here
 */
 .header {
 	overflow: hidden;
-	position: Fixed;
 	width: 85%;
 	height: 170px;
 }
@@ -169,7 +168,7 @@ Start from here
 .search-box {
 	position: absolute;
 	top: 75%;
-	left: 90%;
+	left: 73%;
 	transform: translate(-50%, -50%);
 	background: #c0c0c0;
 	height: 30px;
@@ -220,10 +219,10 @@ Start from here
 /* 내 정보 */
 #myinfo {
 	background-attachment: fixed;
-	position: sticky;
+	position: relative;
 	top: 0;
 	margin: 17%;
-	margin-left: 365px;
+	margin-left: 362px;
 	margin-top: 37px;
 	border: 1px solid;
 	height: 600px;
@@ -324,8 +323,10 @@ Start from here
 
 /*예약 리스트*/
 #myticket {
+	position: absolute;
 	margin: 17%;
 	margin-left: 365px;
+	margin-top: -245px;
 	position: sticky;
 	width: 900px;
 }
@@ -365,11 +366,10 @@ Start from here
 	line-height: 2;
 }
 
-
 .button {
 	float: right;
 	margin-inline: 13px;
-	background-color: red;
+	background-color: rgb(210, 0, 0);
 	line-height: 1.5;
 	border-radius: 8px;
 	font-weight: 400;
