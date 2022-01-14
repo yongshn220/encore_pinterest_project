@@ -168,7 +168,32 @@
 					<c:if test="${not empty r }">
 						<ul>
 						<c:forEach var="l" items="${r }">
-							<li>"${l.id }","${l.user.name }", "${l.time.movieDetail.movie.title }", "${l.adult_num }", "${l.child_num }", "${l.price }", "${l.seatStr }"</li>
+							<ul>
+								<li>
+								"${l.id }"
+								</li>
+								<li>
+								"${l.time.movieDetail.date }"
+								</li>
+								<li>
+								"${l.time.timeRoom }"
+								</li>
+								<li>
+								"${l.time.movieDetail.movie.title }"
+								</li>
+								<li>
+								"${l.adult_num }"
+								</li>
+								<li> 
+								"${l.child_num }"
+								</li>
+								<li>
+								"${l.price }"
+								</li>
+								<li>
+								"${l.seatStr }"
+								</li>
+							</ul>
 							<li><a href="#">예매취소</a>
 						</c:forEach>
 						</ul>
