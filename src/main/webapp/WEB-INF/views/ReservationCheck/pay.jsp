@@ -110,8 +110,12 @@
 									${ppay}원</dd>
 							</dl>
 
-							<input type="hidden" name="time" value="${t.id }"> <input
-								type="hidden" name="user" value="${sessionScope.loginid }">
+							<input type="hidden" name="user" value="${sessionScope.loginid }">
+							<input type="hidden" name="time" value="${t.id }">
+							<input type="hidden" name="adult_num" value="${a }">
+							<input type="hidden" name="child_num" value="${c }">
+							<input type="hidden" name="price" value="${ppay }">
+							<input type="hidden" name="seatStr" value="${seatStr }">
 							<input type="hidden" name="seatList" value="${seatList }">
 						</div>
 
@@ -120,9 +124,12 @@
 							<iframe class="side"
 								src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle"></iframe>
 
+
 							<span> 	<input class="paybutton" type="submit" value="결제"> 
 							
 							<!-- <a class="paybutton"  type="submit"> -->
+
+							<span><input type="submit" value="결제" class="paybutton">
 							</span>
 						</div>
 

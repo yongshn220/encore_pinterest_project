@@ -85,7 +85,7 @@ public class UserController {
 		String id = (String) session.getAttribute("loginid");
 		User u = service.getUser(id);
 		map.put("u", u);
-		ArrayList<Reserve> r = serviceR.getByUser_id(id);
+		ArrayList<Reserve> r = serviceR.getByUser_id(u);
 		map.put("r", r);
 		
 	}

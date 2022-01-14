@@ -25,7 +25,7 @@ public class ReserveService {
 		return dao.findById(id).orElse(null);
 	}
 	
-	public ArrayList<Reserve> getByUser_id(String user) {
+	public ArrayList<Reserve> getByUser_id(User user) {
 		return dao.findByUser(user);
 	}
 	

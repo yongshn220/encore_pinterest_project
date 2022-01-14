@@ -162,13 +162,13 @@
 		<div class="contatiner">
 			<div class="row">
 				<div class="ticket_check">
-					<c:if test="${empty list}">
+					<c:if test="${empty r}">
 						예매한 표가 없습니다.
 					</c:if>
-					<c:if test="${not empty list }">
+					<c:if test="${not empty r }">
 						<ul>
 						<c:forEach var="l" items="${r }">
-							<li>"${l.reserve_id }","${l.user.name }", "${l.time.movieDetail.title }", "${l.adult_num }", "${l.child_num }", "${l.price }", "${l.seatStr }"</li>
+							<li>"${l.id }","${l.user.name }", "${l.time.movieDetail.movie.title }", "${l.adult_num }", "${l.child_num }", "${l.price }", "${l.seatStr }"</li>
 							<li><a href="#">예매취소</a>
 						</c:forEach>
 						</ul>
