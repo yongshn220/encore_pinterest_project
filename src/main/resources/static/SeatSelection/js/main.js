@@ -49,7 +49,7 @@ function progressButtonClickEvent()
 		let anum = controller.data.amountAdult;
 		let cnum = controller.data.amountChild;
 		let seatList = controller.data.getStrReservedSeat();
-		const url = `/ReservationCheck/pay?id=${attr_TIME.movieDetail.movie.id}&anum=${anum}&cnum=${cnum}&seatList=${seatList}`;
+		const url = `/ReservationCheck/pay?id=${attr_TIME.id}&anum=${anum}&cnum=${cnum}&seatList=${seatList}`;
 		window.location.href = url;
 	});
 }

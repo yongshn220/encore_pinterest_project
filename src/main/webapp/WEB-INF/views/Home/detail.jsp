@@ -6,27 +6,9 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
-<script type="text/javascript">
-
-	function loginCheck() {
-		alert("로그인");
-		var uid = $
-		{
-			SessionScope.loginid
-		}
-		;
-		if (uid == null) {
-			alert("로그인이 필요한 서비스입니다.", "로그인 페이지로 이동하시겠습니까?");
-			location.href = "/User/login.jsp";
-		} else {
-		}
-
-		alert(loginid)
-	}
-
-</script>
 </head>
 <body>
+
 	<!--header-->
 	<header id="header">
 		<div class="contatiner">
@@ -90,11 +72,8 @@
 							<dd>개봉 : ${m.open_date }</dd>
 						</dl>
 					</div>
-
-					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
-						<a class="link-reservation"
-						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"
-						></a>
+					<span> <a class="link-reservation"
+						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"></a>
 					</span>
 				</div>
 

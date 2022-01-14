@@ -2,10 +2,10 @@ package com.encore.second.user;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -16,12 +16,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.encore.second.reserve.Reserve;
+import com.encore.second.reserve.ReserveService;
+import com.encore.second.seat.Seat;
+
 @Controller
 @RequestMapping("/User")
 public class UserController {
 
 	@Autowired
 	private UserService service;
+	
+	@Autowired
+	private ReserveService serviceR;
 	
 	@GetMapping("/join")
 	public void joinForm() {}
@@ -79,6 +86,9 @@ public class UserController {
 		String id = (String) session.getAttribute("loginid");
 		User u = service.getUser(id);
 		map.put("u", u);
+		ArrayList<Reserve> r = serviceR.getByUser_id(u);
+		map.put("r", r);
+		
 	}
 	
 	@PostMapping("/edit")
