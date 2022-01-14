@@ -1,5 +1,6 @@
 package com.encore.second.movie_detail;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class Movie_detailController {
 	}*/
 	
 	@GetMapping("/main/{movie_id}")
+
 	public String main(@PathVariable("movie_id") int id, Map map, HttpSession session, HttpServletResponse response) {
 		String loginId = (String) session.getAttribute("loginid");
 		if(loginId == null || loginId.equals("") ) {
@@ -49,13 +51,14 @@ public class Movie_detailController {
 			try {
 				out = response.getWriter();
 				out.println("<script language='javascript'>");
-				out.println("alert('잘못 입력하셨습니다.')");
+				out.println("alert('로그인이 필요한 서비스입니다.')");
 				out.println("</script>");
 				out.flush();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 			return "User/login";
 		}
 		Movie movie = serviceM.getById(id);

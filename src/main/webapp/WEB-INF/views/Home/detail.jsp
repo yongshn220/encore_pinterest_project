@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<!--header-->
 	<header id="header">
 		<div class="contatiner">
@@ -71,11 +72,8 @@
 							<dd>개봉 : ${m.open_date }</dd>
 						</dl>
 					</div>
-
-					<span> <%-- href="/Reservation/DateSelection/main/${m.id }"> --%>
-						<a class="link-reservation"
-						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"
-						></a>
+					<span> <a class="link-reservation"
+						href="/Reservation/DateSelection/main/${m.id }" onclick="a()"></a>
 					</span>
 				</div>
 

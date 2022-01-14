@@ -68,8 +68,8 @@ public class ReserveController {
 		for(int i= 0 ; i <list.size(); i++) {
 			int row = list.get(i).getRow2();
 			int col = list.get(i).getCol2();
-			String strCode = seatCode[row]+(col+1);	
-			seatStr += strCode+" / ";
+			String strCode = seatCode[row]+"열 "+(col+1)+"칸";	
+			seatStr += strCode+" . ";
 		}
 		
 		int apay = anum*15000;
@@ -96,7 +96,7 @@ public class ReserveController {
 		for(int i =0 ; i<array.length; i++) {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
-		return "redirect:/Home/main";
+		return "redirect:/check";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
