@@ -205,21 +205,21 @@ Start from here
 메인
 ------------------------------------
 */
-
 #movie {
-	width: auto;
+	width: 70%;
 	height: 80%;
 	background-color: #fff;
 	background-attachment: fixed; /*배경고정*/
 	position: sticky; /*헤더고정*/
 	top: 0; /*헤더고정*/
 	margin: 3%;
-	padding-left: 134px;
-	padding-right: 134px;
+	margin-top: 14px;
+	padding-left: 190px;
+	padding-right: 190px;
 }
 
 .movie h3 {
-	line-height: 4;
+	line-height: 3;
 	color: #000;
 	font-weight: 700;
 	font-family: 'Times New Roman', '돋움', sans-serif;
@@ -237,7 +237,7 @@ Start from here
 
 .content {
 	width: auto;
-	height: auto;
+	height: 442px;
 	padding-top: 40px;
 	display: flex;
 }
@@ -270,37 +270,42 @@ Start from here
 .movie_left {
 	margin-right: 15px;
 	margin-left: 43px;
-	height: 400px;
 }
 
-.title{
-	line-height: 3;
-    font-size: 20px;
-    font-weight: bold;
-	
+.title {
+	line-height: 1.9;
+	font-size: 20px;
+	font-weight: bold;
 }
-
 
 .movie_middle {
 	margin-right: 80px;
 	margin-left: -12px;
-	height: 400px;
 }
 
 .info {
 	font-weight: unset;
 	font-size: 15px;
-	line-height: 1.5;
+	line-height: 2;
 	color: dimgray;
-	margin-block: revert;
 	text-align: center;
+	border: 1px solid;
+	padding-bottom: 42px;
 }
 
-.movie_bottom {
-	margin-top: 248px;
-	margin-inline: 16px;
+.movie_right {
+	margin-top: 309px;
+	margin-inline: -28px;
 	background: url(/images/pay_buttons.png) no-repeat;;
 	width: 300px;
 	height: 112px;
 	background-position: bottom;
+}
+
+.side {
+	width: 162px;
+	height: 269px;
+	margin-top: -313px;
+	height: 330px;
+	margin-inline: 26px;
 }

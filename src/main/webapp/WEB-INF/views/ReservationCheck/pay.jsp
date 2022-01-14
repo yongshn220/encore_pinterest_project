@@ -66,12 +66,15 @@
 					<div class="content">
 						<div class="movie_left">
 							<h4 class="titlebar">
-								<span class="header">STEP 1</span>
+								<span class="header">내가 선택한 영화</span>
 							</h4>
 
 							<dl class="info">
-								<dd><img src="${t.movieDetail.movie.img_path }" style="width: 220px; height: 269px;"></dd>
-								<dd class="title" >${t.movieDetail.movie.title }</dd>
+								<dd>
+									<img src="${t.movieDetail.movie.img_path }"
+										style="width: 220px; height: 269px; margin-top: 9px;">
+								</dd>
+								<dd class="title">${t.movieDetail.movie.title }</dd>
 							</dl>
 
 						</div>
@@ -79,14 +82,15 @@
 
 						<div class="movie_middle">
 							<h4 class="titlebar">
-								<span class="header">STEP 2</span>
+								<span class="header">예매정보</span>
 							</h4>
 
 							<dl class="info">
 								</br>
-								<dd>일시 ${m.date}</dd>
+								<dd style="text-align: justify; margin-inline: 55px;">일시
+									${m.date}</dd>
 								<dd>시간 ${t.timeRoom}</dd>
-								<dd>
+								<dd style="text-align: justify; margin-inline: 56px;">
 									좌석번호
 									<c:forEach var="str" items="${strlist }">
 								${str }
@@ -95,15 +99,17 @@
 							</dl>
 
 							<h4 class="titlebar">
-								<span class="header">STEP 3</span>
+								<span class="header">결제금액</span>
 							</h4>
 
 							<dl class="info">
-								<dd>성인 ${a}명</dd>
-								<dd>청소년 ${c}명</dd>
-								<dd>성인가격 ${apay}원</dd>
-								<dd>청소년가격 ${cpay}원</dd>
-								<dd>합계 ${ppay}원</dd>
+								<dd
+									style="text-align: justify; margin-inline: 56px; margin-top: 35px">성인
+									${a}명 | ${apay}원</dd>
+								<dd style="text-align: justify; margin-inline: 56px;">청소년
+									${c}명 | ${cpay}원</dd>
+								<dd style="text-align: justify; margin-inline: 56px;">총금액
+									${ppay}원</dd>
 							</dl>
 
 							<input type="hidden" name="time" value="${t.id }"> <input
@@ -111,7 +117,11 @@
 							<input type="hidden" name="seatlist" value="${seatlist }">
 						</div>
 
-						<div class="movie_bottom">
+						<div class="movie_right">
+
+							<iframe class="side"
+								src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@M_Rectangle"></iframe>
+
 							<span> <a class="paybutton" href="결제페이지"></a>
 							</span>
 						</div>
