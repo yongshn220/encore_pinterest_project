@@ -92,7 +92,6 @@ Start from here
 */
 .header {
 	overflow: hidden;
-	position: Fixed;
 	width: 85%;
 	height: 170px;
 }
@@ -152,7 +151,7 @@ Start from here
 .search-box {
 	position: absolute;
 	top: 75%;
-	left: 90%;
+	left: 73%;
 	transform: translate(-50%, -50%);
 	background: #c0c0c0;
 	height: 30px;

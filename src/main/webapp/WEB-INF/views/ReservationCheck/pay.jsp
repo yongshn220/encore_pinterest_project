@@ -72,7 +72,7 @@
 							<dl class="info">
 								<dd>
 									<img src="${t.movieDetail.movie.img_path }"
-										style="width: 220px; height: 269px; margin-top: 9px;">
+										style="width: 220px; height: 269px; margin-top: 38px;">
 								</dd>
 								<dd class="title">${t.movieDetail.movie.title }</dd>
 							</dl>
