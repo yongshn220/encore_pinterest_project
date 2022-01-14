@@ -66,12 +66,12 @@
 						<div class="content">
 							<div class="movie_left"></div>
 							<div class="movie_right">
-								<div>날짜 - ${m.date}</div>
+								<div>날짜 - ${t.movieDetail.date }</div>
 								<div>
 								예약좌석
-								<c:forEach var="str" items="${strlist }">
-								${str }
-								</c:forEach>
+							
+								<input type="text" name ="seatStr" value ="${seatStr }">
+								
 								</div>
 								<div>
 									성인 - <input type="text" name="adult_num" value="${a}">명
@@ -87,10 +87,8 @@
 								<div>
 									시간 -${t.timeRoom}
 								</div>
-								<input type="hidden" name ="time" value ="${t.id }">
 								<%-- <div> 타이틀 - ${t.detail.movie.title } </div> --%>
-								<input type="hidden" name="user" value="${sessionScope.loginid }">
-								<input type="hidden" name="seatlist" value="${seatlist }">
+								<input type="hidden" name="seatList" value="${seatList }">
 								<input type="submit" value="결제">
 							</div>
 						</div>

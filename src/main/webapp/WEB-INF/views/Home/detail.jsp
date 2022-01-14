@@ -6,19 +6,6 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/home/detail.css">
 <title>Insert title here</title>
-<script type="text/javascript">
-
-function a() {	
-	alert('dddd')
-	if(${sessionScope.loginid} == null) {
-		alert("로그인이 필요한 서비스입니다." + "\n" + "로그인 페이지로 이동하시겠습니까?");
-	}else{
-		alert("ddd");
-	}
-}
-
-
-</script>
 </head>
 <body>
 	<!--header-->

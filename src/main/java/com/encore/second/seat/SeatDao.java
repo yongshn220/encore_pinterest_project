@@ -15,11 +15,9 @@ public interface SeatDao extends JpaRepository<Seat, Integer> {
 	
 	public ArrayList<Seat> findByTime(Time time);
 
-	//public void update(Seat r);
 	@Transactional
 	@Modifying
 	@Query(value="update Seat set seat_info = 1 where id = :num ")
 	void updateinfo(@Param("num") int num);
 
-	
 }

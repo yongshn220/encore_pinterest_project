@@ -45,7 +45,6 @@ public class Reserve {
 	@Column(nullable = false)
 	private int price;
 	
-//	adult_num
-//	child_num
-//	price
+	private String seatStr;
+
 }

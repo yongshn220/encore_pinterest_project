@@ -50,77 +50,52 @@ public class ReserveController {
 //	}
 //	
 	
-	@GetMapping("/pay") // /user/myinfo/${sessionScope.loginid} 테이블마다 검색 후 map에등록
+	@GetMapping("/pay")
 	public String myinfo(String seatList, int id, int anum, int cnum, Map map) {// myinfo.jsp에 로그인 사람의 정보를 출력
-		
-		Time t = service1.getById(id);
-		Movie_detail m =t.getMovieDetail();
-		ArrayList<Seat> s = service2.getByTime(t);
-		
-		
-		String[] array = seatList.split(",");//
 		ArrayList<Seat> list = new ArrayList<>();
 		String[] seatCode = {"A","B","C","D","E"};
+		String seatStr = "";
 		
+		Time t = service1.getById(id);
+		ArrayList<Seat> s = service2.getByTime(t);
+		String[] array = seatList.split(",");
 		
 		for(int i =0 ; i<array.length; i++) {
 			Seat tempSeat = service2.getById(Integer.parseInt(array[i])+1);
 			list.add(tempSeat);
 		}
 		
-		String[] strlist = new String[list.size()];
-		System.out.println(list);
 		for(int i= 0 ; i <list.size(); i++) {
-	
 			int row = list.get(i).getRow2();
 			int col = list.get(i).getCol2();
 			String strCode = seatCode[row]+(col+1);	
-			strlist[i] = strCode;
+			seatStr += strCode+" / ";
 		}
 		
-		
-		map.put("seatList", seatList);
-		map.put("strlist", strlist);
-		map.put("t", t);
-		map.put("m", m);
-		map.put("s", s);
-		map.put("a", anum);
-		map.put("c", cnum);
 		int apay = anum*15000;
 		int cpay = cnum*10000;
 		int ppay = apay+cpay;
 		map.put("apay",apay);
 		map.put("cpay",cpay);
 		map.put("ppay",ppay);
+		map.put("seatStr", seatStr);
+		map.put("seatList", seatList);
+		map.put("t", t);
+		map.put("s", s);
+		map.put("a", anum);
+		map.put("c", cnum);
 		
-
-		//Time.id -> arrayList<Seat>
-		//Seat.seat_info = false -> true
-		
-		//time id(Map/ Model) -> html(view page) -> controller(seat db update/ reserve db)  
-		
-		//map.put("u", u);// 뷰 페이지에 전달. 뷰 페이지에 데이터 전달하려면 메서드 파라메터에 맵을 추가하고, 데이터를 맵에 put()으로 추가
 		return "/ReservationCheck/pay"; 
 	}
 	
-	
-	//예매정보 db등록
-	//결제를 버튼 클릭시 db저장
 	@PostMapping("/reservechecksubmit")
-	public String reservecheck(Reserve r) {
-		System.out.println("--------------------------");
-		System.out.println(r);
-//		Time time = 1;
-//		
-//		Reserve newReserve = new Reserve();
-//		newReserve.setId(0)
+	public String reservecheck(Reserve r, String seatList) {
+		service.add(r);
 		
-		service.add(r);// 
-//		int id =s.getId();
-//		for(String x:array) {
-//			int id1 = Integer.parseInt(x);
-//			service2.Seat_info_Update(id1);
-
+		String[] array = seatList.split(",");
+		for(int i =0 ; i<array.length; i++) {
+			service2.infoEditById(Integer.parseInt(array[i])+1);
+		}
 		return "redirect:/Home/main";
 	}
 //	@GetMapping("/list")
