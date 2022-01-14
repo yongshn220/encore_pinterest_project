@@ -96,7 +96,7 @@ public class ReserveController {
 		for(int i =0 ; i<array.length; i++) {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
-		return "redirect:/check";
+		return "redirect:/Home/main";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
