@@ -168,6 +168,7 @@
 					<c:if test="${not empty r }">
 						<ul>
 						<c:forEach var="l" items="${r }">
+<<<<<<< HEAD
 						
 							<li class="bar">예약번호   ${l.id } <a href="#" class="button">예매취소</a></li>
 							
@@ -177,6 +178,35 @@
 							 |  관람좌석 : ${l.seatStr }
 							 |  총 결제금액 : ${l.price }원</li>
 							
+=======
+							<ul>
+								<li>
+								"${l.id }"
+								</li>
+								<li>
+								"${l.time.movieDetail.date }"
+								</li>
+								<li>
+								"${l.time.timeRoom }"
+								</li>
+								<li>
+								"${l.time.movieDetail.movie.title }"
+								</li>
+								<li>
+								"${l.adult_num }"
+								</li>
+								<li> 
+								"${l.child_num }"
+								</li>
+								<li>
+								"${l.price }"
+								</li>
+								<li>
+								"${l.seatStr }"
+								</li>
+							</ul>
+							<li><a href="#">�������</a>
+>>>>>>> e421e240668328aca992887eda83276d40633264
 						</c:forEach>
 						</ul>
 					</c:if>

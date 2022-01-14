@@ -91,7 +91,6 @@ public class ReserveController {
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r, String seatList) {
 		service.add(r);
-		
 		String[] array = seatList.split(",");
 		for(int i =0 ; i<array.length; i++) {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
