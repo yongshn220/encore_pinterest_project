@@ -157,10 +157,17 @@
 	<!-- //info -->
 	
 	<section id="myticket">
+<<<<<<< HEAD
 	<div class="title2"><h3>내 예약 확인</h3></div>
 	<div class="myticket">
 		<div class="contatiner">
 			<div class="row">
+=======
+	<div class="title2"><h3>MY 예매내역</h3></div>
+	<div class="myticket2">
+		<div class="contatiner2">
+			<div class="row2">
+>>>>>>> dfef1c3acc23c5ae1a485ed22ecdfc9d85ccda4a
 				<div class="ticket_check">
 					<c:if test="${empty r}">
 						예매한 표가 없습니다.
@@ -168,6 +175,7 @@
 					<c:if test="${not empty r }">
 						<ul>
 						<c:forEach var="l" items="${r }">
+<<<<<<< HEAD
 							<ul>
 								<li>
 								"${l.id }"
@@ -195,6 +203,21 @@
 								</li>
 							</ul>
 							<li><a href="#">예매취소</a>
+=======
+
+						
+							<li class="bar">예약번호   ${l.id } <a href="#" class="button">예매취소</a></li>
+							
+							<%-- ,"${l.user.name }" --%> 
+							<li class="info">영화 : ${l.time.movieDetail.movie.title }
+						 	 |  관람인원 : 일반 ${l.adult_num }  청소년 ${l.child_num }
+							 |  관람좌석 : ${l.seatStr }
+							 |  총 결제금액 : ${l.price }원</li>
+								<li> 날짜  ${l.time.movieDetail.date}   |   시간/상영관  ${l.time.timeRoom } </li>
+								
+								
+
+>>>>>>> dfef1c3acc23c5ae1a485ed22ecdfc9d85ccda4a
 						</c:forEach>
 						</ul>
 					</c:if>

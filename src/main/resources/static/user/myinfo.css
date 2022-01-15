@@ -1,18 +1,12 @@
 @charset "UTF-8";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+	b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+	details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+	output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -21,36 +15,46 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+a {
+	color: inherit;
+	text-decoration: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before, blockquote:after, q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-.ir_so {overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}
-
+.ir_so {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
 
 /*
 ---------------------------------------------------------------------
@@ -67,17 +71,15 @@ Start from here
 	height: 170px; /*헤더고정*/
 	background-color: #fff;
 	border-bottom: 1px solid #c6c6c6;
-	
 }
 
 #myinfo {
-	position: relative; 
+	position: relative;
 	background-color: #fff; /*배경*/
 	background-attachment: fixed; /*배경고정*/
 	position: sticky; /*헤더고정*/
 	top: 0; /*헤더고정*/
-	
-	}
+}
 
 /* 
 ---------------------------------------------------------------------
@@ -107,7 +109,6 @@ Start from here
 */
 .header {
 	overflow: hidden;
-	position: Fixed;
 	width: 85%;
 	height: 170px;
 }
@@ -167,7 +168,7 @@ Start from here
 .search-box {
 	position: absolute;
 	top: 75%;
-	left: 90%;
+	left: 73%;
 	transform: translate(-50%, -50%);
 	background: #c0c0c0;
 	height: 30px;
@@ -215,24 +216,162 @@ Start from here
 	width: 0px;
 }
 
-
 /* 내 정보 */
-.myinfo {position: absolut; left: 0; top:0px; width: 100%; height: 800px; }
-.myinfo h2 {font-size: 70px; margin: 50px; text-align: center; font-weight: 700; color:#c6c6c6 }
-.myinfo .wrapper {text-align: center; display:block; position: relative; height:100%; }
-.myinfo .myinfo_insert {position: absolute; left:50%; transform: translate(-50%); width: 349px; }
+#myinfo {
+	background-attachment: fixed;
+	position: relative;
+	top: 0;
+	margin: 17%;
+	margin-left: 362px;
+	margin-top: 37px;
+	border: 1px solid;
+	height: 600px;
+	width: 900px;
+	background-color: #F2F0E4;
+	margin-top: 37px
+}
 
-.myinfo h3 {font-size:20px; font-weight: 700; margin: 20px 0 10px; text-align: left; padding:10px 0 0 5px;}
-.myinfo .box {display: block; width:100%; height:30px; border: solid 1px #dadada; box-sizing: border-box; position: relative;}
-.myinfo .int {display: block; width:97%; height:25px; border: none; font-size: 15px}
+.myinfo {
+	margin-inline: -149px;
+}
 
-.myinfo .box.int_gender {border: solid 0px #fff}
-.myinfo .age {margin: 1px 0 8px; }
-.myinfo .edit_button {display: inline_block; border: none; font-size: 20px; margin: 15px 0; padding: 5px 40px 5px 40px; background-color: pink; border: none; color: white; }
-.myinfo .edit_button:hover {color: gray; }
-.myinfo .out_button {display: inline_block; border: none; font-size: 20px; margin: 15px 0; padding: 5px 30px 5px 40px; background-color: white; border: none; color: #c0c0c0; }
-.myinfo .out_button:hover {color: black; }
+.myinfo h2 {
+	font-size: 30px;
+	line-height: 2;
+	text-align: center;
+	font-weight: 700;
+	color: #333;
+}
 
+.myinfo .wrapper {
+	text-align: center;
+	display: block;
+	position: relative;
+}
 
+.myinfo .myinfo_insert {
+	position: absolute;
+	left: 33%;
+	transform: translate(-50%);
+	width: 349px;
+	top: -7px;
+	border: 2px solid #fff;
+	padding: 8px;
+}
 
+.myinfo h3 {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 20px 0 10px;
+	text-align: left;
+}
 
+.myinfo .box {
+	display: block;
+	width: 100%;
+	height: 30px;
+	border: solid 1px #dadada;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.myinfo .int {
+	display: block;
+	width: 97%;
+	height: 25px;
+	border: none;
+	font-size: 15px
+}
+
+.myinfo .box.int_gender {
+	border: solid 0px #fff
+}
+
+.myinfo .age {
+	margin: 1px 0 8px;
+}
+
+.myinfo .edit_button {
+	display: inline_block;
+	border: none;
+	font-size: 20px;
+	margin: 15px 0;
+	padding: 5px 40px 5px 40px;
+	background-color: pink;
+	border: none;
+	color: white;
+}
+
+.myinfo .edit_button:hover {
+	color: gray;
+}
+
+.myinfo .out_button {
+	display: inline_block;
+	border: none;
+	font-size: 20px;
+	margin: 15px 0;
+	padding: 5px 30px 5px 40px;
+	background-color: white;
+	border: none;
+	color: #c0c0c0;
+}
+
+.myinfo .out_button:hover {
+	color: black;
+}
+
+/*예약 리스트*/
+#myticket {
+	position: absolute;
+	margin: 17%;
+	margin-left: 365px;
+	margin-top: -245px;
+	position: sticky;
+	width: 900px;
+}
+
+.title2 {
+	border: solid;
+	text-align: center;
+	position: relative;
+	line-height: 44px;
+	background-color: #F2F0E4;
+	clear: both;
+	border: 1px solid;
+}
+
+.title2 h3 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.bar {
+	width: auto;
+	display: block;
+	position: relative;
+	height: 33px;
+	line-height: 33px;
+	background-color: #333;
+	color: #e0e0e0;
+	clear: both;
+	margin-bottom: 3px;
+}
+
+.myticket2 {
+	border: solid;
+}
+
+.row2 {
+	line-height: 2;
+}
+
+.button {
+	float: right;
+	margin-inline: 13px;
+	background-color: rgb(210, 0, 0);
+	line-height: 1.5;
+	border-radius: 8px;
+	font-weight: 400;
+	margin-top: 5px;
+}

@@ -8,8 +8,10 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 
 import com.encore.second.movie_detail.Movie_detail;
 import com.encore.second.movie_detail.Movie_detailService;
@@ -88,6 +90,15 @@ public class ReserveController {
 		return "/ReservationCheck/pay"; 
 	}
 	
+	@GetMapping("/check") 
+	public void reservationinfo(int id, Map map) {
+		Reserve r = service.getByReserve_id(id);
+		//Time t = service1.getById(tid);
+		map.put("r",r);
+		//map.put("t", t);
+		// /WEB-INF/views/user/myinfo.jsp
+	}
+
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r, String seatList) {
 		Reserve rR = service.add(r);
