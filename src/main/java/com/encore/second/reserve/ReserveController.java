@@ -90,8 +90,6 @@ public class ReserveController {
 		return "/ReservationCheck/pay"; 
 	}
 	
-
-	
 	@GetMapping("/check") 
 	public void reservationinfo(int id, Map map) {
 		Reserve r = service.getByReserve_id(id);
@@ -101,35 +99,16 @@ public class ReserveController {
 		// /WEB-INF/views/user/myinfo.jsp
 	}
 
-	//예매정보 db등록
-	//결제를 버튼 클릭시 db저장
-	@PostMapping("/reservechecksubmit")
-	public String reservecheck(Reserve r) {
-		System.out.println("--------------------------");
-		System.out.println(r);
-//		Time time = 1;
-//		
-//		Reserve newReserve = new Reserve();
-//		newReserve.setId(0)
-		
-		service.add(r);// 
-//		int id =s.getId();
-//		for(String x:array) {
-//			int id1 = Integer.parseInt(x);
-//			service2.Seat_info_Update(id1);
-
-		return "redirect:/ReservationCheck/check";
-	}
-
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r, String seatList) {
-		service.add(r);
+		Reserve rR = service.add(r);
+		int rId = rR.getId();
 		String[] array = seatList.split(",");
 		for(int i =0 ; i<array.length; i++) {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
+		// return "/ReservationCheck/check?id=rId";
 		return "redirect:/Home/main";
-
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {

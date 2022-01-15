@@ -9,25 +9,21 @@ import com.encore.second.user.User;
 
 
 
-
 @Service
 public class ReserveService {
 	
 	@Autowired
 	private ReserveDao dao;
 	
-
-	
-	
-	public void add(Reserve r) {
-		dao.save(r);
+	public Reserve add(Reserve r) {
+		return dao.save(r);
 	}
 	
 	public Reserve getByReserve_id(int id) {
 		return dao.findById(id).orElse(null);
 	}
 	
-	public ArrayList<Reserve> getByUser_id(String user) {
+	public ArrayList<Reserve> getByUser_id(User user) {
 		return dao.findByUser(user);
 	}
 	

@@ -94,7 +94,7 @@ $(document).ready(function(){
 								<li class="red2"><a href="#">Pwd찾기</a></li>
 							</ul>
 						</div>
-						<a class="login_naver" href="#">
+						<a class="login_naver" href="https://nid.naver.com/nidlogin.login?mode=form&amp;url=https%3A%2F%2Fwww.naver.com">
 						<img alt="login" src="/images/loginNaver.png">
 						</a>
 					</div>
