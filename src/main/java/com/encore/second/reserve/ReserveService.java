@@ -14,11 +14,8 @@ public class ReserveService {
 	@Autowired
 	private ReserveDao dao;
 	
-
-	
-	
-	public void add(Reserve r) {
-		dao.save(r);
+	public Reserve add(Reserve r) {
+		return dao.save(r);
 	}
 	
 	public Reserve getByReserve_id(int id) {

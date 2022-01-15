@@ -1,24 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/myinfo.css">
-<title>³» Á¤º¸</title>
+<title>ë‚´ ì •ë³´</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
 
 <script type="text/javascript">
 
  	$(document).ready(function(){
 		$(".edit_button").on("click", function(e){
-			var returnValue = prompt('ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÁÇØÁÖ¼¼¿ä.');
+			var returnValue = prompt('ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¤í•´ì£¼ì„¸ìš”.');
 			if(returnValue==${u.pwd}){
-				alert("ÀÎÁõ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù");
+				alert("ì¸ì¦ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤");
 				document.getElementById("edit_inf").submit();
 			}else{
-				alert("ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù. È®ÀÎ ÈÄ ´Ù½Ã ÀÌ¿ëÇØÁÖ¼¼¿ä.");
+				alert("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤. í™•ì¸ í›„ ë‹¤ì‹œ ì´ìš©í•´ì£¼ì„¸ìš”.");
 				e.preventDefault();
 			};
 		});
@@ -29,16 +29,16 @@
 
  	$(document).ready(function(){
 		$(".out_button").on("click", function(e){
-			var returnValue = prompt('ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÁÇØÁÖ¼¼¿ä.');
+			var returnValue = prompt('ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¤í•´ì£¼ì„¸ìš”.');
 			if(returnValue==${u.pwd}){
-				var returnValue2 = confirm("Á¤¸»·Î Å»ÅğÇÏ½Ã°Ú½À´Ï±î? ¤Ğ¤Ğ");
+				var returnValue2 = confirm("ì •ë§ë¡œ íƒˆí‡´í•˜ì‹œê² ìŠµë‹ˆê¹Œ? ã… ã… ");
 				if(returnValue2){
-					alert("¾È³çÈ÷°¡¼¼¿ä.");
+					alert("ì•ˆë…•íˆê°€ì„¸ìš”.");
 				}else{
 					e.preventDefault();
 				}
 			}else{
-				alert("ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù. È®ÀÎ ÈÄ ´Ù½Ã ÀÌ¿ëÇØÁÖ¼¼¿ä.");
+				alert("ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤. í™•ì¸ í›„ ë‹¤ì‹œ ì´ìš©í•´ì£¼ì„¸ìš”.");
 				e.preventDefault();
 			};
 		});
@@ -69,10 +69,10 @@
 					<nav class="nav">
 						<ul class="clearfix">
 							<li><a href="/User/login"> <img src="/images/login.png"
-									alt="·Î±×ÀÎ"> <span>·Î±×ÀÎ</span>
+									alt="ë¡œê·¸ì¸"> <span>ë¡œê·¸ì¸</span>
 							</a></li>
 							<li><a href="/User/join"> <img src="/images/join.png"
-									alt="È¸¿ø°¡ÀÔ"> <span>È¸¿ø°¡ÀÔ</span>
+									alt="íšŒì›ê°€ì…"> <span>íšŒì›ê°€ì…</span>
 							</a></li>
 							<li><a href="/User/myinfo"> <img src="/images/info.png"
 									alt="MY ElVOM"> <span>MY ElVOM</span>
@@ -83,11 +83,11 @@
 					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<!-- ë‹ë³´ê¸°ì•„ì´ì½˜ -->
 					<form action="/Home/getbytitle" method="post">
 					<div class="search-box">
 						<input type="text" class="search-txt" name="title"
-							placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+							placeholder="ê²€ìƒ‰ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”"> <a class="search-btn"> <i
 							class="fas fa-search"></i>
 						</a>
 					</div>
@@ -100,52 +100,52 @@
 	
 	<section id="myinfo">
 		<div class="myinfo">
-		<h2>³» Á¤º¸ È®ÀÎ ¹× ¼öÁ¤</h2>
+		<h2>ë‚´ ì •ë³´ í™•ì¸ ë° ìˆ˜ì •</h2>
 			<div class="contatiner">
 				<div class="row">
 					<div class="wrapper">
 						<div class="myinfo_insert">
 							<form id="edit_inf" action="/User/edit" method="post">
 								<div>
-									<h3><label for="id">¾ÆÀÌµğ</label></h3>
+									<h3><label for="id">ì•„ì´ë””</label></h3>
 									<span class="box int_id">
 										<input type="text" name="id" id="id" class="int" size=20 value="${u.id }" readonly>
 									</span>
 								</div>
 								<div class="pwd">
-									<h3><label for="pwd">ºñ¹Ğ¹øÈ£</label></h3>
+									<h3><label for="pwd">ë¹„ë°€ë²ˆí˜¸</label></h3>
 									<span class="box int_pwd">
 									<input type="password" name="pwd" id="pwd" value="${u.pwd }" class="int" readonly>
 									</span>
 								</div>
 								<div>
-									<h3><label for="name">ÀÌ¸§</label></h3>
+									<h3><label for="name">ì´ë¦„</label></h3>
 									<span class="box int_name">
 									<input type="text" name="name" id="name" value="${u.name }"  class="int" >
 									</span>
 								</div>
 								<div>
-									<h3><label for="email">ÀÌ¸ŞÀÏ</label></h3>
+									<h3><label for="email">ì´ë©”ì¼</label></h3>
 									<span class="box int_email">
 									<input type="email" name="email" id="email"  value="${u.email }" class="int" >
 									</span>
 								</div>
 								<div>
-									<h3><label for="gender">¼ºº°</label></h3>
+									<h3><label for="gender">ì„±ë³„</label></h3>
 									<span class="box int_gender">
-									<input type="radio" name="gender" id="gender" value="xy">³²¼º
-									<input type="radio" name="gender" id="gender2" value="xx">¿©¼º
+									<input type="radio" name="gender" id="gender" value="xy">ë‚¨ì„±
+									<input type="radio" name="gender" id="gender2" value="xx">ì—¬ì„±
 									</span>
 								</div>
 								<div>
-									<h3 class="age"><label for="age">³ªÀÌ</label></h3>
+									<h3 class="age"><label for="age">ë‚˜ì´</label></h3>
 									<span class="box int_age">
 									<input type="number" name=age id="age" value="${u.age }" class="int" >
 									</span>
 								</div>
 								<div class="buttons">
-								<input class="edit_button" type="button" value="¼öÁ¤ÇÏ±â">
-								<a href="/User/out" class="out_button" type="button">Å»ÅğÇÏ±â</a>
+								<input class="edit_button" type="button" value="ìˆ˜ì •í•˜ê¸°">
+								<a href="/User/out" class="out_button" type="button">íƒˆí‡´í•˜ê¸°</a>
 								</div>
 							</form>
 						</div>
@@ -157,13 +157,13 @@
 	<!-- //info -->
 	
 	<section id="myticket">
-	<div class="title2"><h3>³» ¿¹¾à È®ÀÎ</h3></div>
+	<div class="title2"><h3>ë‚´ ì˜ˆì•½ í™•ì¸</h3></div>
 	<div class="myticket">
 		<div class="contatiner">
 			<div class="row">
 				<div class="ticket_check">
 					<c:if test="${empty r}">
-						¿¹¸ÅÇÑ Ç¥°¡ ¾ø½À´Ï´Ù.
+						ì˜ˆë§¤í•œ í‘œê°€ ì—†ìŠµë‹ˆë‹¤.
 					</c:if>
 					<c:if test="${not empty r }">
 						<ul>
@@ -194,7 +194,7 @@
 								"${l.seatStr }"
 								</li>
 							</ul>
-							<li><a href="#">¿¹¸ÅÃë¼Ò</a>
+							<li><a href="#">ì˜ˆë§¤ì·¨ì†Œ</a>
 						</c:forEach>
 						</ul>
 					</c:if>

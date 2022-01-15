@@ -1,12 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="/user/login.css">
-	<title>·Î±×ÀÎ</title>
+	<title>ë¡œê·¸ì¸</title>
 <script type="text/javascript" src="/js/jquery.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -33,10 +33,10 @@ $(document).ready(function(){
 					<nav class="nav">
 						<ul class="clearfix">
 							<li>
-								<a href="/User/login" class="inout_button" type="button"><img src="/images/login.png" alt="·Î±×ÀÎ"></a>
+								<a href="/User/login" class="inout_button" type="button"><img src="/images/login.png" alt="ë¡œê·¸ì¸"></a>
 							</li>
 							<li>
-								<a href="/User/join"><img src="/images/join.png" alt="È¸¿ø°¡ÀÔ"></a>
+								<a href="/User/join"><img src="/images/join.png" alt="íšŒì›ê°€ì…"></a>
 							</li>
 							<li>
 								<a href="/User/myinfo"><img src="/images/info.png" alt="MY ElVOM"></a>
@@ -47,11 +47,11 @@ $(document).ready(function(){
 					<!-- search -->
 					<link rel="stylesheet"
 						href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-					<!-- µ¸º¸±â¾ÆÀÌÄÜ -->
+					<!-- ë‹ë³´ê¸°ì•„ì´ì½˜ -->
 					<form action="/Home/getbytitle" method="post">
 					<div class="search-box">
 						<input type="text" class="search-txt" name="title"
-							placeholder="°Ë»ö¾î¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <a class="search-btn"> <i
+							placeholder="ê²€ìƒ‰ì–´ë¥¼ ì…ë ¥í•˜ì„¸ìš”"> <a class="search-btn"> <i
 							class="fas fa-search"></i>
 						</a>
 					</div>
@@ -63,7 +63,7 @@ $(document).ready(function(){
 	<!-- //header -->
 
  	<section id="login">
- 		<h2 class="ir_so">·Î±×ÀÎ</h2>
+ 		<h2 class="ir_so">ë¡œê·¸ì¸</h2>
 		<div class="login_inf">
 			<div class="container">
 				<div class="row">
@@ -75,11 +75,11 @@ $(document).ready(function(){
 					<div class="login_right">
 						<div class="login_insert">
 							<form action="/User/login" method="post">
-							<label for="id">¾ÆÀÌµğ</label>
+							<label for="id">ì•„ì´ë””</label>
 								<span class="box int_id">
 									<input type="text" name="id" id="id" class="int" size=20 required>
 								</span>
-							<label for="pwd">ºñ¹Ğ¹øÈ£</label>
+							<label for="pwd">ë¹„ë°€ë²ˆí˜¸</label>
 								<span class="box int_pwd">
 								<input type="password" name="pwd" id="pwd" class="int" required>
 								</span>
@@ -89,12 +89,12 @@ $(document).ready(function(){
 						</div>
 						<div class="login_button">
 							<ul>
-								<li class="green"><a href="/User/join">È¸¿ø°¡ÀÔ</a></li>
-								<li class="red"><a href="#">IdÃ£±â</a></li>
-								<li class="red2"><a href="#">PwdÃ£±â</a></li>
+								<li class="green"><a href="/User/join">íšŒì›ê°€ì…</a></li>
+								<li class="red"><a href="#">Idì°¾ê¸°</a></li>
+								<li class="red2"><a href="#">Pwdì°¾ê¸°</a></li>
 							</ul>
 						</div>
-						<a class="login_naver" href="#">
+						<a class="login_naver" href="https://nid.naver.com/nidlogin.login?mode=form&amp;url=https%3A%2F%2Fwww.naver.com">
 						<img alt="login" src="/images/loginNaver.png">
 						</a>
 					</div>

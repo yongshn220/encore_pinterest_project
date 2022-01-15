@@ -90,11 +90,13 @@ public class ReserveController {
 	
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r, String seatList) {
-		service.add(r);
+		Reserve rR = service.add(r);
+		int rId = rR.getId();
 		String[] array = seatList.split(",");
 		for(int i =0 ; i<array.length; i++) {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
+		// return "/ReservationCheck/check?id=rId";
 		return "redirect:/Home/main";
 	}
 //	@GetMapping("/list")
