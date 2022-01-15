@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.encore.second.user.User;
+
 
 
 
@@ -25,7 +27,7 @@ public class ReserveService {
 		return dao.findById(id).orElse(null);
 	}
 	
-	public ArrayList<Reserve> getByUser_id(User user) {
+	public ArrayList<Reserve> getByUser_id(String user) {
 		return dao.findByUser(user);
 	}
 	

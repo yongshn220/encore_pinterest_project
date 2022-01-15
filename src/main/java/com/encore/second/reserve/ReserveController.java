@@ -90,7 +90,7 @@ public class ReserveController {
 		return "/ReservationCheck/pay"; 
 	}
 	
-<<<<<<< HEAD
+
 	
 	@GetMapping("/check") 
 	public void reservationinfo(int id, Map map) {
@@ -119,7 +119,8 @@ public class ReserveController {
 //			service2.Seat_info_Update(id1);
 
 		return "redirect:/ReservationCheck/check";
-=======
+	}
+
 	@PostMapping("/reservechecksubmit")
 	public String reservecheck(Reserve r, String seatList) {
 		service.add(r);
@@ -128,7 +129,7 @@ public class ReserveController {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
 		return "redirect:/Home/main";
->>>>>>> 02bf5f262f033f668bd0065131dc839463baacba
+
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
