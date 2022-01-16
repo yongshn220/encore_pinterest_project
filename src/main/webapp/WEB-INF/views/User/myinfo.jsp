@@ -189,7 +189,7 @@
 						<ul>
 						<c:forEach var="l" items="${r }">
 							<form id="cancelForm" action="/User/cancel" method="post">
-							<li class="bar">예약번호   ${l.id } <input type="button" id="cancelButton" class="button">예매취소</li>
+							<li class="bar">예약번호   ${l.id } <input type="button" id="cancelButton" class="button" value="예매취소"></li>
 							<input type="hidden" name="id" value="${l.id }">
 							</form>
 							
@@ -197,8 +197,8 @@
 							<li class="info">영화 : ${l.time.movieDetail.movie.title }
 						 	 |  관람인원 : 일반 ${l.adult_num }  청소년 ${l.child_num }
 							 |  관람좌석 : ${l.seatStr }
-							 |  총 결제금액 : ${l.price }원</li>
-								<li> 날짜  ${l.time.movieDetail.date}   |   시간/상영관  ${l.time.timeRoom } </li>
+							</li>
+								<li>총 결제금액 : ${l.price }원   |   날짜  ${l.time.movieDetail.date}   |   시간/상영관  ${l.time.timeRoom } </li>
 								
 						</c:forEach>
 						</ul>
