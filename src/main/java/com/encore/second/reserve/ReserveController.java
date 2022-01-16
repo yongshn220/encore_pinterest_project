@@ -75,7 +75,7 @@ public class ReserveController {
 		}
 		
 		int apay = anum*15000;
-		int cpay = cnum*10000;
+		int cpay = cnum*11000;
 		int ppay = apay+cpay;
 		map.put("apay",apay);
 		map.put("cpay",cpay);

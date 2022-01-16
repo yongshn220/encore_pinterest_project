@@ -113,7 +113,7 @@ public class UserController {
 	@PostMapping("/cancel")
 	public String cancel(Reserve r) {
 		serviceR.delReserve(r.getId());
-		return "redirect:/Home/main";
+		return "redirect:/User/myinfo";
 	}
 }
 
