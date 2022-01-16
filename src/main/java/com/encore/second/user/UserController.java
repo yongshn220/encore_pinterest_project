@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.encore.second.reserve.Reserve;
 import com.encore.second.reserve.ReserveService;
-import com.encore.second.seat.Seat;
 
 @Controller
 @RequestMapping("/User")
@@ -108,6 +107,12 @@ public class UserController {
 	@GetMapping("/logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
+		return "redirect:/Home/main";
+	}
+	
+	@PostMapping("/cancel")
+	public String cancel(Reserve r) {
+		serviceR.delReserve(r.getId());
 		return "redirect:/Home/main";
 	}
 }
