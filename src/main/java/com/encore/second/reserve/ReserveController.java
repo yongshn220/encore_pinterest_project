@@ -108,7 +108,7 @@ public class ReserveController {
 			service2.infoEditById(Integer.parseInt(array[i])+1);
 		}
 		// return "/ReservationCheck/check?id=rId";
-		return "redirect:/Home/main";
+		return "redirect:/User/myinfo";
 	}
 //	@GetMapping("/list")
 //	public void list(Map map) {
